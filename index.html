@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Duston Moore | Formal Methods, Auditable AI, and Systems Assurance</title>
-  <meta name="description" content="Portfolio of Duston Moore: formal methods, proof-carrying verification, structural assurance, provenance, and auditable AI-assisted systems engineering.">
+  <title>Duston Moore | Formal Verification and Auditable AI Systems</title>
+  <meta name="description" content="Portfolio of Duston Moore: formal verification, independent software checks, proof-carrying certificates, and auditable AI-assisted engineering.">
   <meta name="theme-color" content="#081a2c">
-  <meta property="og:title" content="Duston Moore | Formal Methods, Auditable AI, and Systems Assurance">
-  <meta property="og:description" content="Independent verification, constructive diagnostics, and auditable AI integration for complex systems.">
+  <meta property="og:title" content="Duston Moore | Formal Verification and Auditable AI Systems">
+  <meta property="og:description" content="Software and machine-checked mathematics that explain why an automated result was accepted or rejected.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,8 +23,8 @@
       <nav id="site-nav" aria-label="Primary navigation">
         <a href="#work">Public work</a>
         <a href="#applied">Applied systems</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#demo">Diagnostic demo</a>
+        <a href="#architecture">How it works</a>
+        <a href="#demo">Try the check</a>
         <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -35,9 +35,9 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Formal methods · Python tooling · systems assurance</p>
-          <h1>AI-assisted engineering should move faster <span>without weakening rigour.</span></h1>
-          <p class="lead">I build independently checkable tools and formal methods for engineering workflows in which generated outputs remain traceable, reviewable, deterministic, and subject to human judgement.</p>
+          <p class="eyebrow">Formal verification · Python and OCaml tools · auditable AI</p>
+          <h1>Let AI propose. <span>Let independent checks decide.</span></h1>
+          <p class="lead">I design software and machine-checked mathematics for systems that must explain why a result was accepted or rejected. My work separates the program that proposes an answer from the program that verifies it.</p>
           <div class="actions">
             <a class="button primary" href="Duston_Moore_Telesat_CV.pdf">Download CV</a>
             <a class="button secondary" href="https://github.com/dhwcmoore">View GitHub</a>
@@ -46,15 +46,15 @@
         </div>
 
         <div class="assurance-card" aria-label="Assurance workflow">
-          <p class="card-label">A practical assurance boundary</p>
+          <p class="card-label">How I structure an automated decision</p>
           <div class="pipeline">
-            <div><span>1</span><strong>Engineering baseline</strong><small>requirements, architecture, interfaces, tests</small></div>
+            <div><span>1</span><strong>State the claim</strong><small>define the requirement, evidence, interfaces, and test</small></div>
             <i>↓</i>
-            <div><span>2</span><strong>AI or automated proposal</strong><small>structured candidate output, never accepted on authority</small></div>
+            <div><span>2</span><strong>Generate a candidate</strong><small>an AI model, optimiser, or program proposes an answer</small></div>
             <i>↓</i>
-            <div><span>3</span><strong>Independent checks</strong><small>validation, provenance, policy, traceability</small></div>
+            <div><span>3</span><strong>Check it independently</strong><small>a separate component recomputes the evidence and tests the claim</small></div>
             <i>↓</i>
-            <div><span>4</span><strong>Human adjudication</strong><small>accepted change or explicit rejection with evidence</small></div>
+            <div><span>4</span><strong>Decide and record</strong><small>accept, reject, or defer, and preserve the reason</small></div>
           </div>
         </div>
       </div>
@@ -64,18 +64,18 @@
       <div class="wrap three">
         <article>
           <span class="number">01</span>
-          <h2>Engineer-trusted automation</h2>
-          <p>Automation should produce structured proposals that can be inspected, reproduced, tested, and revised rather than opaque conclusions.</p>
+          <h2>Automation proposes</h2>
+          <p>An automated system should return a candidate that can be inspected, reproduced, tested, and revised. It should not present its own output as sufficient authority.</p>
         </article>
         <article>
           <span class="number">02</span>
-          <h2>Independent verification</h2>
-          <p>The component that proposes an answer should not be the sole authority that accepts it. Trust boundaries must be explicit and fail closed.</p>
+          <h2>Verification is separate</h2>
+          <p>The component that proposes an answer should not be the only component that checks it. When the evidence is missing or the check cannot be completed, the system should reject or defer the result.</p>
         </article>
         <article>
           <span class="number">03</span>
-          <h2>Constructive diagnostics</h2>
-          <p>When a baseline is inconsistent or incomplete, a useful tool should return a witness that explains the defect, not merely a red status light.</p>
+          <h2>Failure produces evidence</h2>
+          <p>A useful rejection identifies the failed condition and the evidence that caused it. A red status light without an explanation is not enough.</p>
         </article>
       </div>
     </section>
@@ -83,20 +83,20 @@
     <section class="section" id="work">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Selected public work</p>
-          <h2>Formal foundations and executable assurance boundaries</h2>
-          <p>These repositories separate theorem-backed foundations, independent verification, and runnable engineering demonstrations. Each states its proof boundary and non-claims explicitly.</p>
+          <p class="eyebrow">Public code and proofs</p>
+          <h2>Each repository answers a distinct question</h2>
+          <p>The repositories below distinguish mathematical proof, executable verification, and demonstration code. Each states what has been proved, what has been implemented, and what remains outside its claim.</p>
         </div>
 
         <div class="project-grid">
           <article class="project featured">
             <div class="tags"><span>Python</span><span>Certificates</span><span>Verifier</span></div>
             <h3>Proof-Carrying Exactness</h3>
-            <p>A pure production verifier, separate untrusted generator, and end-to-end assessment boundary for four exact-rational verdicts.</p>
+            <p>Software that classifies finite problems using exact rational arithmetic rather than floating-point approximations. A generator proposes a certificate; a separate verifier checks it before release.</p>
             <ul>
-              <li>Independent re-verification before certificate release</li>
-              <li>Deterministic outputs and tamper rejection</li>
-              <li>Explicit traceability from specification to tests</li>
+              <li>Four explicit results: exact, underdetermined, obstructed, or inadmissible</li>
+              <li>Repeatable certificate bytes and rejection of altered evidence</li>
+              <li>A documented path from specification to implementation and tests</li>
             </ul>
             <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Open repository <span aria-hidden="true">↗</span></a>
           </article>
@@ -104,11 +104,11 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>OCaml</span><span>Exact rational</span></div>
             <h3>Regional Obstruction Calculus</h3>
-            <p>Machine-checked methods for detecting and auditing failures that appear only when locally valid declarations are composed globally.</p>
+            <p>Machine-checked methods for finding failures that cannot be seen by examining neighbouring pieces one at a time. The system produces either a repair or a witness showing why the pieces do not form a valid whole.</p>
             <ul>
-              <li>Repair or separator witnesses</li>
-              <li>Extracted witness generation and independent verifiers</li>
-              <li>Safe presentation change through preservation and reflection</li>
+              <li>Concrete repairs or separating witnesses</li>
+              <li>Rocq proofs with executable OCaml and Python verification paths</li>
+              <li>A distinction between results a representation change preserves and failures it may hide</li>
             </ul>
             <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Open repository <span aria-hidden="true">↗</span></a>
           </article>
@@ -116,11 +116,11 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>OCaml</span><span>Runtime monitoring</span></div>
             <h3>Structural Admissibility Library</h3>
-            <p>A broader Rocq and OCaml mechanisation of factorisation, non-recoverability, restriction and refinement repairs, runtime rupture, and certificate checking.</p>
+            <p>Asks whether the available observation retains enough information to decide a claim. When two relevant cases look identical to the observer but require different answers, no later classifier can recover the missing distinction.</p>
             <ul>
-              <li>Forty-one Rocq source modules with documented assumptions</li>
-              <li>Consensus, GPU, and physical-system case studies</li>
-              <li>Extracted monitor and certificate-checking components</li>
+              <li>Forty-one Rocq source modules with every assumption listed</li>
+              <li>Case studies in distributed consensus, GPU execution, and physical sensing</li>
+              <li>Two principled repairs: weaken the claim or improve the observation</li>
             </ul>
             <a href="https://github.com/dhwcmoore/structural-admissibility">Open repository <span aria-hidden="true">↗</span></a>
           </article>
@@ -128,11 +128,11 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>Linear algebra</span><span>Exactness</span></div>
             <h3>Lift-Descent Exactness</h3>
-            <p>The constructive mathematical layer separating failure to realise a baseline from failure of a declared claim to be uniquely determined.</p>
+            <p>Separates two reasons a claim can fail. The data may admit no solution, or it may admit several solutions that disagree about the claimed value.</p>
             <ul>
-              <li>Exact, underdetermined, and obstructed classifications</li>
-              <li>Constructive separator and ambiguity witnesses</li>
-              <li>Canonical values and presentation transport</li>
+              <li>Constructive classifications of exact, underdetermined, and obstructed cases</li>
+              <li>Witnesses that identify either the obstruction or the remaining ambiguity</li>
+              <li>Proofs of which conclusions survive a change of representation</li>
             </ul>
             <a href="https://github.com/dhwcmoore/lift-descent-exactness">Open repository <span aria-hidden="true">↗</span></a>
           </article>
@@ -140,11 +140,11 @@
           <article class="project featured">
             <div class="tags"><span>Python</span><span>OCaml</span><span>Rocq</span><span>HELICS</span></div>
             <h3>CycleDebt</h3>
-            <p>A certificate-producing diagnostic tool for cyclic systems in which local monitoring data may be coherent while remaining structurally insufficient for a global claim.</p>
+            <p>A diagnostic tool for cyclic systems. Every local comparison may look acceptable while the complete loop is inconsistent or still lacks enough evidence for the global claim.</p>
             <ul>
-              <li>Three accountable verdicts: coherence failure, global admissibility, or warrant debt</li>
-              <li>Independent OCaml/Zarith and Rocq-extracted verification paths</li>
-              <li>Recorded HELICS federation run and reproducible demonstrations</li>
+              <li>Three results: the data conflict, the global claim is supported, or a cyclic obstruction remains</li>
+              <li>Independent verification with exact integer and rational arithmetic</li>
+              <li>A recorded HELICS co-simulation run and commands that reproduce the examples</li>
             </ul>
             <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">Open repository <span aria-hidden="true">↗</span></a>
           </article>
@@ -152,11 +152,11 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>Finite</span><span>Discrete</span><span>Abelian</span></div>
             <h3>Finite Regional Stokes</h3>
-            <p>A finite, discrete, abelian formal development of regional residue and obstruction calculations. It does not claim continuum or non-abelian Yang–Mills results.</p>
+            <p>Machine-checked finite and discrete analogues of regional Stokes-type identities. The repository does not claim results about continuous geometry or non-abelian Yang–Mills theory.</p>
             <ul>
-              <li>Local-to-global finite constructions</li>
-              <li>Machine-checked regional identities</li>
-              <li>Reproducible proof and example artefacts</li>
+              <li>Finite constructions that relate local data to a global result</li>
+              <li>Regional identities checked by Rocq</li>
+              <li>Build instructions and reproducible examples</li>
             </ul>
             <a href="https://github.com/dhwcmoore/finite-regional-stokes">Open repository <span aria-hidden="true">↗</span></a>
           </article>
@@ -167,64 +167,64 @@
     <section class="section alt" id="applied">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Applied assurance systems</p>
-          <h2>From theorem-backed kernels to infrastructure-facing prototypes</h2>
-          <p>These systems connect the formal programme to distributed infrastructure, sensor fusion, defence-relevant coordination, and AI-assisted engineering. They are presented at their actual maturity level rather than as production deployments.</p>
+          <p class="eyebrow">Applied prototypes</p>
+          <h2>Private prototypes built from the public work</h2>
+          <p>These projects explore how the public proofs and verifiers could sit beside sensor, infrastructure, and automated decision systems. They are research prototypes, not deployed products.</p>
         </div>
 
         <div class="case-grid">
           <article class="case-study">
             <div class="case-top">
               <div>
-                <p class="status private">Private integration prototype</p>
+                <p class="status private">Private research prototype</p>
                 <h3>VeriBound-FCE</h3>
               </div>
               <span class="maturity">TRL 3</span>
             </div>
-            <p class="case-summary">A proof-oriented structural validation sidecar for proposed fusion results. It checks evidence supplied by another system rather than generating the fusion result itself.</p>
+            <p class="case-summary">A checker for a proposed sensor-fusion result. VeriBound does not create tracks or combine reports. It checks whether another system’s proposed combination is consistent and supported by evidence.</p>
             <div class="case-columns">
               <div>
                 <h4>Operational problem</h4>
-                <p>Pairwise sensor or interface agreements can coexist with a globally incoherent result, and a generator can misstate its own evidence.</p>
+                <p>Two reports may agree whenever they are compared directly, yet the full network of reports may still conflict. A faulty generator may also claim evidence that it did not compute correctly.</p>
               </div>
               <div>
                 <h4>Assurance response</h4>
-                <p>Separate emitters and independent verifiers recompute exact-rational claims, reject tampering, preserve non-lossy conflict evidence, and assemble pairwise evidence into global diagnostics.</p>
+                <p>VeriBound recomputes the numerical claims, checks certificates with a separate program, rejects altered evidence, and keeps conflicts visible instead of smoothing them away.</p>
               </div>
             </div>
             <ul class="evidence-list">
-              <li>Live CLI paths for pairwise checking, global coherence, and evidence assembly</li>
-              <li>Explicit distinction between live, tested-but-unwired, and unimplemented components</li>
-              <li>Designed for integration beside an existing fusion or tracking pipeline</li>
+              <li>Command-line checks for direct agreement, whole-network consistency, and evidence assembly</li>
+              <li>Documentation separates working code, tested code not yet connected to the main path, and planned work</li>
+              <li>Designed to sit beside an existing tracking or fusion system, not replace it</li>
             </ul>
-            <p class="case-summary">Public evidence trail: <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">formal kernel</a>, <a href="https://github.com/dhwcmoore/proof-carrying-exactness">proof-carrying assessment</a>, and <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">cyclic diagnostic demonstrator</a>.</p>
+            <p class="case-summary">Public foundations: <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">the machine-checked mathematics</a>, <a href="https://github.com/dhwcmoore/proof-carrying-exactness">the certificate and verifier design</a>, and <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">a runnable cyclic-system demonstration</a>.</p>
           </article>
 
           <article class="case-study">
             <div class="case-top">
               <div>
-                <p class="status proposal">Research prototype line</p>
+                <p class="status proposal">Private research prototype</p>
                 <h3>STAK-PSAL</h3>
               </div>
-              <span class="maturity">AR + ML</span>
+              <span class="maturity">ML + verification</span>
             </div>
-            <p class="case-summary">A Parallel Structural Assurance Layer for high-assurance distributed systems operating under partial observability.</p>
+            <p class="case-summary">An experimental architecture for systems that must reason from incomplete observations. Its full name is the Parallel Structural Assurance Layer.</p>
             <div class="case-columns">
               <div>
                 <h4>Operational problem</h4>
-                <p>Locally nominal telemetry can conceal globally invalid configurations in command networks, logistics systems, autonomous coordination, telecoms, and industrial control.</p>
+                <p>Each local reading can appear normal while the complete configuration violates a system-wide condition.</p>
               </div>
               <div>
                 <h4>Assurance response</h4>
-                <p>A learned model proposes candidate structures; interval-certified projection produces discrete surrogates; a verified adjudication layer accepts, rejects, or defers with a witness.</p>
+                <p>A learned model proposes possible structures. A bounded translation step converts each proposal into a finite object. A separate checker then accepts it, rejects it, or asks for more evidence.</p>
               </div>
             </div>
             <ul class="evidence-list">
-              <li>Architecture spans Python inference, OCaml projection, and Rocq-grounded adjudication</li>
-              <li><code>stak-psal-toy-v0.1</code> explores velocity-aware admissibility and timed structural constraints</li>
-              <li>No theorem is claimed below the certified projection boundary</li>
+              <li>Python proposes candidates, OCaml performs the bounded translation, and Rocq checks the finite claim</li>
+              <li><code>stak-psal-toy-v0.1</code> tests whether time and motion constraints support a proposed event</li>
+              <li>The formal guarantee begins only after the translation into the finite model has been certified</li>
             </ul>
-            <p class="case-summary">Public supporting work: <a href="https://github.com/dhwcmoore/structural-admissibility">structural admissibility library</a> and <a href="https://github.com/dhwcmoore/structural-admissibility-in-rocq">focused Rocq development</a>.</p>
+            <p class="case-summary">Public foundations: the <a href="https://github.com/dhwcmoore/structural-admissibility">full structural-admissibility library</a> and a <a href="https://github.com/dhwcmoore/structural-admissibility-in-rocq">smaller focused Rocq development</a>.</p>
           </article>
         </div>
       </div>
@@ -233,52 +233,52 @@
     <section class="section architecture-section" id="architecture">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">AI integration architecture</p>
-          <h2>Put the model inside a governed evidence path</h2>
-          <p>The model is useful because it proposes. It is safe to use in a high-assurance workflow only when proposal, evidence transformation, independent checking, policy, and human authority remain separate.</p>
+          <p class="eyebrow">How the parts fit</p>
+          <h2>Let one component propose and another decide</h2>
+          <p>An AI model can search quickly, but it should not approve its own result. The steps below keep the source material, generated candidate, translation, verification, and final decision separate.</p>
         </div>
 
         <div class="architecture-board" aria-label="AI-assisted assurance architecture">
           <div class="arch-node source">
-            <span class="arch-kicker">Inputs</span>
-            <strong>Requirements, telemetry, code, models</strong>
-            <small>Versioned source material and engineering context</small>
+            <span class="arch-kicker">Source material</span>
+            <strong>Requirements, measurements, code, and models</strong>
+            <small>Recorded sources with a known version and origin</small>
           </div>
           <div class="arch-arrow" aria-hidden="true">→</div>
           <div class="arch-node propose">
-            <span class="arch-kicker">Untrusted proposer</span>
-            <strong>LLM, optimiser, ML model, generator</strong>
-            <small>Produces a candidate plus claimed evidence</small>
+            <span class="arch-kicker">Candidate generator</span>
+            <strong>AI model, optimiser, or ordinary program</strong>
+            <small>Proposes an answer and the evidence it says supports that answer</small>
           </div>
           <div class="arch-arrow" aria-hidden="true">→</div>
           <div class="arch-node adapter">
-            <span class="arch-kicker">Typed boundary</span>
-            <strong>Schema, projection, provenance adapter</strong>
-            <small>Normalises data without silently repairing it</small>
+            <span class="arch-kicker">Explicit translation</span>
+            <strong>Input format, conversion rule, and source record</strong>
+            <small>Converts the candidate into checker input and records what changed</small>
           </div>
           <div class="arch-arrow" aria-hidden="true">→</div>
           <div class="arch-node verify">
-            <span class="arch-kicker">Independent authority</span>
-            <strong>Python or OCaml verifier, Rocq-backed kernel</strong>
-            <small>Recomputes claims and emits a verdict with witnesses</small>
+            <span class="arch-kicker">Independent checker</span>
+            <strong>Python or OCaml verifier backed by Rocq proofs</strong>
+            <small>Recomputes the claim and returns a result with supporting evidence</small>
           </div>
           <div class="arch-arrow" aria-hidden="true">→</div>
           <div class="arch-node decide">
-            <span class="arch-kicker">Controlled release</span>
-            <strong>CI gate, policy layer, human adjudication</strong>
-            <small>Accept, reject, defer, or request more evidence</small>
+            <span class="arch-kicker">Release decision</span>
+            <strong>Automated gate, stated policy, or human review</strong>
+            <small>Accept, reject, defer, or ask for more evidence</small>
           </div>
 
           <div class="feedback-line">
-            <span>Rejected candidates return a structured witness to the engineering or training loop. The verifier never becomes the generator.</span>
+            <span>A rejected candidate returns the exact failed condition to the engineer or generating system. The checker does not rewrite the candidate and then approve its own repair.</span>
           </div>
         </div>
 
         <div class="architecture-principles">
-          <div><strong>Proposal is not proof.</strong><span>Generated content remains a candidate until independently checked.</span></div>
-          <div><strong>Geometry is not algebra.</strong><span>Approximate regions are converted into exact interfaces through an explicit adapter.</span></div>
-          <div><strong>Preservation is not reflection.</strong><span>A transformation may preserve accepted results while concealing failures in the reverse direction.</span></div>
-          <div><strong>Rejection must be useful.</strong><span>Witnesses identify the failed condition, source evidence, and unresolved obligation.</span></div>
+          <div><strong>A proposal is not a proof.</strong><span>Generated content remains a candidate until a separate check establishes the claim.</span></div>
+          <div><strong>An approximation is not an exact structure.</strong><span>Approximate physical regions must be translated explicitly into the finite interfaces used by the proof.</span></div>
+          <div><strong>One-way preservation is not equivalence.</strong><span>A change may carry valid results forward while hiding failures that cannot be recovered in reverse.</span></div>
+          <div><strong>A rejection should identify the defect.</strong><span>The result should name the failed condition, the relevant evidence, and what remains unresolved.</span></div>
         </div>
       </div>
     </section>
@@ -286,18 +286,18 @@
     <section class="section demo-section" id="demo">
       <div class="wrap demo-grid">
         <div>
-          <p class="eyebrow">Interactive diagnostic demo</p>
-          <h2>A failing check should explain itself</h2>
-          <p>This lightweight browser demonstration illustrates a timed certificate boundary. It is not the production Rocq or OCaml verifier. It shows the same fail-closed design discipline: the check recomputes the deadline, refuses an out-of-window rupture time, and returns a concrete witness.</p>
+          <p class="eyebrow">Try a simple check</p>
+          <h2>See why the example is accepted or rejected</h2>
+          <p>The example certificate says that an event occurred after time 120 and before time 150. The checker calculates the deadline itself. Choose an accepted or rejected example to see each comparison and the exact inequality that determines the result. This browser example illustrates the method; the research verifiers are separate Python, OCaml, and Rocq programs.</p>
 
           <div class="demo-controls" aria-label="Diagnostic scenarios">
-            <button class="demo-button active" type="button" data-scenario="violation">Run violating case</button>
-            <button class="demo-button" type="button" data-scenario="valid">Run valid case</button>
+            <button class="demo-button active" type="button" data-scenario="violation">Run rejected example</button>
+            <button class="demo-button" type="button" data-scenario="valid">Run accepted example</button>
           </div>
 
           <div class="demo-rule">
-            <strong>Required condition</strong>
-            <code>origin &lt; rupture_time &lt; origin + horizon</code>
+            <strong>Rule used in this example</strong>
+            <code>start_time &lt; event_time &lt; start_time + allowed_interval</code>
           </div>
         </div>
 
@@ -314,17 +314,17 @@
     <section class="section alt" id="approach">
       <div class="wrap approach-grid">
         <div>
-          <p class="eyebrow">Engineering contribution</p>
-          <h2>What I bring to an AI-enabled systems engineering team</h2>
-          <p>I approach AI adoption as a governance and software-design problem, not simply a prompting problem. The goal is useful acceleration with a visible chain of responsibility.</p>
+          <p class="eyebrow">What I contribute</p>
+          <h2>Clear rules, independent checks, and useful failure reports</h2>
+          <p>I build small, testable tools around AI and automated systems. The aim is not to formalise every component. It is to make the critical claim, its evidence, and the decision path explicit.</p>
         </div>
         <div class="capabilities">
-          <div><h3>Baseline quality</h3><p>Checks for ambiguity, incompleteness, contradiction, weak traceability, and unsupported conclusions across technical artefacts.</p></div>
-          <div><h3>Structured AI workflows</h3><p>Clear input and output contracts, validation criteria, deterministic normalisation, and explicit human review points.</p></div>
-          <div><h3>Provenance and audit</h3><p>Records of source, policy, transformation, version, and witness so that an output can be reviewed later.</p></div>
-          <div><h3>Maintainable internal tools</h3><p>Python packages and CLIs, automated tests, CI-friendly execution, documentation, and reproducible demonstrations.</p></div>
-          <div><h3>Change-impact reasoning</h3><p>Formal separation of what a transformation preserves from what it may conceal or make impossible to reconstruct.</p></div>
-          <div><h3>Adoption and communication</h3><p>Pilots, demonstrations, training, concise documentation, and translation between specialist communities without flattening real differences.</p></div>
+          <div><h3>Clarify the claim</h3><p>Identify ambiguity, contradiction, missing evidence, and conclusions that do not follow from the stated inputs.</p></div>
+          <div><h3>Define the interfaces</h3><p>Specify what enters each component, what it must return, how the result is checked, and where human judgement enters.</p></div>
+          <div><h3>Record the evidence</h3><p>Keep the source, version, conversion steps, decision rule, and failure witness so the result can be reviewed later.</p></div>
+          <div><h3>Build usable tools</h3><p>Create documented Python packages and command-line programs with automated tests and reproducible examples.</p></div>
+          <div><h3>Analyse representation changes</h3><p>State which conclusions survive a conversion and which distinctions the conversion may hide or destroy.</p></div>
+          <div><h3>Explain the result</h3><p>Translate specialist work into demonstrations and documentation without overstating what the proof or software establishes.</p></div>
         </div>
       </div>
     </section>
@@ -332,31 +332,31 @@
     <section class="section" id="writing">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Publications and manuscripts</p>
-          <h2>Research that connects mathematical structure to engineering judgement</h2>
-          <p>The written programme develops the same boundary problem at several levels: observation and factorisation, finite obstruction certificates, AI closure authority, and the philosophical status of exactness in implemented systems.</p>
+          <p class="eyebrow">Research and publications</p>
+          <h2>One question studied in mathematics, software, and philosophy</h2>
+          <p>What must an observation preserve before a system is entitled to make a claim? The manuscripts approach that question through formal mathematics, executable certificates, artificial intelligence, and the philosophy of exactness.</p>
         </div>
 
         <div class="writing-grid">
           <article class="writing-card featured-writing">
             <div class="writing-meta"><span>Journal manuscript</span><span>Under review</span></div>
             <h3>Admissibility and Warrant Debt: Structural Limits on Optimisation in Artificial Intelligence</h3>
-            <p>Argues that a recurring class of AI failures arises before optimisation: the observation regime may fail to preserve the distinctions required by the predicate the system is asked to decide. It develops the factorisation obligation, a finite obstruction example, certificate architecture, and a separation between productive search and closure authority.</p>
-            <p class="writing-status">Manuscript under review. Public supporting artefacts: <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">CycleDebt</a> and the <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility Library</a>.</p>
+            <p>Studies failures caused not by a weak optimiser, but by missing information. When an observation makes two cases look identical even though they require different decisions, no later model can recover the lost distinction. The paper develops a formal test and a certificate that records the result.</p>
+            <p class="writing-status">Under review. Public supporting work: <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">CycleDebt</a> and the <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility Library</a>.</p>
           </article>
 
           <article class="writing-card">
             <div class="writing-meta"><span>Philosophy &amp; Technology</span><span>Under review</span></div>
             <h3>Exactness Is a Boundary Achievement: Whitehead, Formal Systems, and Placed Concreteness</h3>
-            <p>Reconstructs Whitehead’s account of fabricated exactness and recasts it as a discipline for formal and computational systems: exact claims remain conditional on the boundaries, observation maps, and application warrants through which they are placed.</p>
-            <p class="writing-status">Research article under review. The public mechanisation supplies the internally checkable admissibility obligation while preserving the paper’s distinction between formal admissibility and wider application warrant.</p>
+            <p>Uses Whitehead to argue that exactness is achieved within stated conditions rather than possessed without qualification. It applies that argument to formal and computational systems, where a proof is exact inside its model but its use still depends on how the model was connected to the world.</p>
+            <p class="writing-status">Under review. The public mechanisation checks whether the observation supports the formal claim; the paper separately examines whether the model and observation are appropriate for their intended use.</p>
           </article>
 
           <article class="writing-card">
             <div class="writing-meta"><span>Research programme</span><span>Formal verification</span></div>
             <h3>Structural Admissibility: Quotients, Gluing, and the Conditions of Verifiability</h3>
-            <p>Unifies observational collapse, where a representation erases a distinction required for judgement, with gluing obstruction, where locally compatible declarations fail to extend to a coherent global account.</p>
-            <p class="writing-status">Developed through the public <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility</a>, <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Regional Obstruction Calculus</a>, <a href="https://github.com/dhwcmoore/lift-descent-exactness">Lift-Descent Exactness</a>, and <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Proof-Carrying Exactness</a> repositories.</p>
+            <p>Develops two distinct failure tests. First, an observation may erase a distinction needed for a decision. Second, statements that agree locally may still fail to form one coherent global account.</p>
+            <p class="writing-status">The public development is divided among <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility</a>, <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Regional Obstruction Calculus</a>, <a href="https://github.com/dhwcmoore/lift-descent-exactness">Lift-Descent Exactness</a>, and <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Proof-Carrying Exactness</a>.</p>
           </article>
         </div>
 
@@ -368,23 +368,23 @@
       <div class="wrap experience-grid">
         <div>
           <p class="eyebrow">Experience</p>
-          <h2>Technical construction backed by institutional leadership</h2>
+          <h2>Software work and institutional leadership</h2>
         </div>
         <div class="timeline">
           <article>
             <time>2023–Present</time>
             <h3>Independent Researcher, Formal Methods and AI Systems</h3>
-            <p>Design and implementation of Python, OCaml, and Rocq assurance systems, specifications, verifiers, tests, demonstrations, and technical documentation.</p>
+            <p>Built Python and OCaml verification tools, Rocq proofs, specifications, automated tests, demonstrations, and technical documentation.</p>
           </article>
           <article>
             <time>2015–2016</time>
             <h3>Education Developer, University of Alberta</h3>
-            <p>Programme design, learning outcomes, assessment, peer review, workshops, educational technology, and cross-faculty consultation.</p>
+            <p>Designed programmes and assessments, led workshops and peer review, supported educational technology, and worked across faculties.</p>
           </article>
           <article>
             <time>2002–2013</time>
             <h3>Purdue University Fort Wayne</h3>
-            <p>Tenured Associate Professor of Philosophy and Director of General Education in a concurrent appointment. Led university-wide programme and assessment work across autonomous expert groups.</p>
+            <p>Served concurrently as a tenured Associate Professor of Philosophy and Director of General Education. Led university-wide programme and assessment work across independent academic units.</p>
           </article>
         </div>
       </div>
@@ -393,13 +393,13 @@
     <section class="section programme">
       <div class="wrap programme-grid">
         <div>
-          <p class="eyebrow">Theoretical origins</p>
-          <h2>Pattern, rupture, and warrant</h2>
+          <p class="eyebrow">Theoretical starting point</p>
+          <h2>Why boundaries matter</h2>
         </div>
         <div>
-          <p>The wider programme begins from Whitehead’s philosophy of organism: stable objects are achievements of organised process, not inert points that carry their identity without qualification. Region Connection Calculus supplies a disciplined vocabulary for connection, overlap, boundary, and inclusion without requiring point-based geometry as the primary language.</p>
-          <p>That philosophical origin does not substitute for proof. It motivates an engineering discipline: geometric regions and supports may be approximate, representation-dependent, and physically interpreted, while algebraic interfaces, incidence relations, restriction maps, and compatibility conditions must be constructed and checked exactly.</p>
-          <p>For systems assurance, the result is practical. Keep the conclusion, its provenance, its verification conditions, the boundary transformation that produced it, and its unresolved warrant obligations together.</p>
+          <p>My philosophical starting point is Whitehead’s view that stable things are produced by organised processes. Region Connection Calculus provides exact terms for how regions connect, overlap, include one another, and share boundaries.</p>
+          <p>These ideas guide the questions but do not prove the results. In the software, approximate physical regions are translated into exact finite interfaces, incidence relations, and compatibility rules. The translation is a separate step and must be checked rather than assumed.</p>
+          <p>The practical rule is simple: keep a conclusion with its source, the conditions under which it was checked, every conversion applied to it, and any assumption that remains unresolved.</p>
         </div>
       </div>
     </section>
@@ -408,8 +408,8 @@
       <div class="wrap contact-grid">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Discuss a rigorous AI-assisted engineering workflow</h2>
-          <p>Available for full-time roles and technical research collaborations. Based in Edmonton and willing to relocate where relocation is employer-funded.</p>
+          <h2>Discuss formal verification or auditable AI systems</h2>
+          <p>Available for full-time roles and technical research collaborations. Based in Edmonton and willing to relocate when the employer funds the move.</p>
         </div>
         <div class="contact-actions">
           <a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
