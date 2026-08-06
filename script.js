@@ -3,8 +3,8 @@ const nav = document.querySelector('#site-nav');
 
 if (menuButton && nav) {
   menuButton.addEventListener('click', () => {
-    const open = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', String(!open));
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isOpen));
     nav.classList.toggle('open');
   });
 
@@ -18,16 +18,16 @@ if (menuButton && nav) {
 
 const scenarios = {
   violation: {
-    origin: 120,
-    horizon: 30,
-    ruptureTime: 154,
-    certificate: 'timed-rupture-0042'
+    startTime: 120,
+    allowedInterval: 30,
+    eventTime: 154,
+    certificate: 'timed-event-0042'
   },
   valid: {
-    origin: 120,
-    horizon: 30,
-    ruptureTime: 141,
-    certificate: 'timed-rupture-0041'
+    startTime: 120,
+    allowedInterval: 30,
+    eventTime: 141,
+    certificate: 'timed-event-0041'
   }
 };
 
@@ -35,42 +35,43 @@ const terminal = document.querySelector('#terminal-output');
 const demoButtons = document.querySelectorAll('.demo-button');
 
 function renderScenario(name) {
-  if (!terminal || !scenarios[name]) return;
-
   const scenario = scenarios[name];
-  const deadline = scenario.origin + scenario.horizon;
-  const afterOrigin = scenario.ruptureTime > scenario.origin;
-  const beforeDeadline = scenario.ruptureTime < deadline;
-  const accepted = afterOrigin && beforeDeadline;
+  if (!terminal || !scenario) return;
+
+  const deadline = scenario.startTime + scenario.allowedInterval;
+  const isAfterStart = scenario.eventTime > scenario.startTime;
+  const isBeforeDeadline = scenario.eventTime < deadline;
+  const isAccepted = isAfterStart && isBeforeDeadline;
 
   const lines = [
-    '$ verifier check certificate.json',
+    '$ checker verify example.json',
     '',
-    `certificate_id:  ${scenario.certificate}`,
-    `origin:          ${scenario.origin}`,
-    `horizon:         ${scenario.horizon}`,
-    `computed_limit:  ${deadline}`,
-    `rupture_time:    ${scenario.ruptureTime}`,
+    `certificate_id:      ${scenario.certificate}`,
+    `start_time:          ${scenario.startTime}`,
+    `allowed_interval:    ${scenario.allowedInterval}`,
+    `calculated_deadline: ${deadline}`,
+    `claimed_event_time:  ${scenario.eventTime}`,
     '',
-    'recomputing claimed temporal boundary ...',
-    `check 1: rupture_time > origin        ${afterOrigin ? 'PASS' : 'FAIL'}`,
-    `check 2: rupture_time < origin+horizon ${beforeDeadline ? 'PASS' : 'FAIL'}`,
+    'checking the time claim ...',
+    `event is after the start:     ${isAfterStart ? 'PASS' : 'FAIL'}`,
+    `event is before the deadline: ${isBeforeDeadline ? 'PASS' : 'FAIL'}`,
     ''
   ];
 
-  if (accepted) {
+  if (isAccepted) {
     lines.push(
       'VERDICT: ACCEPT',
-      'witness: all strict temporal constraints independently recomputed'
+      'reason: both time conditions hold'
     );
   } else {
-    const witness = !afterOrigin
-      ? `${scenario.ruptureTime} <= ${scenario.origin}`
-      : `${scenario.ruptureTime} >= ${deadline}`;
+    const reason = !isAfterStart
+      ? `${scenario.eventTime} is not greater than ${scenario.startTime}`
+      : `${scenario.eventTime} is not less than ${deadline}`;
+
     lines.push(
       'VERDICT: REJECT',
-      `witness: rupture_time violates the strict window (${witness})`,
-      'action: certificate withheld; candidate returned for review'
+      `reason: ${reason}`,
+      'next step: do not release the certificate; return it for review'
     );
   }
 
