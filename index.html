@@ -3,24 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Duston Moore | Formal Methods and Auditable AI-Assisted Engineering</title>
-  <meta name="description" content="Portfolio of Duston Moore: Python tooling, formal methods, proof-carrying verification, provenance, and auditable AI-assisted engineering.">
+  <title>Duston Moore | Formal Methods, Auditable AI, and Systems Assurance</title>
+  <meta name="description" content="Portfolio of Duston Moore: formal methods, proof-carrying verification, structural assurance, provenance, and auditable AI-assisted systems engineering.">
   <meta name="theme-color" content="#081a2c">
-  <meta property="og:title" content="Duston Moore | Formal Methods and Auditable AI-Assisted Engineering">
-  <meta property="og:description" content="Engineer-trusted automation, independent verification, and constructive diagnostics for complex systems.">
+  <meta property="og:title" content="Duston Moore | Formal Methods, Auditable AI, and Systems Assurance">
+  <meta property="og:description" content="Independent verification, constructive diagnostics, and auditable AI integration for complex systems.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="wrap nav-wrap">
-      <a class="brand" href="#top" aria-label="Duston Moore home"><span class="monogram">DM</span><span>Duston Moore</span></a>
+      <a class="brand" href="#top" aria-label="Duston Moore home">
+        <span class="monogram">DM</span><span>Duston Moore</span>
+      </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Primary navigation">
-        <a href="#work">Selected work</a>
-        <a href="#approach">Approach</a>
-        <a href="#experience">Experience</a>
+        <a href="#work">Public work</a>
+        <a href="#applied">Applied systems</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#demo">Diagnostic demo</a>
+        <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -34,66 +39,274 @@
           <h1>AI-assisted engineering should move faster <span>without weakening rigour.</span></h1>
           <p class="lead">I build independently checkable tools and formal methods for engineering workflows in which generated outputs remain traceable, reviewable, deterministic, and subject to human judgement.</p>
           <div class="actions">
-            <a class="button primary" href="assets/Duston_Moore_Telesat_CV.pdf">Download CV</a>
+            <a class="button primary" href="Duston_Moore_Telesat_CV.pdf">Download CV</a>
             <a class="button secondary" href="https://github.com/dhwcmoore">View GitHub</a>
           </div>
           <p class="availability"><strong>Location:</strong> Edmonton, Canada. <strong>Relocation:</strong> open to Ottawa or another work location with employer-supported relocation.</p>
         </div>
+
         <div class="assurance-card" aria-label="Assurance workflow">
           <p class="card-label">A practical assurance boundary</p>
           <div class="pipeline">
             <div><span>1</span><strong>Engineering baseline</strong><small>requirements, architecture, interfaces, tests</small></div>
             <i>↓</i>
-            <div><span>2</span><strong>AI or automated proposal</strong><small>structured candidate output</small></div>
+            <div><span>2</span><strong>AI or automated proposal</strong><small>structured candidate output, never accepted on authority</small></div>
             <i>↓</i>
             <div><span>3</span><strong>Independent checks</strong><small>validation, provenance, policy, traceability</small></div>
             <i>↓</i>
-            <div><span>4</span><strong>Human adjudication</strong><small>accepted change or explicit rejection</small></div>
+            <div><span>4</span><strong>Human adjudication</strong><small>accepted change or explicit rejection with evidence</small></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="problem">
+    <section class="problem" aria-label="Core assurance principles">
       <div class="wrap three">
-        <article><span class="number">01</span><h2>Engineer-trusted automation</h2><p>Automation should produce structured proposals that can be inspected, reproduced, tested, and revised rather than opaque conclusions.</p></article>
-        <article><span class="number">02</span><h2>Independent verification</h2><p>The component that proposes an answer should not be the sole authority that accepts it. Trust boundaries must be explicit and fail closed.</p></article>
-        <article><span class="number">03</span><h2>Constructive diagnostics</h2><p>When a baseline is inconsistent or incomplete, a useful tool should return a witness that explains the defect, not merely a red status light.</p></article>
+        <article>
+          <span class="number">01</span>
+          <h2>Engineer-trusted automation</h2>
+          <p>Automation should produce structured proposals that can be inspected, reproduced, tested, and revised rather than opaque conclusions.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h2>Independent verification</h2>
+          <p>The component that proposes an answer should not be the sole authority that accepts it. Trust boundaries must be explicit and fail closed.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h2>Constructive diagnostics</h2>
+          <p>When a baseline is inconsistent or incomplete, a useful tool should return a witness that explains the defect, not merely a red status light.</p>
+        </article>
       </div>
     </section>
 
     <section class="section" id="work">
       <div class="wrap">
-        <div class="section-head"><p class="eyebrow">Selected public work</p><h2>Formal foundations and executable assurance boundaries</h2><p>The selection below is deliberately narrow. Each project is public and represents a distinct part of the engineering story.</p></div>
+        <div class="section-head">
+          <p class="eyebrow">Selected public work</p>
+          <h2>Formal foundations and executable assurance boundaries</h2>
+          <p>These repositories separate theorem-backed foundations, independent verification, and runnable engineering demonstrations. Each states its proof boundary and non-claims explicitly.</p>
+        </div>
+
         <div class="project-grid">
           <article class="project featured">
             <div class="tags"><span>Python</span><span>Certificates</span><span>Verifier</span></div>
             <h3>Proof-Carrying Exactness</h3>
             <p>A pure production verifier, separate untrusted generator, and end-to-end assessment boundary for four exact-rational verdicts.</p>
-            <ul><li>Independent re-verification before certificate release</li><li>Deterministic outputs and tamper rejection</li><li>Explicit traceability from specification to tests</li></ul>
-            <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Open repository <span>↗</span></a>
+            <ul>
+              <li>Independent re-verification before certificate release</li>
+              <li>Deterministic outputs and tamper rejection</li>
+              <li>Explicit traceability from specification to tests</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Open repository <span aria-hidden="true">↗</span></a>
           </article>
+
           <article class="project">
             <div class="tags"><span>Rocq</span><span>OCaml</span><span>Exact rational</span></div>
             <h3>Regional Obstruction Calculus</h3>
             <p>Machine-checked methods for detecting and auditing failures that appear only when locally valid declarations are composed globally.</p>
-            <ul><li>Repair or separator witnesses</li><li>Extracted witness generation and independent verifiers</li><li>Safe presentation change through preservation and reflection</li></ul>
-            <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Open repository <span>↗</span></a>
+            <ul>
+              <li>Repair or separator witnesses</li>
+              <li>Extracted witness generation and independent verifiers</li>
+              <li>Safe presentation change through preservation and reflection</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Open repository <span aria-hidden="true">↗</span></a>
           </article>
+
           <article class="project">
-            <div class="tags"><span>Rocq</span><span>Admissibility</span><span>Provenance</span></div>
-            <h3>Structural Admissibility in Rocq</h3>
-            <p>Formal proofs showing when an observation map has already erased distinctions required by a later predicate.</p>
-            <ul><li>Warrant-debt and non-factorisation theorems</li><li>Concrete rupture decomposition</li><li>OCaml staged observation and refinement components</li></ul>
-            <a href="https://github.com/dhwcmoore/structural-admissibility-in-rocq">Open repository <span>↗</span></a>
+            <div class="tags"><span>Rocq</span><span>OCaml</span><span>Runtime monitoring</span></div>
+            <h3>Structural Admissibility Library</h3>
+            <p>A broader Rocq and OCaml mechanisation of factorisation, non-recoverability, restriction and refinement repairs, runtime rupture, and certificate checking.</p>
+            <ul>
+              <li>Forty-one Rocq source modules with documented assumptions</li>
+              <li>Consensus, GPU, and physical-system case studies</li>
+              <li>Extracted monitor and certificate-checking components</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/structural-admissibility">Open repository <span aria-hidden="true">↗</span></a>
           </article>
+
           <article class="project">
             <div class="tags"><span>Rocq</span><span>Linear algebra</span><span>Exactness</span></div>
             <h3>Lift-Descent Exactness</h3>
             <p>The constructive mathematical layer separating failure to realise a baseline from failure of a declared claim to be uniquely determined.</p>
-            <ul><li>Exact, underdetermined, and obstructed classifications</li><li>Constructive separator and ambiguity witnesses</li><li>Canonical values and presentation transport</li></ul>
-            <a href="https://github.com/dhwcmoore/lift-descent-exactness">Open repository <span>↗</span></a>
+            <ul>
+              <li>Exact, underdetermined, and obstructed classifications</li>
+              <li>Constructive separator and ambiguity witnesses</li>
+              <li>Canonical values and presentation transport</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/lift-descent-exactness">Open repository <span aria-hidden="true">↗</span></a>
           </article>
+
+          <article class="project featured">
+            <div class="tags"><span>Python</span><span>OCaml</span><span>Rocq</span><span>HELICS</span></div>
+            <h3>CycleDebt</h3>
+            <p>A certificate-producing diagnostic tool for cyclic systems in which local monitoring data may be coherent while remaining structurally insufficient for a global claim.</p>
+            <ul>
+              <li>Three accountable verdicts: coherence failure, global admissibility, or warrant debt</li>
+              <li>Independent OCaml/Zarith and Rocq-extracted verification paths</li>
+              <li>Recorded HELICS federation run and reproducible demonstrations</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project">
+            <div class="tags"><span>Rocq</span><span>Finite</span><span>Discrete</span><span>Abelian</span></div>
+            <h3>Finite Regional Stokes</h3>
+            <p>A finite, discrete, abelian formal development of regional residue and obstruction calculations. It does not claim continuum or non-abelian Yang–Mills results.</p>
+            <ul>
+              <li>Local-to-global finite constructions</li>
+              <li>Machine-checked regional identities</li>
+              <li>Reproducible proof and example artefacts</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/finite-regional-stokes">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="applied">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Applied assurance systems</p>
+          <h2>From theorem-backed kernels to infrastructure-facing prototypes</h2>
+          <p>These systems connect the formal programme to distributed infrastructure, sensor fusion, defence-relevant coordination, and AI-assisted engineering. They are presented at their actual maturity level rather than as production deployments.</p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-study">
+            <div class="case-top">
+              <div>
+                <p class="status private">Private integration prototype</p>
+                <h3>VeriBound-FCE</h3>
+              </div>
+              <span class="maturity">TRL 3</span>
+            </div>
+            <p class="case-summary">A proof-oriented structural validation sidecar for proposed fusion results. It checks evidence supplied by another system rather than generating the fusion result itself.</p>
+            <div class="case-columns">
+              <div>
+                <h4>Operational problem</h4>
+                <p>Pairwise sensor or interface agreements can coexist with a globally incoherent result, and a generator can misstate its own evidence.</p>
+              </div>
+              <div>
+                <h4>Assurance response</h4>
+                <p>Separate emitters and independent verifiers recompute exact-rational claims, reject tampering, preserve non-lossy conflict evidence, and assemble pairwise evidence into global diagnostics.</p>
+              </div>
+            </div>
+            <ul class="evidence-list">
+              <li>Live CLI paths for pairwise checking, global coherence, and evidence assembly</li>
+              <li>Explicit distinction between live, tested-but-unwired, and unimplemented components</li>
+              <li>Designed for integration beside an existing fusion or tracking pipeline</li>
+            </ul>
+            <p class="case-summary">Public evidence trail: <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">formal kernel</a>, <a href="https://github.com/dhwcmoore/proof-carrying-exactness">proof-carrying assessment</a>, and <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">cyclic diagnostic demonstrator</a>.</p>
+          </article>
+
+          <article class="case-study">
+            <div class="case-top">
+              <div>
+                <p class="status proposal">Proposal and prototype line</p>
+                <h3>STAK-PSAL</h3>
+              </div>
+              <span class="maturity">AR + ML</span>
+            </div>
+            <p class="case-summary">A Parallel Structural Assurance Layer for high-assurance distributed systems operating under partial observability.</p>
+            <div class="case-columns">
+              <div>
+                <h4>Operational problem</h4>
+                <p>Locally nominal telemetry can conceal globally invalid configurations in command networks, logistics systems, autonomous coordination, telecoms, and industrial control.</p>
+              </div>
+              <div>
+                <h4>Assurance response</h4>
+                <p>A learned model proposes candidate structures; interval-certified projection produces discrete surrogates; a verified adjudication layer accepts, rejects, or defers with a witness.</p>
+              </div>
+            </div>
+            <ul class="evidence-list">
+              <li>DARPA CLARA TA1 architecture: Python inference, OCaml projection, Rocq-grounded adjudication</li>
+              <li><code>stak-psal-toy-v0.1</code> explores velocity-aware admissibility and timed structural constraints</li>
+              <li>No theorem is claimed below the certified projection boundary</li>
+            </ul>
+            <p class="case-summary">Public supporting work: <a href="https://github.com/dhwcmoore/structural-admissibility">structural admissibility library</a> and <a href="https://github.com/dhwcmoore/structural-admissibility-in-rocq">focused Rocq development</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">AI integration architecture</p>
+          <h2>Put the model inside a governed evidence path</h2>
+          <p>The model is useful because it proposes. It is safe to use in a high-assurance workflow only when proposal, evidence transformation, independent checking, policy, and human authority remain separate.</p>
+        </div>
+
+        <div class="architecture-board" aria-label="AI-assisted assurance architecture">
+          <div class="arch-node source">
+            <span class="arch-kicker">Inputs</span>
+            <strong>Requirements, telemetry, code, models</strong>
+            <small>Versioned source material and engineering context</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node propose">
+            <span class="arch-kicker">Untrusted proposer</span>
+            <strong>LLM, optimiser, ML model, generator</strong>
+            <small>Produces a candidate plus claimed evidence</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node adapter">
+            <span class="arch-kicker">Typed boundary</span>
+            <strong>Schema, projection, provenance adapter</strong>
+            <small>Normalises data without silently repairing it</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node verify">
+            <span class="arch-kicker">Independent authority</span>
+            <strong>Python or OCaml verifier, Rocq-backed kernel</strong>
+            <small>Recomputes claims and emits a verdict with witnesses</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node decide">
+            <span class="arch-kicker">Controlled release</span>
+            <strong>CI gate, policy layer, human adjudication</strong>
+            <small>Accept, reject, defer, or request more evidence</small>
+          </div>
+
+          <div class="feedback-line">
+            <span>Rejected candidates return a structured witness to the engineering or training loop. The verifier never becomes the generator.</span>
+          </div>
+        </div>
+
+        <div class="architecture-principles">
+          <div><strong>Proposal is not proof.</strong><span>Generated content remains a candidate until independently checked.</span></div>
+          <div><strong>Geometry is not algebra.</strong><span>Approximate regions are converted into exact interfaces through an explicit adapter.</span></div>
+          <div><strong>Preservation is not reflection.</strong><span>A transformation may preserve accepted results while concealing failures in the reverse direction.</span></div>
+          <div><strong>Rejection must be useful.</strong><span>Witnesses identify the failed condition, source evidence, and unresolved obligation.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="wrap demo-grid">
+        <div>
+          <p class="eyebrow">Interactive diagnostic demo</p>
+          <h2>A failing check should explain itself</h2>
+          <p>This lightweight browser demonstration illustrates a timed certificate boundary. It is not the production Rocq or OCaml verifier. It shows the same fail-closed design discipline: the check recomputes the deadline, refuses an out-of-window rupture time, and returns a concrete witness.</p>
+
+          <div class="demo-controls" aria-label="Diagnostic scenarios">
+            <button class="demo-button active" type="button" data-scenario="violation">Run violating case</button>
+            <button class="demo-button" type="button" data-scenario="valid">Run valid case</button>
+          </div>
+
+          <div class="demo-rule">
+            <strong>Required condition</strong>
+            <code>origin &lt; rupture_time &lt; origin + horizon</code>
+          </div>
+        </div>
+
+        <div class="terminal" aria-label="Interactive verifier transcript">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <strong>certificate-check</strong>
+          </div>
+          <pre id="terminal-output" aria-live="polite"></pre>
         </div>
       </div>
     </section>
@@ -102,7 +315,7 @@
       <div class="wrap approach-grid">
         <div>
           <p class="eyebrow">Engineering contribution</p>
-          <h2>What I bring to an AI-enabled Systems Engineering team</h2>
+          <h2>What I bring to an AI-enabled systems engineering team</h2>
           <p>I approach AI adoption as a governance and software-design problem, not simply a prompting problem. The goal is useful acceleration with a visible chain of responsibility.</p>
         </div>
         <div class="capabilities">
@@ -116,6 +329,41 @@
       </div>
     </section>
 
+    <section class="section" id="writing">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Publications and proposals</p>
+          <h2>Research that connects mathematical structure to engineering judgement</h2>
+          <p>The written programme develops the same boundary problem at several levels: observation and factorisation, finite obstruction certificates, AI closure authority, and the philosophical status of exactness in implemented systems.</p>
+        </div>
+
+        <div class="writing-grid">
+          <article class="writing-card featured-writing">
+            <div class="writing-meta"><span>Journal manuscript</span><span>Under review</span></div>
+            <h3>Admissibility and Warrant Debt: Structural Limits on Optimisation in Artificial Intelligence</h3>
+            <p>Argues that a recurring class of AI failures arises before optimisation: the observation regime may fail to preserve the distinctions required by the predicate the system is asked to decide. It develops the factorisation obligation, a finite obstruction example, certificate architecture, and a separation between productive search and closure authority.</p>
+            <p class="writing-status">Manuscript under review. Public supporting artefacts: <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">CycleDebt</a> and the <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility Library</a>.</p>
+          </article>
+
+          <article class="writing-card">
+            <div class="writing-meta"><span>Philosophy &amp; Technology</span><span>Under review</span></div>
+            <h3>Exactness Is a Boundary Achievement: Whitehead, Formal Systems, and Placed Concreteness</h3>
+            <p>Reconstructs Whitehead’s account of fabricated exactness and recasts it as a discipline for formal and computational systems: exact claims remain conditional on the boundaries, observation maps, and application warrants through which they are placed.</p>
+            <p class="writing-status">Research article under review. The public mechanisation supplies the internally checkable admissibility obligation while preserving the paper’s distinction between formal admissibility and wider application warrant.</p>
+          </article>
+
+          <article class="writing-card">
+            <div class="writing-meta"><span>Technical proposal</span><time datetime="2026-04-17">17 April 2026</time></div>
+            <h3>Structural Admissibility via Interval-Certified Projection under Partial Observability</h3>
+            <p>A DARPA CLARA TA1 proposal for a verified AR-constrained inference architecture combining temporal graph learning, certified projection, and discrete adjudication for high-assurance distributed systems.</p>
+            <p class="writing-status">Submitted concept and technical-management volume. The restricted proposal document is not published here.</p>
+          </article>
+        </div>
+
+        <p class="publication-note">Earlier publications include “Marcuse and Eternal Objects” in <em>Process Studies</em> and “Propositions in Corporations” in <em>Applied Process Thought II</em> (2008).</p>
+      </div>
+    </section>
+
     <section class="section" id="experience">
       <div class="wrap experience-grid">
         <div>
@@ -123,29 +371,62 @@
           <h2>Technical construction backed by institutional leadership</h2>
         </div>
         <div class="timeline">
-          <article><time>2023-Present</time><h3>Independent Researcher, Formal Methods and AI Systems</h3><p>Design and implementation of Python, OCaml, and Rocq assurance systems, specifications, verifiers, tests, demonstrations, and technical documentation.</p></article>
-          <article><time>2015-2016</time><h3>Education Developer, University of Alberta</h3><p>Programme design, learning outcomes, assessment, peer review, workshops, educational technology, and cross-faculty consultation.</p></article>
-          <article><time>2002-2013</time><h3>Purdue University Fort Wayne</h3><p>Tenured Associate Professor of Philosophy and Director of General Education in a concurrent appointment. Led university-wide programme and assessment work across autonomous expert groups.</p></article>
+          <article>
+            <time>2023–Present</time>
+            <h3>Independent Researcher, Formal Methods and AI Systems</h3>
+            <p>Design and implementation of Python, OCaml, and Rocq assurance systems, specifications, verifiers, tests, demonstrations, and technical documentation.</p>
+          </article>
+          <article>
+            <time>2015–2016</time>
+            <h3>Education Developer, University of Alberta</h3>
+            <p>Programme design, learning outcomes, assessment, peer review, workshops, educational technology, and cross-faculty consultation.</p>
+          </article>
+          <article>
+            <time>2002–2013</time>
+            <h3>Purdue University Fort Wayne</h3>
+            <p>Tenured Associate Professor of Philosophy and Director of General Education in a concurrent appointment. Led university-wide programme and assessment work across autonomous expert groups.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section programme">
       <div class="wrap programme-grid">
-        <div><p class="eyebrow">Research programme</p><h2>Pattern, rupture, and warrant</h2></div>
-        <div><p>The wider programme asks how organised patterns persist, fail, and become reconfigured across changing material, relational, and symbolic media, and how formal systems can state exactly what a passage has preserved without pretending that it has preserved everything that matters.</p><p>For engineering, this becomes a practical discipline: keep the conclusion, its provenance, its verification conditions, and its unresolved obligations together.</p></div>
+        <div>
+          <p class="eyebrow">Theoretical origins</p>
+          <h2>Pattern, rupture, and warrant</h2>
+        </div>
+        <div>
+          <p>The wider programme begins from Whitehead’s philosophy of organism: stable objects are achievements of organised process, not inert points that carry their identity without qualification. Region Connection Calculus supplies a disciplined vocabulary for connection, overlap, boundary, and inclusion without requiring point-based geometry as the primary language.</p>
+          <p>That philosophical origin does not substitute for proof. It motivates an engineering discipline: geometric regions and supports may be approximate, representation-dependent, and physically interpreted, while algebraic interfaces, incidence relations, restriction maps, and compatibility conditions must be constructed and checked exactly.</p>
+          <p>For systems assurance, the result is practical. Keep the conclusion, its provenance, its verification conditions, the boundary transformation that produced it, and its unresolved warrant obligations together.</p>
+        </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="wrap contact-grid">
-        <div><p class="eyebrow">Contact</p><h2>Discuss a rigorous AI-assisted engineering workflow</h2><p>Available for full-time roles and technical research collaborations. Open to relocation with employer-supported relocation.</p></div>
-        <div class="contact-actions"><a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a><a href="tel:+17809383102">780-938-3102</a><a href="https://github.com/dhwcmoore">github.com/dhwcmoore</a></div>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Discuss a rigorous AI-assisted engineering workflow</h2>
+          <p>Available for full-time roles and technical research collaborations. Open to relocation with employer-supported relocation.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
+          <a href="tel:+17809383102">780-938-3102</a>
+          <a href="https://github.com/dhwcmoore">github.com/dhwcmoore</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="wrap"><span>© 2026 Duston Moore</span><span>Independent researcher · Edmonton, Canada</span></div></footer>
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Duston Moore</span>
+      <span>Independent researcher · Edmonton, Canada</span>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
