@@ -1,7 +1,12 @@
 const evidencePipelineSection = document.querySelector('section[aria-label="Evidence pipeline"]');
 if (evidencePipelineSection) {
   evidencePipelineSection.classList.add('architecture-section');
-  evidencePipelineSection.style.background = '#051522';
+}
+
+const cvButton = document.querySelector('.actions .button.primary');
+if (cvButton) {
+  cvButton.textContent = 'View CV';
+  cvButton.href = 'cv.html';
 }
 
 const menuButton = document.querySelector('.nav-toggle');
