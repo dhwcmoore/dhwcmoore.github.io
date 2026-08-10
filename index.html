@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Duston Moore | Formal Verification and Auditable AI Systems</title>
-  <meta name="description" content="Portfolio of Duston Moore: formal verification, independent software checks, proof-carrying certificates, and auditable AI-assisted engineering.">
+  <title>Duston Moore | Formal Verification and Proof-Carrying Evidence</title>
+  <meta name="description" content="Portfolio of Duston Moore: formal verification, proof-carrying evidence, independent software checks, and auditable AI and data systems.">
   <meta name="theme-color" content="#081a2c">
-  <meta property="og:title" content="Duston Moore | Formal Verification and Auditable AI Systems">
-  <meta property="og:description" content="Software and machine-checked mathematics that explain why an automated result was accepted or rejected.">
+  <meta property="og:title" content="Duston Moore | Formal Verification and Proof-Carrying Evidence">
+  <meta property="og:description" content="Independent verification for high-stakes data and AI systems: what the evidence supports, what is missing, and why a result may be accepted, rejected, or deferred.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -35,14 +35,14 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Formal verification · Python and OCaml tools · auditable AI</p>
+          <p class="eyebrow">Formal verification · proof-carrying evidence · auditable AI and data systems</p>
           <h1>Let AI propose. <span>Let independent checks decide.</span></h1>
-          <p class="lead">I design software and machine-checked mathematics for systems that must explain why a result was accepted or rejected. My work separates the program that proposes an answer from the program that verifies it.</p>
+          <p class="lead">I build independent verification for systems in which data or automated decisions have consequences. The software records what evidence supports a result, what is missing or contradictory, and why the result may be accepted, rejected, or deferred.</p>
           <div class="actions">
-            <a class="button primary" href="Duston_Moore_Telesat_CV.pdf">Download CV</a>
+            <a class="button primary" href="mailto:dhwcmoore@gmail.com?subject=CV%20request">Request CV</a>
             <a class="button secondary" href="https://github.com/dhwcmoore">View GitHub</a>
           </div>
-          <p class="availability"><strong>Location:</strong> Edmonton, Canada. <strong>Relocation:</strong> willing to relocate for the right role when relocation is employer-funded.</p>
+          <p class="availability"><strong>Location:</strong> Edmonton, Canada. <strong>Open to:</strong> Vancouver relocation and remote collaboration.</p>
         </div>
 
         <div class="assurance-card" aria-label="Assurance workflow">
@@ -80,6 +80,47 @@
       </div>
     </section>
 
+    <section class="section alt" aria-label="Evidence pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Where the verification layer sits</p>
+          <h2>Establish the evidence before downstream analysis begins</h2>
+          <p>The verification layer establishes what evidence actually entered the downstream system and what that evidence warrants before analysis, fusion, optimisation, or AI interpretation begins.</p>
+        </div>
+        <div class="architecture-board" aria-label="Proof-carrying evidence pipeline">
+          <div class="arch-node source">
+            <span class="arch-kicker">Source evidence</span>
+            <strong>Sensor, document, telemetry, or operational data</strong>
+            <small>Finite evidence with declared origin, identity, and completion conditions</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node verify">
+            <span class="arch-kicker">Proof-carrying check</span>
+            <strong>Independent evidence verification</strong>
+            <small>Establishes what is exact, missing, contradictory, or inadmissible</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node adapter">
+            <span class="arch-kicker">Governed ingestion</span>
+            <strong>Validated evidence enters the application</strong>
+            <small>Bindings preserve the evidence bundle, trust context, and decision conditions</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node propose">
+            <span class="arch-kicker">Analysis or fusion</span>
+            <strong>AI, analytics, optimisation, or operator workflow</strong>
+            <small>Downstream conclusions remain distinguishable from upstream evidence quality</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node decide">
+            <span class="arch-kicker">Decision</span>
+            <strong>Accept, reject, defer, or request more evidence</strong>
+            <small>The result retains the reason and the conditions under which it was warranted</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="work">
       <div class="wrap">
         <div class="section-head">
@@ -89,6 +130,19 @@
         </div>
 
         <div class="project-grid">
+          <article class="project featured">
+            <div class="tags"><span>Python</span><span>Rocq</span><span>Certificates</span><span>Independent verifier</span></div>
+            <h3>Proof-Carrying Stream Exactness</h3>
+            <p>Verifies what a receiver is entitled to claim about a finite data transfer. It distinguishes complete and exact evidence from missing evidence, concrete contradictions, and evidence that is not admissible for assessment. A generator produces a portable certificate; an independent verifier checks the claim against the bound evidence and trust context.</p>
+            <ul>
+              <li>Four explicit results: exact, underdetermined, obstructed, or inadmissible rather than pass/fail</li>
+              <li>Certificates bound to the evidence bundle, transfer subject, assurance level, and trust context</li>
+              <li>Concrete witnesses for missing, conflicting, out-of-range, malformed, or otherwise inadmissible evidence</li>
+            </ul>
+            <p class="writing-status">Current development repository is private while the certificate and differential-verification work is being completed. Technical material is available on request.</p>
+            <a href="mailto:dhwcmoore@gmail.com?subject=Proof-Carrying%20Stream%20Exactness">Ask about the project <span aria-hidden="true">↗</span></a>
+          </article>
+
           <article class="project featured">
             <div class="tags"><span>Python</span><span>Certificates</span><span>Verifier</span></div>
             <h3>Proof-Carrying Exactness</h3>
@@ -179,7 +233,7 @@
                 <p class="status private">Private research prototype</p>
                 <h3>VeriBound-FCE</h3>
               </div>
-              <span class="maturity">TRL 3</span>
+              <span class="maturity">Research prototype</span>
             </div>
             <p class="case-summary">A checker for a proposed sensor-fusion result. VeriBound does not create tracks or combine reports. It checks whether another system’s proposed combination is consistent and supported by evidence.</p>
             <div class="case-columns">
@@ -408,8 +462,8 @@
       <div class="wrap contact-grid">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Discuss formal verification or auditable AI systems</h2>
-          <p>Available for full-time roles and technical research collaborations. Based in Edmonton and willing to relocate when the employer funds the move.</p>
+          <h2>Discuss formal verification, proof-carrying evidence, or auditable AI systems</h2>
+          <p>Available for full-time roles and technical research collaborations. Based in Edmonton, open to Vancouver relocation and remote collaboration.</p>
         </div>
         <div class="contact-actions">
           <a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
