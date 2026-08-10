@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duston Moore, PhD | CV</title>
+  <meta name="description" content="CV of Duston Moore: formal methods, verification, proof-carrying evidence, and auditable systems.">
+  <style>
+    :root{--navy:#173a70;--ink:#2d3035;--muted:#60646a;--line:#173a70;--paper:#fff;--bg:#edf2f6}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.38 Arial,Helvetica,sans-serif}
+    a{color:#173a70}
+    .toolbar{position:sticky;top:0;z-index:5;background:#081a2c;color:#fff;padding:12px 20px;display:flex;justify-content:center;gap:12px;box-shadow:0 4px 18px rgba(0,0,0,.14)}
+    .toolbar a,.toolbar button{border:1px solid rgba(255,255,255,.35);border-radius:8px;background:transparent;color:#fff;text-decoration:none;padding:9px 13px;font:inherit;cursor:pointer}
+    .toolbar .primary{background:#62c5d6;color:#082039;border-color:#62c5d6;font-weight:700}
+    main{width:min(920px,calc(100% - 30px));margin:28px auto 50px;background:var(--paper);padding:54px 58px 64px;box-shadow:0 16px 48px rgba(8,26,44,.14)}
+    header{text-align:center;border-bottom:2px solid var(--line);padding-bottom:28px;margin-bottom:26px}
+    h1{margin:0;color:#193a70;font-size:31px;letter-spacing:.01em}
+    .location{margin:5px 0 2px;color:#50555b}
+    .contact{margin:0;color:#50555b}
+    section{margin-top:28px}
+    h2{font-size:17px;letter-spacing:.045em;color:#193a70;margin:0 0 14px;border-bottom:1.5px solid var(--line);padding-bottom:7px;text-transform:uppercase}
+    p{margin:0 0 9px}
+    .skills p{margin:0 0 7px}
+    .skills strong,.project h3{color:#193a70}
+    .project{margin:0 0 20px}
+    .project h3,.job h3{font-size:17px;margin:0 0 2px}
+    .meta{font-style:italic;color:var(--muted);margin-bottom:8px}
+    ul{margin:5px 0 0 20px;padding:0}
+    li{margin:0 0 5px;padding-left:2px}
+    .job{margin-bottom:20px}
+    .edu-title{font-weight:700;font-size:17px;margin-bottom:1px}
+    .public-work p{margin-bottom:5px}
+    .question{font-style:normal}
+    @media(max-width:700px){main{padding:34px 25px}h1{font-size:27px}.toolbar{justify-content:flex-start;overflow:auto}}
+    @media print{
+      @page{size:Letter;margin:.48in .58in}
+      body{background:#fff;font-size:10.7pt;line-height:1.30}
+      .toolbar{display:none}
+      main{width:auto;margin:0;padding:0;box-shadow:none}
+      header{padding-bottom:14px;margin-bottom:14px}
+      h1{font-size:22pt}
+      section{margin-top:16px}
+      h2{font-size:11.5pt;margin-bottom:8px;padding-bottom:4px}
+      .project,.job{margin-bottom:11px;break-inside:avoid}
+      .project h3,.job h3,.edu-title{font-size:11.5pt}
+      p{margin-bottom:5px}
+      li{margin-bottom:2px}
+      a{color:inherit;text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar" aria-label="CV controls">
+    <a href="index.html">← Back to portfolio</a>
+    <button class="primary" type="button" onclick="window.print()">Print / save as PDF</button>
+  </div>
+  <main>
+    <header>
+      <h1>DUSTON MOORE, PhD</h1>
+      <p class="location">Edmonton, Alberta</p>
+      <p class="contact"><a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a> &nbsp;|&nbsp; <a href="https://github.com/dhwcmoore">github.com/dhwcmoore</a> &nbsp;|&nbsp; <a href="https://dhwcmoore.github.io/">dhwcmoore.github.io</a></p>
+    </header>
+
+    <section>
+      <h2>Professional Profile</h2>
+      <p>Formal methods and verification researcher developing independent assurance systems for distributed data, automated reasoning, sensor evidence, and consequential computational pipelines.</p>
+      <p>I build systems in which a program may propose a result but is not trusted to certify its own work. My projects combine machine-checked mathematics in Rocq, executable OCaml and Python verification, proof-carrying evidence, explicit failure witnesses, and reproducible test suites.</p>
+      <p class="question">Current work concentrates on a practical question: what is a computational result actually entitled to claim, given the evidence, representation, assumptions, and trust context available to it?</p>
+      <p>Open to formal verification, assurance, systems research, auditable AI, distributed-systems, and verification-architecture roles.</p>
+    </section>
+
+    <section class="skills">
+      <h2>Technical Areas</h2>
+      <p><strong>Formal verification:</strong> Rocq/Coq, constructive proof, formal specification, proof-carrying evidence, exact arithmetic</p>
+      <p><strong>Verification architecture:</strong> independent verifiers, certificates, trust boundaries, admissibility checks, diagnostic witnesses</p>
+      <p><strong>Distributed and data systems:</strong> finite stream verification, cyclic consistency, sensor-fusion assurance, runtime monitoring, evidence provenance</p>
+      <p><strong>Programming and tools:</strong> Python, OCaml, C/C++, Linux, Git, HELICS</p>
+      <p><strong>Mathematical methods:</strong> linear algebra, obstruction methods, exactness, finite discrete structures, representation and quotient analysis</p>
+    </section>
+
+    <section>
+      <h2>Selected Engineering and Verification Projects</h2>
+      <div class="project">
+        <h3>Proof-Carrying Stream Exactness</h3>
+        <p class="meta">Creator and Lead Developer | Python, Rocq</p>
+        <p>Developing an independent verification system for finite data transfers.</p>
+        <ul>
+          <li>Distinguishes EXACT, UNDERDETERMINED, OBSTRUCTED, and INADMISSIBLE rather than collapsing materially different failures into pass/fail.</li>
+          <li>Binds certificates to the evidence bundle, transfer identity, assurance level, and trust context.</li>
+          <li>Uses a certificate generator and a separately implemented verifier so that certificate production does not constitute its own authority.</li>
+          <li>Detects missing, conflicting, out-of-range, malformed, unauthorised, or insufficient evidence.</li>
+          <li>Uses differential campaigns to compare executable assessment with independent certificate verification over derived evidence lattices.</li>
+          <li>Rocq formal core and executable implementation are deliberately kept as distinct assurance layers; formal-executable correspondence is not claimed until proved.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Proof-Carrying Exactness</h3>
+        <p class="meta">Creator | Python, Rocq</p>
+        <p>Designed a certificate architecture for finite exact problems.</p>
+        <ul>
+          <li>Uses explicit evidence to distinguish exact, underdetermined, obstructed, and inadmissible cases.</li>
+          <li>Implements deterministic certificates and independent verification.</li>
+          <li>Uses exact arithmetic where approximation would otherwise obscure the status of a claim.</li>
+          <li>Rejects altered or unsupported evidence rather than silently repairing it.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>VeriBound-FCE</h3>
+        <p class="meta">Private Research Prototype | Python, OCaml, Rocq</p>
+        <p>Developed an assurance layer for proposed sensor-fusion results.</p>
+        <ul>
+          <li>Recomputes numerical claims rather than trusting upstream output.</li>
+          <li>Checks independently generated evidence and rejects altered certificates.</li>
+          <li>Detects global inconsistencies that can remain invisible when reports are examined only pairwise.</li>
+          <li>Designed to sit beside an existing tracking or fusion system rather than replace it.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Structural Admissibility Library</h3>
+        <p class="meta">Creator | Rocq, OCaml</p>
+        <p>Developed a machine-checked framework for determining whether an observation preserves enough information to support a specified claim.</p>
+        <ul>
+          <li>Forty-one Rocq source modules.</li>
+          <li>Applications explored in distributed consensus, GPU execution, physical sensing, and runtime monitoring.</li>
+          <li>Formalises a central engineering alternative: when an observation cannot determine the desired claim, either weaken the claim or improve the observation.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Regional Obstruction Calculus and CycleDebt</h3>
+        <p class="meta">Creator | Rocq, OCaml, Python, HELICS</p>
+        <p>Developed formal and executable methods for detecting global inconsistency hidden by locally acceptable observations.</p>
+        <ul>
+          <li>Machine-checked constructive results in Rocq.</li>
+          <li>Executable OCaml and Python verification paths.</li>
+          <li>Concrete separating witnesses when local evidence cannot be assembled into a valid global result.</li>
+          <li>CycleDebt provides a runnable cyclic-system diagnostic using exact integer and rational arithmetic.</li>
+          <li>HELICS co-simulation demonstrates application to distributed infrastructure models.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Lift-Descent Exactness</h3>
+        <p class="meta">Creator | Rocq</p>
+        <p>Developed a constructive exact-linear-algebra framework separating two fundamentally different failures: no admissible solution exists, or several admissible solutions remain and disagree about the requested value.</p>
+        <p>The development provides constructive obstruction and ambiguity witnesses and analyses which conclusions survive changes of representation.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <h3>Independent Formal Methods Researcher and Systems Architect</h3>
+        <p class="meta">Edmonton, Alberta | Current</p>
+        <p>Design and implement formal-verification and assurance architectures for data-intensive and automated systems.</p>
+        <ul>
+          <li>Develop Rocq theorem libraries and executable Python/OCaml verification systems.</li>
+          <li>Design proof-carrying certificate formats and independent verification boundaries.</li>
+          <li>Construct adversarial and differential test programmes to expose disagreements between classifiers and verifiers.</li>
+          <li>Develop methods for preserving evidence provenance, unresolved obligations, assumptions, and failure witnesses through computational pipelines.</li>
+          <li>Write research papers connecting formal verification, structural admissibility, exactness, and the limits of what computational evidence warrants.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Associate Professor of Philosophy / Director of General Education Assessment</h3>
+        <p class="meta">Purdue University Fort Wayne</p>
+        <ul>
+          <li>Taught, researched, and participated in university governance and programme assessment.</li>
+          <li>Directed institution-wide assessment work involving requirements, evidence, reporting, and quality assurance.</li>
+          <li>Developed research in philosophy, logic-related structural questions, and ontology that subsequently led to a programme of computational formalisation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p class="edu-title">PhD, Philosophy</p>
+      <p class="meta">KU Leuven, Belgium</p>
+      <p>Doctoral research in philosophy, followed by an independent research programme increasingly focused on mathematical structure, formal specification, and machine-checked verification.</p>
+    </section>
+
+    <section class="public-work">
+      <h2>Public Work</h2>
+      <p>Public repositories, proofs, executable verifiers, demonstrations, and project documentation:</p>
+      <p><a href="https://github.com/dhwcmoore">github.com/dhwcmoore</a></p>
+      <p>Portfolio and project introductions:</p>
+      <p><a href="https://dhwcmoore.github.io/">dhwcmoore.github.io</a></p>
+    </section>
+  </main>
+</body>
+</html>
