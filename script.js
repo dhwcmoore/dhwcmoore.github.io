@@ -1,3 +1,8 @@
+const evidencePipelineSection = document.querySelector('section[aria-label="Evidence pipeline"]');
+if (evidencePipelineSection) {
+  evidencePipelineSection.classList.add('architecture-section');
+}
+
 const menuButton = document.querySelector('.nav-toggle');
 const nav = document.querySelector('#site-nav');
 
