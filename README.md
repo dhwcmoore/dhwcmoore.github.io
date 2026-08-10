@@ -4,11 +4,22 @@ Public portfolio for work on formal verification, proof-carrying evidence, struc
 
 The organising principle is simple:
 
-> Approximate evidence does not require vague claims.
+> Imperfect evidence does not require imprecise inference.
 
-A tolerance can be stated. Missing evidence can be identified. A transformation can be recorded. Once the relevant conditions are explicit, a nominated claim can be checked against them rather than accepted because it is plausible, locally consistent, or "close enough".
+Exactness here does **not** mean perfect measurement, complete models, deterministic environments, or exhaustive knowledge. It means stating exactly what a nominated claim is allowed to follow from the evidence, uncertainty, transformations, and assumptions actually declared.
 
-The portfolio links the public proof developments, executable verifiers, applied prototypes, and research programme behind that principle.
+A tolerance can be stated. Missing evidence can be identified. A transformation can be recorded. Once those conditions are explicit, a claim can be checked against them rather than accepted because it is plausible, locally consistent, statistically convenient, or merely "close enough".
+
+The public work separates several obligations that are often collapsed together:
+
+- **Structural admissibility:** can the available observation possibly determine the claim?
+- **Lift-descent exactness:** does a compatible state exist, and if so, is the nominated claim uniquely determined?
+- **Regional obstruction:** do locally compatible pieces actually assemble into a coherent whole?
+- **Claim-relative exactness:** can a nominated claim remain determined even when the complete global state cannot be reconstructed?
+- **Proof-carrying exactness:** can a result travel with evidence that an independent verifier can check?
+- **Proof-carrying stream exactness:** what exactly is a receiver entitled to claim about a finite transfer?
+
+The practical rule is equally simple: state the claim, preserve the evidence, declare the uncertainty, record every transformation, check the relevant obligation independently, and never strengthen the conclusion beyond what survives those steps.
 
 ## Site
 
