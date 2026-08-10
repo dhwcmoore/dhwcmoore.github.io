@@ -93,6 +93,7 @@ h1 span{color:var(--cyan)}
 .tags span{font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800;background:#e7f2f7;color:#1d6176;padding:5px 8px;border-radius:999px}
 .project h3{font-size:1.45rem;margin:20px 0 10px}
 .project p,.project li{color:var(--muted)}
+.project p strong{color:var(--ink)}
 .project ul{padding-left:20px;margin-bottom:24px}
 .project a{margin-top:auto;text-decoration:none;font-weight:800;color:#17618b}
 .project a:hover,.project a:focus-visible{text-decoration:underline}
@@ -132,6 +133,10 @@ h1 span{color:var(--cyan)}
 .architecture-principles>div{padding:18px;border:1px solid rgba(255,255,255,.13);border-radius:12px;background:rgba(255,255,255,.04)}
 .architecture-principles strong{display:block;color:var(--cyan);margin-bottom:8px}
 .architecture-principles span{display:block;color:#c4d4de;font-size:.88rem}
+#standard .architecture-principles{grid-template-columns:repeat(3,1fr)}
+#standard .architecture-principles>div{background:#fff;border:1px solid var(--line);box-shadow:0 8px 22px rgba(8,26,44,.045)}
+#standard .architecture-principles strong{color:#174a67}
+#standard .architecture-principles span{color:var(--muted)}
 
 .demo-section{background:#eaf2f6}
 .demo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
@@ -193,7 +198,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px}
   .architecture-board{grid-template-columns:1fr}
   .arch-arrow{transform:rotate(90deg);justify-self:center}
   .feedback-line{grid-column:auto;border:1px solid rgba(255,255,255,.16);border-left:3px solid #dfae50;border-radius:10px}
-  .architecture-principles{grid-template-columns:repeat(2,1fr)}
+  .architecture-principles,#standard .architecture-principles{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:850px){
@@ -218,7 +223,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px}
   .actions{flex-direction:column}
   .button{width:100%}
   .case-top{flex-direction:column}
-  .architecture-principles{grid-template-columns:1fr}
+  .architecture-principles,#standard .architecture-principles{grid-template-columns:1fr}
   footer .wrap{flex-direction:column}
 }
 
