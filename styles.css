@@ -78,6 +78,10 @@ h1 span{color:var(--cyan)}
 
 .section{padding:90px 0}
 .section.alt{background:var(--pale)}
+.section.alt[aria-label="Evidence pipeline"]{background:#0b2439;color:#fff}
+.section.alt[aria-label="Evidence pipeline"] .section-head>p:last-child{color:#d2e1ea}
+.section.alt[aria-label="Evidence pipeline"] .eyebrow{color:var(--cyan)}
+.section.alt[aria-label="Evidence pipeline"] .architecture-board{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.18)}
 .section-head{max-width:800px;margin-bottom:38px}
 .section h2,.contact h2{font-size:clamp(2rem,3.4vw,3.15rem);letter-spacing:-.035em;margin-bottom:18px}
 .section-head>p:last-child,.approach-grid>div>p:last-child{color:var(--muted);font-size:1.04rem}
