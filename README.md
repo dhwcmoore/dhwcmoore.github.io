@@ -1,14 +1,23 @@
-# Duston Moore Portfolio
+# Duston Moore | Formal Verification Portfolio
 
-Static, dependency-free portfolio prepared for GitHub Pages.
+Public portfolio for work on formal verification, proof-carrying evidence, structural admissibility, local-to-global obstruction, and claim-relative exactness.
 
-## Publish at `https://dhwcmoore.github.io`
+The organising principle is simple:
 
-1. Create a new **public** GitHub repository named exactly `dhwcmoore.github.io`.
-2. Copy the contents of this folder into the repository root.
-3. Commit and push to the `main` branch.
-4. In GitHub, open **Settings > Pages**.
-5. Under **Build and deployment**, select **Deploy from a branch**, then choose `main` and `/ (root)`.
-6. After GitHub finishes the deployment, use `https://dhwcmoore.github.io` as the portfolio URL.
+> Approximate evidence does not require vague claims.
 
-The included CV link expects `assets/Duston_Moore_Telesat_CV.pdf` to remain at that path.
+A tolerance can be stated. Missing evidence can be identified. A transformation can be recorded. Once the relevant conditions are explicit, a nominated claim can be checked against them rather than accepted because it is plausible, locally consistent, or "close enough".
+
+The portfolio links the public proof developments, executable verifiers, applied prototypes, and research programme behind that principle.
+
+## Site
+
+`https://dhwcmoore.github.io/`
+
+## Public GitHub work
+
+`https://github.com/dhwcmoore`
+
+## Contact
+
+`dhwcmoore@gmail.com`
