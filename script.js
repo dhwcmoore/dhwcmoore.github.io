@@ -1,6 +1,7 @@
 const evidencePipelineSection = document.querySelector('section[aria-label="Evidence pipeline"]');
 if (evidencePipelineSection) {
   evidencePipelineSection.classList.add('architecture-section');
+  evidencePipelineSection.style.background = '#051522';
 }
 
 const menuButton = document.querySelector('.nav-toggle');
