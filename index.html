@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Duston Moore | Exact Claims from Imperfect Evidence</title>
-  <meta name="description" content="Formal verification and proof-carrying evidence for deciding exactly what imperfect, incomplete, or conflicting data warrants.">
+  <meta name="description" content="Formal verification and proof-carrying evidence for deciding exactly what imperfect, incomplete, transformed, or conflicting data warrants.">
   <meta name="theme-color" content="#081a2c">
   <meta property="og:title" content="Duston Moore | Exact Claims from Imperfect Evidence">
-  <meta property="og:description" content="Formal verification for systems that must distinguish what imperfect evidence supports, what it does not support, and what remains unresolved.">
+  <meta property="og:description" content="Imperfect evidence does not require imprecise inference. Formal verification for stating exactly what the available evidence warrants, what it does not warrant, and why.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,6 +21,7 @@
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Primary navigation">
+        <a href="#standard">The standard</a>
         <a href="#work">Public work</a>
         <a href="#applied">Applied systems</a>
         <a href="#architecture">How it works</a>
@@ -36,8 +37,8 @@
       <div class="wrap hero-grid">
         <div>
           <p class="eyebrow">Formal verification · proof-carrying evidence · claim-relative exactness</p>
-          <h1>Approximate evidence. <span>Exact obligations.</span></h1>
-          <p class="lead">Reality need not be exact for an inference to be disciplined. A tolerance can be stated. Missing evidence can be named. A transformation can be recorded. Once those conditions are explicit, a nominated claim either follows under them or it does not. I build independent verification that makes that boundary checkable.</p>
+          <h1>Imperfect evidence. <span>Exact inference.</span></h1>
+          <p class="lead">Exactness is not a claim that reality is perfectly measured. It is an exact account of what follows from the measurement, model, tolerance, and evidence you actually have. Once those are stated, a nominated claim either follows under those conditions, fails under them, or remains unresolved. I build independent verification that makes that boundary inspectable.</p>
           <div class="actions">
             <a class="button primary" href="mailto:dhwcmoore@gmail.com?subject=CV%20request">Request CV</a>
             <a class="button secondary" href="https://github.com/dhwcmoore">View GitHub</a>
@@ -65,7 +66,7 @@
         <article>
           <span class="number">01</span>
           <h2>Approximation is not ambiguity</h2>
-          <p>"Close enough" is meaningful only after the tolerance and the claim have been specified. An interval, error bound, or probability distribution is imperfect evidence described precisely. Without the bound, "close enough" is not an engineering criterion.</p>
+          <p>"Close enough" has technical meaning only after the tolerance and the claim have been specified. An interval, error bound, or probability distribution is imperfect evidence described precisely. Without the bound, "close enough" is not an engineering criterion.</p>
         </article>
         <article>
           <span class="number">02</span>
@@ -80,12 +81,31 @@
       </div>
     </section>
 
-    <section class="section alt" aria-label="Evidence pipeline">
+    <section class="section alt" id="standard">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">The standard</p>
+          <h2>Exactness is about implication, not omniscience</h2>
+          <p>I do not assume perfect sensors, complete models, deterministic environments, infallible software, or exhaustive knowledge. I ask a narrower and answerable question: given the evidence and conditions actually declared, what conclusion is the system entitled to make? The limits are part of the result.</p>
+        </div>
+
+        <div class="architecture-principles">
+          <div><strong>If a tolerance matters, state it.</strong><span>A tolerance is a parameter of the claim. Leaving it unstated does not make the system practical; it leaves the criterion undefined.</span></div>
+          <div><strong>If the observation loses the distinction, stop.</strong><span>No amount of downstream intelligence can warrant different answers from inputs that are identical with respect to the information available.</span></div>
+          <div><strong>If the whole matters, check the whole.</strong><span>Pairwise agreement and local success entail a global result only when that implication has itself been established.</span></div>
+          <div><strong>If data are transformed, prove what survives.</strong><span>Compression, projection, aggregation, discretisation, and translation may preserve some conclusions and destroy others. Preservation must be stated; equivalence must be earned.</span></div>
+          <div><strong>If the generator says it is correct, that is still the generator speaking.</strong><span>Independent assurance requires an independently specified check, not a second assertion from the component whose result is under examination.</span></div>
+          <div><strong>If the evidence is insufficient, say insufficient.</strong><span>Underdetermination is not failure to make a decision. It is the correct decision when the evidence does not determine the nominated claim.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Evidence pipeline">
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">The discipline</p>
           <h2>Do not ask the evidence to support more than it contains</h2>
-          <p>The first task of verification is not to demand perfect data. It is to keep observation, declared uncertainty, transformation, and claim distinct. Once those are explicit, a checker can distinguish support from ambiguity, contradiction, missing evidence, and inadmissible evidence without disguising one as another.</p>
+          <p>Keep observation, declared uncertainty, transformation, and claim distinct. Then a verifier can separate support from ambiguity, contradiction, missing evidence, and inadmissible evidence. Collapsing those cases into one green or red light throws away information precisely where assurance is supposed to preserve it.</p>
         </div>
         <div class="architecture-board" aria-label="Proof-carrying evidence pipeline">
           <div class="arch-node source">
@@ -125,15 +145,15 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">Public code and proofs</p>
-          <h2>Each repository isolates one failure of inference</h2>
-          <p>A pass/fail result is useful only after the obligation being passed has been stated. These projects separate certificate validity, missing information, contradiction, ambiguity, representation loss, and local-to-global obstruction instead of collapsing them into one status light.</p>
+          <h2>One programme, several distinct obligations</h2>
+          <p>The repositories are not separate exercises in mathematical sophistication. Each isolates a place where a system can say more than its evidence warrants. Together they ask whether the evidence can determine the claim, whether compatible states exist, whether the claim is unique, whether local pieces form a whole, whether a representation change preserves the result, and whether the final verdict can be checked independently.</p>
         </div>
 
         <div class="project-grid">
           <article class="project featured">
             <div class="tags"><span>Python</span><span>Rocq</span><span>Certificates</span><span>Independent verifier</span></div>
             <h3>Proof-Carrying Stream Exactness</h3>
-            <p>A receiver should not claim that a finite stream was received exactly merely because bytes arrived. The claim also depends on transfer identity, completion, structural compatibility, admissibility, and the trust context under which the evidence is accepted. This project makes those obligations explicit and binds them to a portable certificate.</p>
+            <p><strong>Question:</strong> what is a receiver entitled to claim about a finite transfer? Bytes arriving is not enough. The claim also depends on transfer identity, completion, structural compatibility, admissibility, and the trust context under which the evidence is accepted.</p>
             <ul>
               <li>Four explicit results: exact, underdetermined, obstructed, or inadmissible rather than pass/fail</li>
               <li>Certificates bound to the evidence bundle, transfer subject, assurance level, and trust context</li>
@@ -146,7 +166,7 @@
           <article class="project featured">
             <div class="tags"><span>Python</span><span>Certificates</span><span>Verifier</span></div>
             <h3>Proof-Carrying Exactness</h3>
-            <p>A certificate is not made valid by the program that produced it. This repository separates candidate generation from verification and uses exact rational arithmetic so that the verdict does not depend on floating-point tolerance at the point where the formal claim is decided.</p>
+            <p><strong>Question:</strong> who checks the checker? A certificate is not made valid by the program that produced it. This repository separates candidate generation from verification and uses exact rational arithmetic at the point where the formal verdict is decided.</p>
             <ul>
               <li>Four explicit results: exact, underdetermined, obstructed, or inadmissible</li>
               <li>Repeatable certificate bytes and rejection of altered evidence</li>
@@ -158,7 +178,7 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>OCaml</span><span>Exact rational</span></div>
             <h3>Regional Obstruction Calculus</h3>
-            <p>Neighbouring pieces can agree wherever they meet and still fail to form one coherent whole. This repository makes the missing global obligation explicit and produces either a repair or a witness showing why no valid assembly exists under the declared conditions.</p>
+            <p><strong>Question:</strong> do locally compatible pieces actually form one coherent whole? Neighbouring pieces can agree wherever they meet and still fail globally. The development produces either a repair or a witness showing why valid assembly fails under the declared conditions.</p>
             <ul>
               <li>Concrete repairs or separating witnesses</li>
               <li>Rocq proofs with executable OCaml and Python verification paths</li>
@@ -170,7 +190,7 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>OCaml</span><span>Runtime monitoring</span></div>
             <h3>Structural Admissibility Library</h3>
-            <p>If an observation erases a distinction required by the claim, no later classifier can recover that distinction from the same observation. The library formalises this limit and distinguishes a modelling failure from an optimisation failure.</p>
+            <p><strong>Question:</strong> can the observation possibly determine the claim? If two relevant cases become identical in the available observation but require different answers, the problem precedes optimisation. No later classifier can reconstruct the missing distinction from the same input.</p>
             <ul>
               <li>Forty-one Rocq source modules with every assumption listed</li>
               <li>Case studies in distributed consensus, GPU execution, and physical sensing</li>
@@ -182,7 +202,7 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>Linear algebra</span><span>Exactness</span></div>
             <h3>Lift-Descent Exactness</h3>
-            <p>Existence and uniqueness are different obligations. Data may admit no compatible state, or several compatible states may remain while disagreeing on the claimed value. This development proves the distinction constructively and supplies witnesses for each failure.</p>
+            <p><strong>Question:</strong> is the problem impossible, or merely non-unique? Existence and determination are different obligations. Data may admit no compatible state, or several compatible states may remain while disagreeing on the nominated claim.</p>
             <ul>
               <li>Constructive classifications of exact, underdetermined, and obstructed cases</li>
               <li>Witnesses that identify either the obstruction or the remaining ambiguity</li>
@@ -194,7 +214,7 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>Cohomology</span><span>Local-to-global</span></div>
             <h3>Claim-Relative Exactness</h3>
-            <p>A global state may fail to exist while a nominated quotient claim remains determined. The project asks which part of a local-to-global obstruction is actually visible to the claim, rather than treating failure of the full state as automatic failure of every conclusion about it.</p>
+            <p><strong>Question:</strong> must failure to reconstruct the whole state defeat every claim about it? Not necessarily. A global state may fail to exist while a nominated quotient claim remains determined. This project isolates the part of a local-to-global obstruction that is actually visible to the claim.</p>
             <ul>
               <li>Extends the finite lift-descent theory to truncated cochain systems</li>
               <li>Separates global state realisability from claim-relative determination</li>
@@ -206,7 +226,7 @@
           <article class="project featured">
             <div class="tags"><span>Python</span><span>OCaml</span><span>Rocq</span><span>HELICS</span></div>
             <h3>CycleDebt</h3>
-            <p>Every local comparison around a cycle can look acceptable while the complete loop still fails the global condition. CycleDebt checks the loop itself and distinguishes a supported claim, a concrete conflict, and an unresolved cyclic obstruction.</p>
+            <p><strong>Question:</strong> can every local comparison pass while the loop still fails? Yes. CycleDebt checks the cyclic obligation itself and distinguishes a supported claim, a concrete conflict, and an unresolved cyclic obstruction.</p>
             <ul>
               <li>Three results: the data conflict, the global claim is supported, or a cyclic obstruction remains</li>
               <li>Independent verification with exact integer and rational arithmetic</li>
@@ -218,7 +238,7 @@
           <article class="project">
             <div class="tags"><span>Rocq</span><span>Finite</span><span>Discrete</span><span>Abelian</span></div>
             <h3>Finite Regional Stokes</h3>
-            <p>Local identities do not become global identities by inspection. This repository proves finite and discrete Stokes-type relations in a deliberately bounded setting and states explicitly where the result stops.</p>
+            <p><strong>Question:</strong> when do local identities justify a global identity? The answer is proved in a deliberately bounded finite setting. The repository also states where the result stops, because scope is part of correctness.</p>
             <ul>
               <li>Finite constructions that relate local data to a global result</li>
               <li>Regional identities checked by Rocq</li>
@@ -234,8 +254,8 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">Applied prototypes</p>
-          <h2>Applied systems begin where inference is easiest to overstate</h2>
-          <p>These prototypes test how independent checks can sit beside sensor, infrastructure, and automated decision systems. They do not replace domain models, and they do not claim deployment. Their purpose is narrower: make the assurance obligation explicit and refuse to report more than the evidence establishes.</p>
+          <h2>The point is not to replace approximation. It is to govern what approximation is allowed to imply.</h2>
+          <p>Real systems fuse noisy measurements, learn from incomplete observations, use thresholds, and trade accuracy against cost. None of that is an objection to exact reasoning. It is the reason the assumptions, transformations, and permitted conclusions have to be explicit.</p>
         </div>
 
         <div class="case-grid">
