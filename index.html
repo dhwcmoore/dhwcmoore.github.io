@@ -151,6 +151,19 @@
 
         <div class="project-grid">
           <article class="project featured">
+            <div class="tags"><span>Rocq</span><span>DO-333</span><span>Aerospace assurance</span><span>Traceability</span></div>
+            <h3>DO-333 Rocq Assurance Case Study</h3>
+            <p><strong>Question:</strong> when a machine-checked proof is offered as assurance evidence, exactly what does it establish, and what remains outside the proof? This public reconstruction revisits selected NASA/Rockwell Collins Flight Guidance System arguments and organises the evidence around DO-178C/DO-333 verification objectives without claiming certification credit.</p>
+            <ul>
+              <li>Reproduces the three source-reported requirement defects with machine-checked refutations, then proves the corrected requirements over their explicit domains</li>
+              <li>Constructively shows the HLR context is inhabited, audits declared dependencies against observed proof terms, and tests each HLR by removal</li>
+              <li>Publishes the theorem ladder, assumptions, discrepancies, traceability, evidence manifest, tool-trust boundary, non-claims, and completion report beside the proofs</li>
+            </ul>
+            <p class="writing-status">Released as <code>v1.0.0</code>. Coq 8.18.0 baseline; re-checked with <code>coqchk</code>. Independent case-study reconstruction, not a certification artefact.</p>
+            <a href="https://github.com/dhwcmoore/do333-rocq-assurance-case-study">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project featured">
             <div class="tags"><span>Python</span><span>Rocq</span><span>Certificates</span><span>Independent verifier</span></div>
             <h3>Proof-Carrying Stream Exactness</h3>
             <p><strong>Question:</strong> what is a receiver entitled to claim about a finite transfer? Bytes arriving is not enough. The claim also depends on transfer identity, completion, structural compatibility, admissibility, and the trust context under which the evidence is accepted.</p>
