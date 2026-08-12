@@ -1,6 +1,6 @@
 # Duston Moore | Formal Verification Portfolio
 
-Public portfolio for work on formal verification, proof-carrying evidence, structural admissibility, local-to-global obstruction, and claim-relative exactness.
+Public portfolio for work on formal verification, proof-carrying evidence, structural admissibility, local-to-global obstruction, claim-relative exactness, and inspectable assurance evidence.
 
 The organising principle is simple:
 
@@ -12,6 +12,7 @@ A tolerance can be stated. Missing evidence can be identified. A transformation 
 
 The public work separates several obligations that are often collapsed together:
 
+- **Assurance evidence:** when a machine-checked proof is offered as lifecycle evidence, what does it establish, what assumptions does it depend on, and what remains outside the proof? The public [DO-333 Rocq Assurance Case Study](https://github.com/dhwcmoore/do333-rocq-assurance-case-study) reconstructs selected NASA/Rockwell Collins Flight Guidance System arguments while keeping proof, evidence relevance, objective satisfaction, and certification credit distinct.
 - **Structural admissibility:** can the available observation possibly determine the claim?
 - **Lift-descent exactness:** does a compatible state exist, and if so, is the nominated claim uniquely determined?
 - **Regional obstruction:** do locally compatible pieces actually assemble into a coherent whole?
