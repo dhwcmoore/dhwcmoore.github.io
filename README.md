@@ -18,7 +18,8 @@ The public work separates several obligations that are often collapsed together:
 - **Regional obstruction:** do locally compatible pieces actually assemble into a coherent whole?
 - **Claim-relative exactness:** can a nominated claim remain determined even when the complete global state cannot be reconstructed?
 - **Proof-carrying exactness:** can a result travel with evidence that an independent verifier can check?
-- **Proof-carrying stream exactness:** what exactly is a receiver entitled to claim about a finite transfer?
+- **Proof-carrying audit warrants:** when changing evidence preserves, defeats, or leaves unresolved the continuing authority of an audit conclusion.
+- **Proof-carrying Byzantine succession:** when a distributed state is entitled to count as a continuation, and which explicit witness exposes replay, reordering, equivocation, fork, or defeated quorum assumptions.
 
 The practical rule is equally simple: state the claim, preserve the evidence, declare the uncertainty, record every transformation, check the relevant obligation independently, and never strengthen the conclusion beyond what survives those steps.
 
