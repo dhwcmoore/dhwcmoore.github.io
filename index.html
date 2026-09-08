@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Duston Moore | Exact Claims from Imperfect Evidence</title>
-  <meta name="description" content="Formal verification, Rocq/Coq, OCaml and Python for proof-carrying evidence, independent verification, structural admissibility, and auditable systems.">
+  <title>Duston Moore | Formal Methods for Trustworthy AI</title>
+  <meta name="description" content="Formal methods research in Rocq/Coq, OCaml and Python: machine-checked proofs, independent verifiers, proof-carrying evidence, and trustworthy AI assurance.">
   <meta name="theme-color" content="#081a2c">
-  <meta property="og:title" content="Duston Moore | Exact Claims from Imperfect Evidence">
-  <meta property="og:description" content="Formal verification and independent assurance for deciding exactly what imperfect, incomplete, transformed, or conflicting evidence warrants.">
+  <meta property="og:title" content="Duston Moore | Formal Methods for Trustworthy AI">
+  <meta property="og:description" content="Machine-checked proofs and executable assurance systems for AI and other consequential software.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,13 +21,13 @@
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Primary navigation">
-        <a href="#standard">The standard</a>
-        <a href="#work">Public work</a>
+        <a href="#about">Research profile</a>
+        <a href="#work">Selected research</a>
+        <a href="#architecture">Architecture</a>
         <a href="#applied">Applied systems</a>
-        <a href="#architecture">How it works</a>
-        <a href="#demo">Try the check</a>
         <a href="#writing">Writing</a>
-        <a href="#contact">Contact</a>
+        <a href="#experience">Experience</a>
+        <a href="cv.html">CV</a>
       </nav>
     </div>
   </header>
@@ -36,26 +36,26 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Formal verification · proof-carrying evidence · claim-relative exactness</p>
-          <h1>Imperfect evidence. <span>Exact inference.</span></h1>
-          <p class="lead">Exactness is not a claim that reality is perfectly measured. It is an exact account of what follows from the measurement, model, tolerance, and evidence you actually have. Once those are stated, a nominated claim either follows under those conditions, fails under them, or remains unresolved. I build independent verification that makes that boundary inspectable.</p>
+          <p class="eyebrow">Formal methods · Rocq/Coq · OCaml · trustworthy AI</p>
+          <h1>Machine-checked assurance for <span>trustworthy AI.</span></h1>
+          <p class="lead">I design formal specifications, Rocq proofs, extracted OCaml checkers, and Python verification tools for claims made by AI and other consequential software. The generator may propose a result; authority comes from an independent check with explicit assumptions, provenance, failure witnesses, and trust boundaries.</p>
           <div class="actions">
             <a class="button primary" href="cv.html">View CV</a>
-            <a class="button secondary" href="https://github.com/dhwcmoore">View GitHub</a>
+            <a class="button secondary" href="#work">See selected research</a>
           </div>
-          <p class="availability"><strong>Location:</strong> Edmonton, Canada. <strong>Open to:</strong> relocation with support and remote collaboration.</p>
+          <p class="availability"><strong>Based in:</strong> Edmonton, Canada. <strong>Open to:</strong> relocation to Paris with support, formal-methods research roles, and international research collaboration. <a href="https://github.com/dhwcmoore">GitHub ↗</a></p>
         </div>
 
         <div class="assurance-card" aria-label="Assurance workflow">
-          <p class="card-label">A claim earns authority in four steps</p>
+          <p class="card-label">Research pattern</p>
           <div class="pipeline">
-            <div><span>1</span><strong>State the claim</strong><small>say exactly what is asserted and under which conditions</small></div>
+            <div><span>1</span><strong>Scope the claim</strong><small>fix the proposition, evidence, policy, and non-claims</small></div>
             <i>↓</i>
-            <div><span>2</span><strong>Present the evidence</strong><small>record its source, uncertainty, identity, and transformations</small></div>
+            <div><span>2</span><strong>Formalise the obligation</strong><small>state the semantics and prove the kernel result in Rocq</small></div>
             <i>↓</i>
-            <div><span>3</span><strong>Check independently</strong><small>recompute the obligation without trusting the generator's verdict</small></div>
+            <div><span>3</span><strong>Build the checker</strong><small>connect executable OCaml or Python to independently checkable evidence</small></div>
             <i>↓</i>
-            <div><span>4</span><strong>Return the reason</strong><small>accept, reject, or defer with the condition that determined the result</small></div>
+            <div><span>4</span><strong>Audit the boundary</strong><small>publish assumptions, residual trust, tests, and the exact conclusion earned</small></div>
           </div>
         </div>
       </div>
@@ -65,18 +65,18 @@
       <div class="wrap three">
         <article>
           <span class="number">01</span>
-          <h2>Approximation is not ambiguity</h2>
-          <p>"Close enough" has technical meaning only after the tolerance and the claim have been specified. An interval, error bound, or probability distribution is imperfect evidence described precisely. Without the bound, "close enough" is not an engineering criterion.</p>
+          <h2>Machine-checked</h2>
+          <p>Rocq developments state the semantics and proof obligations explicitly. Builds include assumption inspection and independent kernel re-checking so that theorem scope and dependencies remain visible.</p>
         </article>
         <article>
           <span class="number">02</span>
-          <h2>Lost information stays lost</h2>
-          <p>If two admissible states produce the same observation but require different answers, no downstream model can determine which answer is warranted from that observation alone. Optimisation cannot recreate a distinction the input has erased.</p>
+          <h2>Executable</h2>
+          <p>Formal cores are connected to extracted or independently implemented OCaml and Python checkers, command-line tools, adversarial fixtures, and reproducible verification workflows.</p>
         </article>
         <article>
           <span class="number">03</span>
-          <h2>Local success is not global success</h2>
-          <p>Passing every local check establishes a global claim only when the global claim follows from those checks. Otherwise the global obligation remains unproved. Passing the checks you ran does not prove the check you omitted.</p>
+          <h2>Auditable</h2>
+          <p>Each project separates proved results, tested behaviour, external premises, open obligations, and non-claims. A formal core is useful only when its translation and trusted boundary are inspectable.</p>
         </article>
       </div>
     </section>
@@ -84,20 +84,20 @@
     <section class="section alt" id="about">
       <div class="wrap approach-grid">
         <div>
-          <p class="eyebrow">About</p>
-          <h2>From philosophy to formal assurance</h2>
-          <p>My route into formal methods began in philosophy. I earned a PhD at KU Leuven and later served as a tenured Associate Professor of Philosophy and Director of General Education at Purdue University Fort Wayne. That work centred on arguments, conceptual structure, evidence, and the conditions under which a conclusion is justified.</p>
-          <p>The engineering form of the same problem is concrete: what may this system conclude from these inputs, transformations, assumptions, and checks? I now answer that with executable artefacts: formal specifications, Rocq proofs, Python and OCaml verifiers, certificates, tests, traceability, and explicit failure witnesses. A conclusion should not outrun its premises; an assurance claim should not outrun its evidence.</p>
+          <p class="eyebrow">Research profile</p>
+          <h2>Formal methods research, built end to end</h2>
+          <p>I develop research programmes from the governing claim and threat model through formal semantics, machine-checked proof, implementation, extraction, testing, traceability, and release evidence. Current work focuses on proof-carrying AI audits, learned observation regimes, structural admissibility, and assurance architectures that prevent a generator from certifying its own output.</p>
+          <p>My route into formal methods began with a PhD in Philosophy at KU Leuven and a career as a tenured Associate Professor and Director of General Education. That background contributes disciplined argument, scientific writing, peer review, and cross-disciplinary programme leadership. The formal-methods record itself is demonstrated in the proofs, checkers, tests, and public artefacts below.</p>
         </div>
         <div>
           <p class="eyebrow">Working stack</p>
           <div class="capabilities">
-            <div><h3>Proof and specification</h3><p>Rocq/Coq 8.18, <code>coqchk</code>, constructive proof, formal specification</p></div>
-            <div><h3>Languages</h3><p>Python, OCaml, C/C++, shell scripting</p></div>
-            <div><h3>Engineering environment</h3><p>Linux/Ubuntu, Git/GitHub, Make, pytest, command-line tooling</p></div>
-            <div><h3>Verification architecture</h3><p>Proof-carrying certificates, independent verifiers, traceability, differential testing, runtime monitoring</p></div>
+            <div><h3>Proof and specification</h3><p>Rocq/Coq 8.18 and 9.x projects, constructive proof, inductive semantics, <code>Print Assumptions</code>, <code>coqchk</code></p></div>
+            <div><h3>Languages</h3><p>OCaml, Python, C/C++, shell scripting</p></div>
+            <div><h3>Engineering environment</h3><p>Linux, Git/GitHub, Make, Dune, opam, pytest, command-line tooling</p></div>
+            <div><h3>Verification architecture</h3><p>Coq extraction, proof-carrying certificates, independent verifiers, canonical encodings, replay, differential testing</p></div>
             <div><h3>Mathematical methods</h3><p>Exact rational arithmetic, finite linear algebra, discrete structures, quotient and local-to-global analysis</p></div>
-            <div><h3>Distributed and sensor systems</h3><p>HELICS co-simulation, finite-stream verification, cyclic consistency, sensor-fusion assurance</p></div>
+            <div><h3>AI and assurance</h3><p>Learned observation regimes, audit warrants, policy and context binding, provenance, trust boundaries, explicit non-claims</p></div>
           </div>
         </div>
       </div>
@@ -166,12 +166,25 @@
     <section class="section" id="work">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Public code and proofs</p>
-          <h2>One programme, several distinct obligations</h2>
-          <p>The repositories are not separate exercises in mathematical sophistication. Each isolates a place where a system can say more than its evidence warrants. Together they ask whether the evidence can determine the claim, whether compatible states exist, whether the claim is unique, whether local pieces form a whole, whether a representation change preserves the result, and whether the final verdict can be checked independently.</p>
+          <p class="eyebrow">Selected formal methods research</p>
+          <h2>Proofs, executable checkers, and explicit assurance boundaries</h2>
+          <p>The work below spans trustworthy AI, aerospace assurance, formal semantics, extracted verification, and exact finite mathematics. Each project publishes what is proved, what is merely tested, what remains trusted, and which stronger conclusions are not licensed by the artefact.</p>
         </div>
 
         <div class="project-grid">
+          <article class="project featured">
+            <div class="tags"><span>Rocq</span><span>OCaml</span><span>Trustworthy AI</span><span>Active research</span></div>
+            <h3>Proof-Carrying Fibre Witnesses</h3>
+            <p><strong>Question:</strong> can a learned observation interface support a declared target decision, or has it erased a distinction that the decision requires? An untrusted search process may propose a witness; the audit pipeline must establish its authority independently.</p>
+            <ul>
+              <li>Machine-checked kernel result connecting a validated fibre witness to target-relative inadmissibility</li>
+              <li>Typed campaign validation and capture/replay architecture with canonical manifests, authentication wiring, policy and context commitment, failure precedence, and fuel accounting</li>
+              <li>Current review build: 14 modules checked with <code>coqchk</code>, 71 closed assumption checks, and seven OCaml harnesses</li>
+            </ul>
+            <p class="writing-status">Phase 1 is active and remains open. Full pipeline completion, capture/replay correspondence, arbitrary-precision extraction, and verified cryptographic primitives are not claimed.</p>
+            <a href="mailto:dhwcmoore@gmail.com?subject=Proof-Carrying%20Fibre%20Witnesses%20review%20archive">Request the current review archive <span aria-hidden="true">↗</span></a>
+          </article>
+
           <article class="project featured">
             <div class="tags"><span>Rocq</span><span>DO-333</span><span>Aerospace assurance</span><span>Traceability</span></div>
             <h3>DO-333 Rocq Assurance Case Study</h3>
@@ -497,7 +510,7 @@
           <article>
             <time>2023–Present</time>
             <h3>Independent Researcher, Formal Methods and AI Systems</h3>
-            <p>Built Python and OCaml verification tools, Rocq proofs, specifications, automated tests, demonstrations, and technical documentation.</p>
+            <p>Define and execute formal-methods research programmes from governing claim and threat model through Rocq proof, OCaml/Python implementation, test harnesses, assumption audits, traceability, and release documentation.</p>
           </article>
           <article>
             <time>2015–2016</time>
@@ -531,11 +544,12 @@
       <div class="wrap contact-grid">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>If a claim matters, make its warrant inspectable</h2>
-          <p>Available for full-time roles and technical research collaborations in formal verification, proof-carrying evidence, reliable data systems, and auditable AI. Based in Edmonton and open to relocation with support or remote collaboration.</p>
+          <h2>Build the bridge from proof to working systems</h2>
+          <p>Available for full-time formal-methods research roles and technical collaborations in theorem proving, proof-carrying evidence, trustworthy AI, and auditable systems. Based in Edmonton and open to relocation to Paris with support.</p>
         </div>
         <div class="contact-actions">
           <a href="cv.html">View CV</a>
+          <a href="Duston_Moore_Formal_Methods_CV.pdf" download>Download CV (PDF)</a>
           <a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
           <a href="tel:+17809383102">780-938-3102</a>
           <a href="https://github.com/dhwcmoore">github.com/dhwcmoore</a>
@@ -547,7 +561,7 @@
   <footer>
     <div class="wrap">
       <span>© 2026 Duston Moore</span>
-      <span>Independent researcher · Edmonton, Canada</span>
+      <span>Formal methods researcher · Edmonton, Canada</span>
     </div>
   </footer>
 
