@@ -1,6 +1,6 @@
-# Duston Moore | Formal Verification Portfolio
+# Duston Moore | Formal Methods Research Portfolio
 
-Public portfolio for work on formal verification, proof-carrying evidence, structural admissibility, local-to-global obstruction, claim-relative exactness, and inspectable assurance evidence.
+Public portfolio for formal methods research in trustworthy AI and consequential software. The work combines Rocq/Coq proofs, OCaml and Python verification, proof-carrying evidence, structural admissibility, local-to-global obstruction, and explicit assurance boundaries.
 
 The organising principle is simple:
 
@@ -12,6 +12,7 @@ A tolerance can be stated. Missing evidence can be identified. A transformation 
 
 The public work separates several obligations that are often collapsed together:
 
+- **Proof-carrying fibre witnesses:** can an independently checked witness establish that a learned observation regime has erased a distinction required by a target predicate? This is active Phase 1 research; the current review artefact is available on request and does not claim full-pipeline completion.
 - **Assurance evidence:** when a machine-checked proof is offered as lifecycle evidence, what does it establish, what assumptions does it depend on, and what remains outside the proof? The public [DO-333 Rocq Assurance Case Study](https://github.com/dhwcmoore/do333-rocq-assurance-case-study) reconstructs selected NASA/Rockwell Collins Flight Guidance System arguments while keeping proof, evidence relevance, objective satisfaction, and certification credit distinct.
 - **Structural admissibility:** can the available observation possibly determine the claim?
 - **Lift-descent exactness:** does a compatible state exist, and if so, is the nominated claim uniquely determined?
@@ -26,6 +27,11 @@ The practical rule is equally simple: state the claim, preserve the evidence, de
 ## Site
 
 `https://dhwcmoore.github.io/`
+
+## CV
+
+- Web: `https://dhwcmoore.github.io/cv.html`
+- PDF: `https://dhwcmoore.github.io/Duston_Moore_Formal_Methods_CV.pdf`
 
 ## Public GitHub work
 
