@@ -168,6 +168,8 @@ h1 span{color:var(--cyan)}
 .writing-meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;text-transform:uppercase;letter-spacing:.08em;font-size:.66rem;color:#2b728d;font-weight:850}
 .writing-card h3{font-size:1.25rem;margin:20px 0 12px}
 .writing-card p{color:var(--muted)}
+.writing-card .manuscript-button{align-self:flex-start;margin:8px 0 20px;text-align:center}
+.writing-card .manuscript-button:hover,.writing-card .manuscript-button:focus-visible{background:#49b6c9;box-shadow:0 8px 20px rgba(46,124,195,.2)}
 .writing-status{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:.86rem}
 .publication-note{margin:28px 0 0;color:var(--muted)}
 
