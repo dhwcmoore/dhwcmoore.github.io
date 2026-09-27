@@ -1,6 +1,6 @@
-# Duston Moore | Formal Methods Research Portfolio
+# Duston Moore | Research Portfolio
 
-Public portfolio for formal methods research in trustworthy AI and consequential software. The work combines Rocq/Coq proofs, OCaml and Python verification, proof-carrying evidence, structural admissibility, local-to-global obstruction, and explicit assurance boundaries.
+Public portfolio spanning philosophy of science and technology, formal methods, measurement, AI, and the governance of evidence. Technical projects combine Rocq/Coq proofs, OCaml and Python verification, proof-carrying evidence, structural admissibility, and explicit assurance boundaries. Philosophical work examines exactness, abstraction, and application.
 
 The organising principle is simple:
 
@@ -12,7 +12,7 @@ A tolerance can be stated. Missing evidence can be identified. A transformation 
 
 The public work separates several obligations that are often collapsed together:
 
-- **Proof-carrying fibre witnesses:** can an independently checked witness establish that a learned observation regime has erased a distinction required by a target predicate? This is active Phase 1 research; the current review artefact is available on request and does not claim full-pipeline completion.
+- **Proof-carrying fibre witnesses:** can an independently checked witness establish that a learned observation regime has erased a distinction required by a target predicate? Review artefacts are available on request; each unit records its scope and remaining obligations.
 - **Assurance evidence:** when a machine-checked proof is offered as lifecycle evidence, what does it establish, what assumptions does it depend on, and what remains outside the proof? The public [DO-333 Rocq Assurance Case Study](https://github.com/dhwcmoore/do333-rocq-assurance-case-study) reconstructs selected NASA/Rockwell Collins Flight Guidance System arguments while keeping proof, evidence relevance, objective satisfaction, and certification credit distinct.
 - **Structural admissibility:** can the available observation possibly determine the claim?
 - **Lift-descent exactness:** does a compatible state exist, and if so, is the nominated claim uniquely determined?
@@ -27,6 +27,12 @@ The practical rule is equally simple: state the claim, preserve the evidence, de
 ## Site
 
 `https://dhwcmoore.github.io/`
+
+## Published article
+
+Moore, D. (2026). “Admissibility defines structural limits on optimisation in artificial intelligence.” *Discover Artificial Intelligence*, 6, article 1267. `https://doi.org/10.1007/s44163-026-02252-6`
+
+The publisher's version of record is also available at `Admissibility_Defines_Structural_Limits_Published.pdf`.
 
 ## CV
 

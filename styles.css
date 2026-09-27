@@ -59,6 +59,8 @@ h1 span{color:var(--cyan)}
 .primary{background:var(--cyan);color:#062239}
 .secondary{border:1px solid rgba(255,255,255,.35);color:#fff}
 .availability{font-size:.9rem;color:#c3d5e1}
+.latest-publication{max-width:740px;padding:13px 16px;border-left:3px solid var(--cyan);background:rgba(255,255,255,.075);border-radius:0 8px 8px 0;color:#e2eef3;font-size:.94rem}
+.latest-publication a{color:#fff;text-decoration-thickness:1px;text-underline-offset:3px}
 .assurance-card{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
 .card-label{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800;color:var(--cyan)}
 .pipeline{display:grid;gap:7px}
