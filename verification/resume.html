@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Duston Moore | Formal Verification CV</title>
-  <meta name="description" content="Formal verification CV for Duston Moore, with Rocq/Coq, OCaml, Python, executable verification, proof-carrying systems, and assurance architecture.">
+  <meta name="description" content="Formal verification CV for Duston Moore, with Rocq/Coq, SystemVerilog/SVA, Yosys/SMT, OCaml, Python, executable verification, proof-carrying systems, and assurance architecture.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="resume-body">
@@ -24,21 +24,34 @@
 
     <section>
       <h2>Technical Profile</h2>
-      <p>Formal verification specialist working in Rocq/Coq, OCaml and Python on machine-checked verification, proof-carrying systems, executable checkers and explicit assurance boundaries. I build formal specifications, prove kernel results, extract or implement small verification cores, connect them to testable command-line tooling, and document the assumptions and residual trust that remain outside the proof.</p>
-      <p>Current public work includes a DO-333-oriented assurance reconstruction, a structural-admissibility library with extracted OCaml monitoring components, proof-carrying audit-warrant verification, and a certificate architecture that separates untrusted generation from independent verification.</p>
+      <p>Formal verification specialist working across machine-checked proof, RTL formal verification, executable checking and assurance architecture. My current work combines Rocq/Coq, SystemVerilog/SVA, Yosys/SMT, OCaml and Python. I build formal specifications, prove kernel results, analyse counterexamples, extract or implement small verification cores, connect them to reproducible tooling, and document the assumptions and residual trust that remain outside the proof.</p>
+      <p>Current public work includes a security-critical DMA access-control fabric with inductive and bounded formal results, a DO-333-oriented assurance reconstruction, a structural-admissibility library with extracted OCaml monitoring components, proof-carrying audit-warrant verification, and a certificate architecture that separates untrusted generation from independent verification.</p>
     </section>
 
     <section class="skills-lines">
       <h2>Technical Skills</h2>
       <p><strong>Proof and verification:</strong> Rocq/Coq 8.18 and 9.x, constructive proof, inductive semantics, formal specification, proof-term inspection, dependency audits, <code>Print Assumptions</code>, <code>coqchk</code>, proof-carrying certificates.</p>
+      <p><strong>RTL formal verification:</strong> SystemVerilog, SVA, Yosys/SMT, bounded model checking, temporal induction, reachability covers, VCD counterexample analysis, finite-width configuration semantics and requirement-to-property traceability.</p>
       <p><strong>Languages and tooling:</strong> OCaml, Python, C/C++, Bash, Linux, Git/GitHub, Make, Dune, opam, pytest.</p>
       <p><strong>Verification architecture:</strong> Coq extraction, independent verifiers, typed certificates and witnesses, canonical encodings, replay, manifests, explicit failure precedence, fail-closed checking and trust-boundary documentation.</p>
       <p><strong>Mathematical methods:</strong> exact rational arithmetic, finite linear algebra, quotient and factorisation analysis, obstruction methods, discrete structures and local-to-global reasoning.</p>
-      <p><strong>Assurance and documentation:</strong> verification plans, theorem ladders, assumption registers, traceability, discrepancy logs, non-claims, completion criteria, reproducible builds and technical writing.</p>
+      <p><strong>Assurance and documentation:</strong> verification plans, theorem ladders, assumption registers, property matrices, traceability, discrepancy logs, non-claims, completion criteria, reproducible builds and technical writing.</p>
     </section>
 
     <section>
       <h2>Selected Verification Projects</h2>
+
+      <div class="resume-project">
+        <h3>Security-Critical DMA Access Control</h3>
+        <p class="meta">Creator · SystemVerilog · SVA · Yosys/SMT · Rocq · public CI-backed repository</p>
+        <ul>
+          <li>Designed and formally analysed a stateful DMA access-control fabric with CPU and DMA requesters, one protected region, programmable DMA authority, locking, reset, arbitration and one outstanding transaction.</li>
+          <li>Developed explicit security requirements, normative SVA properties and executable checkers. The forwarding-authorisation boundary is proved inductively for all steps under the declared model; registered memory-effect and configuration-admissibility properties are reported separately as bounded to depth 12.</li>
+          <li>Built three controlled defect campaigns covering authorisation bypass, stale/reset authority and finite-width address-range overflow. Each defective variant is formally detected with a preserved counterexample trace.</li>
+          <li>Built a machine-readable verification ledger, evidence audit, deterministic tool bootstrap and GitHub Actions release gate that distinguish proof strength, assumptions, requirements and open obligations.</li>
+        </ul>
+        <p><a href="https://github.com/dhwcmoore/formal-dma-access-control">github.com/dhwcmoore/formal-dma-access-control</a></p>
+      </div>
 
       <div class="resume-project">
         <h3>Proof-Carrying Exactness</h3>
@@ -70,7 +83,7 @@
         <ul>
           <li>Formalised structural admissibility as factorisation of a safety predicate through an observation map, including proofs that downstream post-processing cannot recover a distinction already erased by observation.</li>
           <li>Developed 41 Rocq source modules spanning factorisation, refinement, collapse, runtime monitoring and case studies in consensus, GPU memory observation and physical-system sensing.</li>
-          <li>Extracted verified monitor and certificate-checking functions to OCaml and connected monitor states to typed engineering actions.</li>
+          <li>Extracted verified monitor and certificate-checking functions to OCaml and connected monitor states to typed operational actions.</li>
           <li>Repository reports zero admitted lemmas and eight named, documented axioms rather than hiding background assumptions inside incomplete proofs.</li>
         </ul>
         <p><a href="https://github.com/dhwcmoore/structural-admissibility">github.com/dhwcmoore/structural-admissibility</a></p>
@@ -78,7 +91,7 @@
 
       <div class="resume-project">
         <h3>Proof-Carrying Audit Warrants</h3>
-        <p class="meta">Creator · Coq 8.18 · extracted OCaml · CLI · public v0.1.0 candidate</p>
+        <p class="meta">Creator · Coq 8.18 · extracted OCaml · CLI · public repository</p>
         <ul>
           <li>Built a claim-relative verifier for the continuing authority of audit evidence under declared policy and conditions.</li>
           <li>Formalised <code>WARRANTED</code>, <code>DEFEATED</code>, <code>UNDERDETERMINED</code> and <code>INADMISSIBLE</code> as logical verdicts rather than confidence scores.</li>
@@ -95,9 +108,9 @@
         <h3>Independent Researcher</h3>
         <p class="meta">Edmonton, Canada · 2023–present</p>
         <ul>
-          <li>Carry formal-methods projects from governing claim and threat boundary through specification, proof, executable checking, test harnesses, audit records and public release.</li>
+          <li>Carry formal-methods projects from governing claim and threat boundary through specification, proof, executable checking, test harnesses, adversarial defect campaigns, audit records, CI and public release.</li>
           <li>Design small trusted verification boundaries that preserve assumptions, provenance, failure witnesses and unresolved obligations.</li>
-          <li>Develop technical documentation for expert and cross-disciplinary review, including verification plans, proof inventories, trust boundaries, discrepancy logs and reproducibility instructions.</li>
+          <li>Develop technical documentation for expert and cross-disciplinary review, including verification plans, proof inventories, property matrices, trust boundaries, discrepancy logs and reproducibility instructions.</li>
         </ul>
       </div>
 
