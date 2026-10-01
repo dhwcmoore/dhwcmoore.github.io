@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Duston Moore | Formal Verification Specialist</title>
-  <meta name="description" content="Formal verification portfolio of Duston Moore: Rocq/Coq, OCaml, Python, machine-checked proof, proof-carrying systems, executable verification, and explicit assurance boundaries.">
+  <meta name="description" content="Formal verification portfolio of Duston Moore: Rocq/Coq, SystemVerilog/SVA, Yosys/SMT, OCaml, Python, machine-checked proof, proof-carrying systems, executable verification, and explicit assurance boundaries.">
   <meta name="theme-color" content="#07111d">
   <meta property="og:title" content="Duston Moore | Formal Verification Specialist">
-  <meta property="og:description" content="Machine-checked verification, proof-carrying systems, executable checkers, and high-assurance software architecture.">
+  <meta property="og:description" content="RTL formal verification, machine-checked proof, proof-carrying systems, executable checkers, and high-assurance software architecture.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,9 +34,9 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Formal verification · proof-carrying systems · assurance architecture</p>
+          <p class="eyebrow">Formal verification · RTL and proof-carrying systems · assurance architecture</p>
           <h1>Formal Verification <span>Specialist</span></h1>
-          <p class="lead">I build machine-checkable arguments about computational systems. My work combines Rocq/Coq proofs, executable OCaml and Python checkers, exact finite mathematics, reproducible verification pipelines, and explicit trust boundaries.</p>
+          <p class="lead">I build machine-checkable arguments about computational systems. My work combines Rocq/Coq proofs, SystemVerilog/SVA hardware properties, executable OCaml and Python checkers, exact finite mathematics, reproducible verification pipelines, and explicit trust boundaries.</p>
           <div class="actions">
             <a class="button primary" href="#projects">View verification projects</a>
             <a class="button secondary" href="resume.html">Verification CV</a>
@@ -61,8 +61,8 @@
     <section class="evidence-strip" aria-label="Technical focus">
       <div class="wrap evidence-grid">
         <div><strong>Rocq / Coq</strong><span>formal specification, constructive proof, dependency audits</span></div>
+        <div><strong>SystemVerilog / SVA</strong><span>RTL safety properties, induction, bounded checks, counterexamples</span></div>
         <div><strong>OCaml + Python</strong><span>extracted cores, independent checkers, test harnesses, CLIs</span></div>
-        <div><strong>Proof-carrying systems</strong><span>certificates, witnesses, canonical encodings, replay</span></div>
         <div><strong>Assurance discipline</strong><span>explicit assumptions, non-claims, trust boundaries, fail-closed behaviour</span></div>
       </div>
     </section>
@@ -80,6 +80,10 @@
             <p>Rocq/Coq 8.18 and 9.x, inductive semantics, constructive proof, formal specification, proof-term inspection, <code>Print Assumptions</code>, <code>coqchk</code>.</p>
           </article>
           <article class="skill-card">
+            <h3>RTL formal verification</h3>
+            <p>SystemVerilog, SVA, Yosys/SMT, bounded model checking, induction, reachability covers, counterexample traces, finite-width configuration semantics and hardware security requirements.</p>
+          </article>
+          <article class="skill-card">
             <h3>Executable verification</h3>
             <p>OCaml extraction, Python verification tooling, exact arithmetic, command-line checkers, fixtures, adversarial tests, replay and differential checking.</p>
           </article>
@@ -88,11 +92,7 @@
             <p>Proof-carrying certificates, independent verification boundaries, canonical representations, manifests, provenance, failure precedence and explicit residual trust.</p>
           </article>
           <article class="skill-card">
-            <h3>Mathematical systems</h3>
-            <p>Finite linear algebra, exact rational arithmetic, quotient and factorisation analysis, obstruction methods, discrete structures and local-to-global consistency.</p>
-          </article>
-          <article class="skill-card">
-            <h3>Engineering environment</h3>
+            <h3>Development environment</h3>
             <p>Linux, Git/GitHub, Make, Dune, opam, shell scripting, pytest, reproducible builds and repository-level verification gates.</p>
           </article>
           <article class="skill-card">
@@ -112,6 +112,39 @@
         </div>
 
         <div class="project-list">
+          <article class="project">
+            <div class="project-meta">
+              <strong>Hardware formal verification</strong>
+              SystemVerilog · SVA · Yosys/SMT · Rocq · security requirements
+            </div>
+            <div>
+              <h3>Security-Critical DMA Access Control</h3>
+              <p class="problem">Formal RTL verification of a stateful DMA access-control fabric, with explicit authorisation, reset, configuration-admissibility and protected-memory requirements.</p>
+              <div class="project-columns">
+                <div>
+                  <h4>Built</h4>
+                  <ul>
+                    <li>SystemVerilog RTL with a formal harness, normative SVA properties, reachability covers and a Rocq reference model.</li>
+                    <li>Machine-readable verification ledger and evidence audit that distinguish proof class, assumptions, requirements and open obligations.</li>
+                    <li>One-command release gate covering intended-design verification, defect campaigns, evidence audit and Rocq regression.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Evidence</h4>
+                  <ul>
+                    <li>Forwarding authorisation boundary proved inductively for all steps under the declared model.</li>
+                    <li>Registered memory-effect and configuration-admissibility properties verified to depth 12 and reported explicitly as bounded results.</li>
+                    <li>Three controlled defect classes—authorisation bypass, stale/reset authority and finite-width range overflow—are formally detected with preserved counterexample traces.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="boundary"><strong>Boundary:</strong> this is a formally analysed reference design, not production silicon. The results apply to the stated RTL, assumptions and property set; they do not claim industrial SoC verification, certification, physical implementation or general hardware security.</p>
+              <div class="project-links">
+                <a href="https://github.com/dhwcmoore/formal-dma-access-control">Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
           <article class="project">
             <div class="project-meta">
               <strong>Proof-carrying verification</strong>
@@ -192,7 +225,7 @@
                   <ul>
                     <li>41 Rocq source modules covering factorisation, refinement, collapse, runtime monitoring and three case-study domains.</li>
                     <li>Extracted OCaml monitor and certificate-checking components.</li>
-                    <li>Runtime states and typed engineering actions for review, rejection, restriction or observation refinement.</li>
+                    <li>Runtime states and typed operational actions for review, rejection, restriction or observation refinement.</li>
                   </ul>
                 </div>
                 <div>
@@ -272,12 +305,12 @@
           <h2>An unusual route into formal methods</h2>
           <p class="statement">My earlier career was in philosophy, logic, university teaching and programme leadership. The transition into formal verification was not a rejection of that training. It turned the demand for exact claims into executable proof obligations.</p>
           <p>I hold a PhD in Philosophy from KU Leuven and previously served as a tenured Associate Professor and Director of General Education Assessment. That background contributes strong specification discipline, technical writing, review practice and the ability to explain difficult structures across disciplinary boundaries.</p>
-          <p>The verification portfolio is intentionally narrower than my academic portfolio. It presents the artefacts relevant to formal verification, automated reasoning, high-assurance software, AI assurance, aerospace and other systems where silent boundary errors are expensive.</p>
+          <p>The verification portfolio is intentionally narrower than my academic portfolio. It presents the artefacts relevant to formal verification, automated reasoning, high-assurance software, AI assurance, aerospace, hardware verification and other systems where silent boundary errors are expensive.</p>
         </div>
         <div class="timeline">
           <div class="timeline-item">
             <h3>Independent formal methods research</h3>
-            <p>Rocq/Coq developments, executable checkers, proof-carrying verification, assurance case studies and reproducible public artefacts.</p>
+            <p>Rocq/Coq developments, RTL formal verification, executable checkers, proof-carrying verification, assurance case studies and reproducible public artefacts.</p>
           </div>
           <div class="timeline-item">
             <h3>Associate Professor / Director</h3>
@@ -299,7 +332,7 @@
       <div class="wrap">
         <p class="eyebrow">Contact</p>
         <h2>Formal verification, automated reasoning and high-assurance systems</h2>
-        <p>Open to technical and research roles involving theorem proving, executable verification, assurance architecture, AI verification, aerospace, cloud systems and other correctness-critical software.</p>
+        <p>Open to technical and research roles involving theorem proving, RTL and software formal verification, executable verification, assurance architecture, AI verification, aerospace, cloud systems and other correctness-critical systems.</p>
         <div class="actions" style="justify-content:center">
           <a class="button primary" href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
           <a class="button secondary" href="resume.html">Verification CV</a>
