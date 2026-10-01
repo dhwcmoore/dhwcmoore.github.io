@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duston Moore | Formal Methods Engineering CV</title>
+  <meta name="description" content="Formal methods engineering CV for Duston Moore, with Rocq/Coq, OCaml, Python, executable verification, proof-carrying systems, and assurance architecture.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="resume-body">
+  <div class="resume-toolbar" aria-label="CV controls">
+    <a href="index.html">← Portfolio</a>
+    <a href="../Duston_Moore_Formal_Methods_CV.pdf">Existing PDF CV</a>
+    <button class="primary" type="button" onclick="window.print()">Print / save as PDF</button>
+  </div>
+
+  <main class="resume">
+    <header>
+      <h1>DUSTON MOORE, PhD</h1>
+      <p class="role">Formal Methods Engineer</p>
+      <p class="contact-line">Edmonton, Canada · Open to remote work and relocation with financial support</p>
+      <p class="contact-line"><a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a> · <a href="https://github.com/dhwcmoore">github.com/dhwcmoore</a> · <a href="https://dhwcmoore.github.io/verification/">dhwcmoore.github.io/verification/</a></p>
+    </header>
+
+    <section>
+      <h2>Engineering Profile</h2>
+      <p>Formal methods engineer working in Rocq/Coq, OCaml and Python on machine-checked verification, proof-carrying systems, executable checkers and explicit assurance boundaries. I build formal specifications, prove kernel results, extract or implement small verification cores, connect them to testable command-line tooling, and document the assumptions and residual trust that remain outside the proof.</p>
+      <p>Current public work includes a DO-333-oriented assurance reconstruction, a structural-admissibility library with extracted OCaml monitoring components, proof-carrying audit-warrant verification, and a certificate architecture that separates untrusted generation from independent verification.</p>
+    </section>
+
+    <section class="skills-lines">
+      <h2>Technical Skills</h2>
+      <p><strong>Proof and verification:</strong> Rocq/Coq 8.18 and 9.x, constructive proof, inductive semantics, formal specification, proof-term inspection, dependency audits, <code>Print Assumptions</code>, <code>coqchk</code>, proof-carrying certificates.</p>
+      <p><strong>Languages and tooling:</strong> OCaml, Python, C/C++, Bash, Linux, Git/GitHub, Make, Dune, opam, pytest.</p>
+      <p><strong>Verification architecture:</strong> Coq extraction, independent verifiers, typed certificates and witnesses, canonical encodings, replay, manifests, explicit failure precedence, fail-closed checking and trust-boundary documentation.</p>
+      <p><strong>Mathematical methods:</strong> exact rational arithmetic, finite linear algebra, quotient and factorisation analysis, obstruction methods, discrete structures and local-to-global reasoning.</p>
+      <p><strong>Assurance and documentation:</strong> verification plans, theorem ladders, assumption registers, traceability, discrepancy logs, non-claims, completion criteria, reproducible builds and technical writing.</p>
+    </section>
+
+    <section>
+      <h2>Selected Engineering Projects</h2>
+
+      <div class="resume-project">
+        <h3>Proof-Carrying Exactness</h3>
+        <p class="meta">Creator · proof-carrying verification · Python · exact rational arithmetic · public repository</p>
+        <ul>
+          <li>Built a pure certificate verifier that checks already-produced certificates without importing the untrusted search and discovery machinery used to construct them.</li>
+          <li>Separated an untrusted generator for four verdict classes from the production verifier, with certificate bytes released only after independent verification succeeds.</li>
+          <li>Built an assessment API and CLI that verifies again at the orchestration layer and fails closed on malformed input, generation failure, verifier rejection or output failure.</li>
+          <li>Published reproducible demonstrations including tampered-certificate rejection and simulated malicious-generator rejection.</li>
+        </ul>
+        <p><a href="https://github.com/dhwcmoore/proof-carrying-exactness">github.com/dhwcmoore/proof-carrying-exactness</a></p>
+      </div>
+
+      <div class="resume-project">
+        <h3>DO-333 Rocq Assurance Case Study</h3>
+        <p class="meta">Creator · Coq 8.18 · Python · Make · public release</p>
+        <ul>
+          <li>Completed an independent Rocq reconstruction of selected NASA/Rockwell Collins dual-channel Flight Guidance System requirements arguments, with explicit mapping to DO-178C/DO-333 verification objectives and explicit limits on certification credit.</li>
+          <li>Reproduced three source-reported requirement defects as machine-checked refutations, then proved corrected requirements over their explicit domains.</li>
+          <li>Constructively established that the high-level requirement context is inhabited and tested each of eleven high-level requirements by removal.</li>
+          <li>Published a 223-result inventory, proof-footprint audits, traceability checks, tool-trust boundary and completion report. <code>make verify</code> compiles, re-checks with <code>coqchk</code>, audits assumptions and enforces repository-level boundary checks.</li>
+        </ul>
+        <p><a href="https://github.com/dhwcmoore/do333-rocq-assurance-case-study">github.com/dhwcmoore/do333-rocq-assurance-case-study</a></p>
+      </div>
+
+      <div class="resume-project">
+        <h3>Structural Admissibility Library</h3>
+        <p class="meta">Creator · Rocq 9.x · OCaml · Dune · runtime assurance · public repository</p>
+        <ul>
+          <li>Formalised structural admissibility as factorisation of a safety predicate through an observation map, including proofs that downstream post-processing cannot recover a distinction already erased by observation.</li>
+          <li>Developed 41 Rocq source modules spanning factorisation, refinement, collapse, runtime monitoring and case studies in consensus, GPU memory observation and physical-system sensing.</li>
+          <li>Extracted verified monitor and certificate-checking functions to OCaml and connected monitor states to typed engineering actions.</li>
+          <li>Repository reports zero admitted lemmas and eight named, documented axioms rather than hiding background assumptions inside incomplete proofs.</li>
+        </ul>
+        <p><a href="https://github.com/dhwcmoore/structural-admissibility">github.com/dhwcmoore/structural-admissibility</a></p>
+      </div>
+
+      <div class="resume-project">
+        <h3>Proof-Carrying Audit Warrants</h3>
+        <p class="meta">Creator · Coq 8.18 · extracted OCaml · CLI · public v0.1.0 candidate</p>
+        <ul>
+          <li>Built a claim-relative verifier for the continuing authority of audit evidence under declared policy and conditions.</li>
+          <li>Formalised <code>WARRANTED</code>, <code>DEFEATED</code>, <code>UNDERDETERMINED</code> and <code>INADMISSIBLE</code> as logical verdicts rather than confidence scores.</li>
+          <li>Connected declarative semantics to an executable classifier by soundness and completeness results in both directions, including preservation and defeat under evidence extension.</li>
+          <li>Built an extracted checker and CLI. Fourteen published fixtures across three source-gated AI-audit cases agree with the formal decisions; the repository reports <code>coqchk</code> clean with no admitted obligations or project axioms.</li>
+        </ul>
+        <p><a href="https://github.com/dhwcmoore/proof-carrying-audit-warrants">github.com/dhwcmoore/proof-carrying-audit-warrants</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="job">
+        <h3>Independent Researcher</h3>
+        <p class="meta">Edmonton, Canada · 2023–present</p>
+        <ul>
+          <li>Carry formal-methods projects from governing claim and threat boundary through specification, proof, executable checking, test harnesses, audit records and public release.</li>
+          <li>Design small trusted verification boundaries that preserve assumptions, provenance, failure witnesses and unresolved obligations.</li>
+          <li>Develop technical documentation for expert and cross-disciplinary review, including verification plans, proof inventories, trust boundaries, discrepancy logs and reproducibility instructions.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Education Developer</h3>
+        <p class="meta">University of Alberta · 2015–2016</p>
+        <ul>
+          <li>Designed programmes and assessments, led workshops and peer review, supported educational technology and worked across faculties.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Associate Professor of Philosophy / Director of General Education Assessment</h3>
+        <p class="meta">Purdue University Fort Wayne · 2002–2013</p>
+        <ul>
+          <li>Published and taught as a tenured researcher with a focus on logic, argument, conceptual structure and interdisciplinary scholarship.</li>
+          <li>Directed institution-wide assessment involving evidence standards, programme requirements, reporting, workshops and coordination across academic units.</li>
+          <li>Reviewed scholarly work and participated in university governance and programme development.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <h3>PhD, Philosophy</h3>
+      <p class="meta">KU Leuven, Belgium</p>
+      <p>Doctoral training in argument, conceptual structure and process philosophy. Later work extends the same concern with exact claims into formal specification, machine-checked proof and computational assurance.</p>
+    </section>
+
+    <section>
+      <h2>Selected Publication</h2>
+      <p>Moore, D. (2026). “Admissibility defines structural limits on optimisation in artificial intelligence.” <em>Discover Artificial Intelligence</em>, 6, article 1267. <a href="https://doi.org/10.1007/s44163-026-02252-6">doi:10.1007/s44163-026-02252-6</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
