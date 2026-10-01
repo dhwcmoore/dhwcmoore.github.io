@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duston Moore | Formal Methods Engineer</title>
+  <meta name="description" content="Formal methods engineering portfolio of Duston Moore: Rocq/Coq, OCaml, Python, machine-checked proof, proof-carrying systems, executable verification, and explicit assurance boundaries.">
+  <meta name="theme-color" content="#07111d">
+  <meta property="og:title" content="Duston Moore | Formal Methods Engineer">
+  <meta property="og:description" content="Machine-checked verification, proof-carrying systems, executable checkers, and high-assurance software architecture.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Duston Moore formal methods portfolio">
+        <span class="brand-mark">DM</span>
+        <span>Duston Moore</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Projects</a>
+        <a href="#principles">Principles</a>
+        <a href="#background">Background</a>
+        <a href="resume.html" class="nav-cta">Engineering CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Formal verification · proof-carrying systems · assurance architecture</p>
+          <h1>Formal Methods <span>Engineer</span></h1>
+          <p class="lead">I build machine-checkable arguments about computational systems. My work combines Rocq/Coq proofs, executable OCaml and Python checkers, exact finite mathematics, reproducible verification pipelines, and explicit trust boundaries.</p>
+          <div class="actions">
+            <a class="button primary" href="#projects">View engineering projects</a>
+            <a class="button secondary" href="resume.html">Engineering CV</a>
+            <a class="button secondary" href="https://github.com/dhwcmoore">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="terminal-card" aria-label="Verification workflow example">
+          <div class="terminal-top">verification boundary</div>
+          <div class="terminal-body">
+            <div><span class="prompt">$</span> make verify</div>
+            <div class="ok">✓ formal obligations checked</div>
+            <div class="ok">✓ proof artefacts re-checked</div>
+            <div class="ok">✓ executable fixtures compared</div>
+            <div class="ok">✓ trust boundary recorded</div>
+            <div class="dim">result: state only what the evidence proves</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="evidence-strip" aria-label="Technical focus">
+      <div class="wrap evidence-grid">
+        <div><strong>Rocq / Coq</strong><span>formal specification, constructive proof, dependency audits</span></div>
+        <div><strong>OCaml + Python</strong><span>extracted cores, independent checkers, test harnesses, CLIs</span></div>
+        <div><strong>Proof-carrying systems</strong><span>certificates, witnesses, canonical encodings, replay</span></div>
+        <div><strong>Assurance discipline</strong><span>explicit assumptions, non-claims, trust boundaries, fail-closed behaviour</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Capabilities</p>
+          <h2>From proposition to independently checkable artefact</h2>
+          <p>The emphasis is not on producing another assertion that a system is correct. It is on reducing the claim to explicit obligations, proving what can be proved, and exposing the remaining boundary.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Proof and specification</h3>
+            <p>Rocq/Coq 8.18 and 9.x, inductive semantics, constructive proof, formal specification, proof-term inspection, <code>Print Assumptions</code>, <code>coqchk</code>.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Executable verification</h3>
+            <p>OCaml extraction, Python verification tooling, exact arithmetic, command-line checkers, fixtures, adversarial tests, replay and differential checking.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Assurance architecture</h3>
+            <p>Proof-carrying certificates, independent verification boundaries, canonical representations, manifests, provenance, failure precedence and explicit residual trust.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Mathematical systems</h3>
+            <p>Finite linear algebra, exact rational arithmetic, quotient and factorisation analysis, obstruction methods, discrete structures and local-to-global consistency.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Engineering environment</h3>
+            <p>Linux, Git/GitHub, Make, Dune, opam, shell scripting, pytest, reproducible builds and repository-level verification gates.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Technical communication</h3>
+            <p>Verification plans, theorem ladders, assumption registers, discrepancy logs, traceability, non-claims, completion reports and cross-disciplinary documentation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Selected engineering work</p>
+          <h2>Public artefacts with inspectable boundaries</h2>
+          <p>Each project below links to the implementation or proof corpus. The point is not merely what the system claims to do, but what another engineer can inspect, rebuild and challenge.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-meta">
+              <strong>Proof-carrying verification</strong>
+              Rocq/Coq · Python · exact rational arithmetic · certificate verification
+            </div>
+            <div>
+              <h3>Proof-Carrying Exactness</h3>
+              <p class="problem">Separates an untrusted certificate generator from a pure verifier and independently re-checks four verdict classes before any result is released.</p>
+              <div class="project-columns">
+                <div>
+                  <h4>Built</h4>
+                  <ul>
+                    <li>Pure certificate verifier with no search or discovery dependency.</li>
+                    <li>Separate untrusted generator for <code>EXACT</code>, <code>UNDERDETERMINED</code>, <code>OBSTRUCTED</code> and <code>INADMISSIBLE</code>.</li>
+                    <li>End-to-end assessment interface and CLI with fail-closed handling of malformed input, generation failure and verifier rejection.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Assurance value</h4>
+                  <ul>
+                    <li>Generator cannot release a certificate that the production verifier rejects.</li>
+                    <li>Assessment layer verifies again rather than trusting the generator's internal gate.</li>
+                    <li>Includes tampered-certificate and malicious-generator rejection demonstrations.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="boundary"><strong>Boundary:</strong> the public end-to-end demonstration currently covers the generic affine-rational pipeline. A region-native adapter and real regional evidence path are not claimed.</p>
+              <div class="project-links">
+                <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">
+              <strong>Aerospace assurance case study</strong>
+              Coq 8.18 · Python · Make · requirements verification · DO-333 evidence mapping
+            </div>
+            <div>
+              <h3>DO-333 Rocq Assurance Case Study</h3>
+              <p class="problem">Reconstructs selected NASA/Rockwell Collins Flight Guidance System requirements arguments as machine-checked proofs and refutations.</p>
+              <div class="project-columns">
+                <div>
+                  <h4>Built</h4>
+                  <ul>
+                    <li>Machine-checked formalisation of five selected system requirements and supporting architecture.</li>
+                    <li>Three source-reported requirement defects reproduced as formal refutations.</li>
+                    <li>Requirement-removal experiments, proof-footprint extraction, traceability checks and a 223-result inventory.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Verification discipline</h4>
+                  <ul>
+                    <li><code>make verify</code> compiles with warnings as errors and re-checks with <code>coqchk</code>.</li>
+                    <li>Named results are audited for closed assumptions.</li>
+                    <li>Declared proof support is checked against observed proof dependencies.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="boundary"><strong>Boundary:</strong> this is an independent assurance reconstruction. It does not claim DO-333 objective satisfaction, certification credit, source-code verification or a verified flight system.</p>
+              <div class="project-links">
+                <a href="https://github.com/dhwcmoore/do333-rocq-assurance-case-study">Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">
+              <strong>Runtime structural assurance</strong>
+              Rocq 9.x · OCaml · Dune · runtime monitoring · certificate checking
+            </div>
+            <div>
+              <h3>Structural Admissibility Library</h3>
+              <p class="problem">Formalises when an observation interface preserves the distinction required by a safety predicate, and when no downstream classifier can recover information that the observation has already lost.</p>
+              <div class="project-columns">
+                <div>
+                  <h4>Built</h4>
+                  <ul>
+                    <li>41 Rocq source modules covering factorisation, refinement, collapse, runtime monitoring and three case-study domains.</li>
+                    <li>Extracted OCaml monitor and certificate-checking components.</li>
+                    <li>Runtime states and typed engineering actions for review, rejection, restriction or observation refinement.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Formal status</h4>
+                  <ul>
+                    <li>Zero admitted lemmas reported in the public repository.</li>
+                    <li>Eight named axioms, each documented rather than hidden.</li>
+                    <li>Case studies cover consensus, GPU memory observation and physical-system sensing.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="boundary"><strong>Boundary:</strong> the extracted components form a verified core. The repository does not claim a production dashboard, issue tracker or complete deployed safety system.</p>
+              <div class="project-links">
+                <a href="https://github.com/dhwcmoore/structural-admissibility">Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">
+              <strong>AI audit verification</strong>
+              Coq 8.18 · extracted OCaml · CLI · evidence semantics
+            </div>
+            <div>
+              <h3>Proof-Carrying Audit Warrants</h3>
+              <p class="problem">Checks whether admitted evidence still warrants a specific audit claim under declared policy and conditions, rather than treating old audit conclusions as permanently authoritative.</p>
+              <div class="project-columns">
+                <div>
+                  <h4>Built</h4>
+                  <ul>
+                    <li>Four logical verdicts: <code>WARRANTED</code>, <code>DEFEATED</code>, <code>UNDERDETERMINED</code> and <code>INADMISSIBLE</code>.</li>
+                    <li>Declarative semantics connected to an executable classifier by soundness and completeness results.</li>
+                    <li>Extracted checker, CLI and 14 published fixtures across three source-gated audit cases.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Verification discipline</h4>
+                  <ul>
+                    <li><code>coqchk</code> clean with no admitted obligations or project axioms reported.</li>
+                    <li>Preservation and defeat under evidence extension are formalised separately.</li>
+                    <li>Evidence admission, claim evaluation and failure witnesses remain explicit.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="boundary"><strong>Boundary:</strong> the checker verifies a formal warrant judgement over the evidence ledger it receives. It does not establish that supplied evidence is true, complete, or that an AI system is safe.</p>
+              <div class="project-links">
+                <a href="https://github.com/dhwcmoore/proof-carrying-audit-warrants">Repository ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="principles">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Engineering principles</p>
+          <h2>Systematic bug prevention starts at the claim boundary</h2>
+          <p>These rules are simple, but they are where many silent failures begin.</p>
+        </div>
+        <div class="principles">
+          <div class="principle"><strong>If a tolerance matters, state it.</strong><span>A numerical tolerance is part of the specification, not an implementation detail to be guessed later.</span></div>
+          <div class="principle"><strong>If the observation loses the distinction, stop.</strong><span>No downstream intelligence can recover a distinction that is absent from the available observation.</span></div>
+          <div class="principle"><strong>If the whole matters, check the whole.</strong><span>Local success or pairwise agreement does not imply a global property unless that implication has itself been established.</span></div>
+          <div class="principle"><strong>If data are transformed, prove what survives.</strong><span>Compression, projection, aggregation and discretisation may preserve one conclusion while destroying another.</span></div>
+          <div class="principle"><strong>If the generator says it is correct, that is still the generator speaking.</strong><span>Independent assurance requires an independently specified check, not a second assertion from the producing component.</span></div>
+          <div class="principle"><strong>If the evidence is insufficient, say insufficient.</strong><span>An underdetermined result is preferable to a confident answer unsupported by the declared evidence.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="background">
+      <div class="wrap background-grid">
+        <div>
+          <p class="eyebrow">Background</p>
+          <h2>An unusual route into formal methods</h2>
+          <p class="statement">My earlier career was in philosophy, logic, university teaching and programme leadership. The transition into formal verification was not a rejection of that training. It turned the demand for exact claims into executable proof obligations.</p>
+          <p>I hold a PhD in Philosophy from KU Leuven and previously served as a tenured Associate Professor and Director of General Education Assessment. That background contributes strong specification discipline, technical writing, review practice and the ability to explain difficult structures across disciplinary boundaries.</p>
+          <p>The engineering portfolio is intentionally narrower than my academic portfolio. It presents the artefacts relevant to formal verification, automated reasoning, high-assurance software, AI assurance, aerospace and other systems where silent boundary errors are expensive.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Independent formal methods research</h3>
+            <p>Rocq/Coq developments, executable checkers, proof-carrying verification, assurance case studies and reproducible public artefacts.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Associate Professor / Director</h3>
+            <p>Purdue University Fort Wayne. Research, logic and philosophy teaching, institutional assessment, evidence standards and programme leadership.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>PhD, Philosophy</h3>
+            <p>KU Leuven. Advanced work in argument, conceptual structure and process philosophy.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Published research</h3>
+            <p>Most recently, “Admissibility defines structural limits on optimisation in artificial intelligence”, <em>Discover Artificial Intelligence</em> (2026).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2>Formal verification, automated reasoning and high-assurance systems</h2>
+        <p>Open to engineering and research roles involving theorem proving, executable verification, assurance architecture, AI verification, aerospace, cloud systems and other correctness-critical software.</p>
+        <div class="actions" style="justify-content:center">
+          <a class="button primary" href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
+          <a class="button secondary" href="resume.html">Engineering CV</a>
+          <a class="button secondary" href="https://github.com/dhwcmoore">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Duston Moore</span>
+      <span><a href="../index.html">Academic and interdisciplinary portfolio</a></span>
+    </div>
+  </footer>
+</body>
+</html>
