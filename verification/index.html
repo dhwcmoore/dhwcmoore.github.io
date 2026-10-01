@@ -36,7 +36,7 @@
         <div>
           <p class="eyebrow">Formal verification · RTL and proof-carrying systems · assurance architecture</p>
           <h1>Formal Verification <span>Specialist</span></h1>
-          <p class="lead">I build machine-checkable arguments about computational systems. My work combines Rocq/Coq proofs, SystemVerilog/SVA hardware properties, executable OCaml and Python checkers, exact finite mathematics, reproducible verification pipelines, and explicit trust boundaries.</p>
+          <p class="lead">I build machine-checkable assurance arguments for computational systems. My work combines Rocq/Coq proofs, SystemVerilog/SVA properties, executable OCaml and Python checkers, exact finite mathematics, reproducible verification pipelines and explicit trust boundaries.</p>
           <div class="actions">
             <a class="button primary" href="#projects">View verification projects</a>
             <a class="button secondary" href="resume.html">Verification CV</a>
@@ -52,7 +52,7 @@
             <div class="ok">✓ proof artefacts re-checked</div>
             <div class="ok">✓ executable fixtures compared</div>
             <div class="ok">✓ trust boundary recorded</div>
-            <div class="dim">result: state only what the evidence proves</div>
+            <div class="dim">result: claim only what the evidence proves</div>
           </div>
         </aside>
       </div>
@@ -72,7 +72,7 @@
         <div class="section-head">
           <p class="eyebrow">Capabilities</p>
           <h2>From proposition to independently checkable artefact</h2>
-          <p>The emphasis is not on producing another assertion that a system is correct. It is on reducing the claim to explicit obligations, proving what can be proved, and exposing the remaining boundary.</p>
+          <p>I reduce correctness claims to explicit obligations, prove what the model supports, and expose the residual trust boundary.</p>
         </div>
         <div class="skills-grid">
           <article class="skill-card">
@@ -108,7 +108,7 @@
         <div class="section-head">
           <p class="eyebrow">Selected verification work</p>
           <h2>Public artefacts with inspectable boundaries</h2>
-          <p>Each project below links to the implementation or proof corpus. The point is not merely what the system claims to do, but what another reviewer can inspect, rebuild and challenge.</p>
+          <p>Each project links to its implementation or proof corpus. The focus is verifiable evidence: what an independent reviewer can inspect, rebuild and challenge.</p>
         </div>
 
         <div class="project-list">
@@ -119,13 +119,13 @@
             </div>
             <div>
               <h3>Security-Critical DMA Access Control</h3>
-              <p class="problem">Formal RTL verification of a stateful DMA access-control fabric, with explicit authorisation, reset, configuration-admissibility and protected-memory requirements.</p>
+              <p class="problem">Formal RTL verification of a stateful DMA access-control fabric, with explicit authorisation, reset, configuration admissibility and protected-memory requirements.</p>
               <div class="project-columns">
                 <div>
                   <h4>Built</h4>
                   <ul>
                     <li>SystemVerilog RTL with a formal harness, normative SVA properties, reachability covers and a Rocq reference model.</li>
-                    <li>Machine-readable verification ledger and evidence audit that distinguish proof class, assumptions, requirements and open obligations.</li>
+                    <li>Machine-readable verification ledger and evidence audit that distinguish proof classes, assumptions, requirements and open obligations.</li>
                     <li>One-command release gate covering intended-design verification, defect campaigns, evidence audit and Rocq regression.</li>
                   </ul>
                 </div>
@@ -152,7 +152,7 @@
             </div>
             <div>
               <h3>Proof-Carrying Fibre Witnesses for Learned Observation Regimes</h3>
-              <p class="problem">A parametric verification framework for determining what claims are warranted under an explicitly supplied learned-observation regime, while keeping the assumptions outside the proof visible.</p>
+              <p class="problem">A parametric framework that determines which claims are warranted under an explicitly supplied learned-observation regime while exposing the assumptions outside the proof.</p>
               <div class="project-columns">
                 <div>
                   <h4>Built</h4>
@@ -171,7 +171,7 @@
                   </ul>
                 </div>
               </div>
-              <p class="boundary"><strong>Boundary:</strong> Phase 1 is closed as a parametric framework. It does not claim concrete policy realisation, physical observation faithfulness, whole-model verification or certification. Policy realisation and transcript faithfulness remain explicit external premises.</p>
+              <p class="boundary"><strong>Boundary:</strong> Phase 1 is closed under a parametric release boundary. It does not claim concrete policy realisation, physical observation faithfulness, whole-model verification or certification. Policy realisation and transcript faithfulness remain explicit external premises.</p>
               <div class="project-links">
                 <a href="https://github.com/dhwcmoore/proof-carrying-fibre-witnesses">Repository ↗</a>
                 <a href="https://github.com/dhwcmoore/proof-carrying-fibre-witnesses/tree/phase1-closed">Phase-1 closure ↗</a>
@@ -186,7 +186,7 @@
             </div>
             <div>
               <h3>Proof-Carrying Exactness</h3>
-              <p class="problem">Separates an untrusted certificate generator from a pure verifier and independently re-checks four verdict classes before any result is released.</p>
+              <p class="problem">Isolates an untrusted certificate generator from a pure verifier. The verifier independently re-checks four verdict classes before release.</p>
               <div class="project-columns">
                 <div>
                   <h4>Built</h4>
@@ -252,7 +252,7 @@
             </div>
             <div>
               <h3>Structural Admissibility Library</h3>
-              <p class="problem">Formalises when an observation interface preserves the distinction required by a safety predicate, and when no downstream classifier can recover information that the observation has already lost.</p>
+              <p class="problem">Formalises when an observation interface preserves the distinctions required by a safety predicate, and when downstream classifiers cannot recover distinctions the observation has erased.</p>
               <div class="project-columns">
                 <div>
                   <h4>Built</h4>
@@ -285,7 +285,7 @@
             </div>
             <div>
               <h3>Proof-Carrying Audit Warrants</h3>
-              <p class="problem">Checks whether admitted evidence still warrants a specific audit claim under declared policy and conditions, rather than treating old audit conclusions as permanently authoritative.</p>
+              <p class="problem">Evaluates whether admitted evidence still warrants a specific audit claim under declared policy and conditions, allowing prior conclusions to be defeated when their warrant no longer holds.</p>
               <div class="project-columns">
                 <div>
                   <h4>Built</h4>
@@ -319,7 +319,7 @@
         <div class="section-head">
           <p class="eyebrow">Verification principles</p>
           <h2>Systematic bug prevention starts at the claim boundary</h2>
-          <p>These rules are simple, but they are where many silent failures begin.</p>
+          <p>These rules are simple. Violating them can produce silent failures.</p>
         </div>
         <div class="principles">
           <div class="principle"><strong>If a tolerance matters, state it.</strong><span>A numerical tolerance is part of the specification, not an implementation detail to be guessed later.</span></div>
@@ -337,9 +337,9 @@
         <div>
           <p class="eyebrow">Background</p>
           <h2>An unusual route into formal methods</h2>
-          <p class="statement">My earlier career was in philosophy, logic, university teaching and programme leadership. The transition into formal verification was not a rejection of that training. It turned the demand for exact claims into executable proof obligations.</p>
-          <p>I hold a PhD in Philosophy from KU Leuven and previously served as a tenured Associate Professor and Director of General Education Assessment. That background contributes strong specification discipline, technical writing, review practice and the ability to explain difficult structures across disciplinary boundaries.</p>
-          <p>The verification portfolio is intentionally narrower than my academic portfolio. It presents the artefacts relevant to formal verification, automated reasoning, high-assurance software, AI assurance, aerospace, hardware verification and other systems where silent boundary errors are expensive.</p>
+          <p class="statement">My earlier career was in philosophy, logic, university teaching and programme leadership. Formal verification did not replace that training; it turned the demand for exact claims into executable proof obligations.</p>
+          <p>I hold a PhD in Philosophy from KU Leuven and previously served as a tenured Associate Professor and Director of General Education Assessment. That background provides specification discipline, technical writing, review practice and the ability to explain difficult structures across disciplinary boundaries.</p>
+          <p>This verification portfolio is intentionally narrower than my academic portfolio. It presents artefacts relevant to formal verification, automated reasoning, high-assurance software, AI assurance, aerospace, hardware verification and other systems where silent boundary errors are expensive.</p>
         </div>
         <div class="timeline">
           <div class="timeline-item">
@@ -366,7 +366,7 @@
       <div class="wrap">
         <p class="eyebrow">Contact</p>
         <h2>Formal verification, automated reasoning and high-assurance systems</h2>
-        <p>Open to technical and research roles involving theorem proving, RTL and software formal verification, executable verification, assurance architecture, AI verification, aerospace, cloud systems and other correctness-critical systems.</p>
+        <p>Open to technical and research roles in theorem proving, RTL and software formal verification, executable verification, assurance architecture, AI verification, aerospace, cloud systems and other correctness-critical systems.</p>
         <div class="actions" style="justify-content:center">
           <a class="button primary" href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
           <a class="button secondary" href="resume.html">Verification CV</a>
