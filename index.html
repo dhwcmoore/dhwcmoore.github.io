@@ -36,13 +36,14 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Philosophy · formal methods · measurement · AI and audit</p>
+          <p class="eyebrow">Duston Moore, PhD · Formal verification · Automated reasoning · AI assurance</p>
           <h1>What makes a claim <span>fit for use?</span></h1>
           <p class="lead">I study how exact claims are made, checked, and maintained when they are used in the world. My work connects philosophy of science and technology, formal logic, machine-checked proof, and the practical governance of evidence. Applications include AI, measurement, software assurance, and institutional audit.</p>
           <div class="actions">
             <a class="button primary" href="cv.html">View CV</a>
             <a class="button secondary" href="#work">See selected research</a>
           </div>
+          <p><strong>Featured projects:</strong> <a href="#grounded-transport">Grounded Transport Calculus</a> · <a href="#byzantine-succession">Proof-Carrying Byzantine Succession</a></p>
           <p class="latest-publication"><strong>New publication:</strong> <a href="https://doi.org/10.1007/s44163-026-02252-6">Admissibility defines structural limits on optimisation in artificial intelligence</a>, <em>Discover Artificial Intelligence</em> (2026).</p>
           <p class="availability"><strong>Based in:</strong> Edmonton, Canada. <strong>Open to:</strong> research, verification, writing, teaching, and international collaboration; relocation with financial support. <a href="https://github.com/dhwcmoore">GitHub ↗</a></p>
         </div>
@@ -91,7 +92,7 @@
           <p>I hold a PhD in Philosophy from KU Leuven and previously worked as a tenured Associate Professor and Director of General Education. That experience informs my writing, teaching, assessment, and work across disciplines. The software and proof claims on this site are supported by the linked artefacts, with open boundaries stated alongside them.</p>
         </div>
         <div>
-          <p class="eyebrow">Working stack</p>
+          <p class="eyebrow">Technical profile</p>
           <div class="capabilities">
             <div><h3>Proof and specification</h3><p>Rocq/Coq 8.18 and 9.x projects, constructive proof, inductive semantics, <code>Print Assumptions</code>, <code>coqchk</code></p></div>
             <div><h3>Languages</h3><p>OCaml, Python, C/C++, shell scripting</p></div>
@@ -287,7 +288,19 @@
             <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">Open repository <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project">
+          <article class="project" id="grounded-transport">
+            <div class="tags"><span>Rocq</span><span>Data lineage</span><span>Verified extraction</span></div>
+            <h3>Grounded Transport Calculus</h3>
+            <p><strong>Question:</strong> when can a data transformation carry forward the evidence that justified a claim about the original data?</p>
+            <ul>
+              <li>Mechanised rules for when transformations preserve the lineage evidence needed to justify substitution</li>
+              <li>Counterexamples showing how lineage guarantees can fail to compose</li>
+              <li>Extracted lineage checker with regression and mutation studies</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/grounded-transport-calculus">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project" id="byzantine-succession">
             <div class="tags"><span>Rocq</span><span>Distributed systems</span><span>Byzantine faults</span><span>Warrant debt</span></div>
             <h3>Proof-Carrying Byzantine Succession</h3>
             <p><strong>Question:</strong> when a distributed system presents one state as the continuation of another, what evidence warrants that claim, and what witness should be returned when replay, reordering, equivocation, or conflicting quorum support defeats it?</p>
@@ -297,6 +310,7 @@
               <li>Finite dependency paths propagate upstream defeat into inspectable downstream reassessment obligations</li>
             </ul>
             <p class="writing-status">Formal kernel and seven-scenario counter demonstration complete. Not a consensus protocol, certificate implementation, or deployed runtime verifier.</p>
+            <p>Run <code>make demo-counter</code> from the repository root to see the seven scenarios, including a valid extension, replay, reordering, a fork, and equivocation.</p>
             <a href="https://github.com/dhwcmoore/proof-carrying-byzantine-succession">Open repository <span aria-hidden="true">↗</span></a>
           </article>
         </div>
