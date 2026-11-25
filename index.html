@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Duston Moore | Philosophy, Formal Methods, and Evidence</title>
-  <meta name="description" content="Duston Moore's research in philosophy, formal methods, measurement, AI, and audit: from conceptual questions to machine-checked proofs and accountable use.">
+  <title>Duston Moore | Formal Verification and Proof-Carrying AI Assurance</title>
+  <meta name="description" content="Machine-checked proofs and executable assurance for AI audit, aerospace flight guidance, GPU memory consistency, and distributed consensus.">
   <meta name="theme-color" content="#081a2c">
-  <meta property="og:title" content="Duston Moore | Philosophy, Formal Methods, and Evidence">
-  <meta property="og:description" content="Research and writing on the conditions under which formal claims can be used responsibly, with proofs, software, and institutional analysis.">
+  <meta property="og:title" content="Duston Moore | Formal Verification and Proof-Carrying AI Assurance">
+  <meta property="og:description" content="Machine-checked proofs and executable assurance for AI audit, aerospace flight guidance, GPU memory consistency, and distributed consensus.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -37,28 +37,249 @@
       <div class="wrap hero-grid">
         <div>
           <p class="eyebrow">Duston Moore, PhD · Formal verification · Automated reasoning · AI assurance</p>
-          <h1>What makes a claim <span>fit for use?</span></h1>
-          <p class="lead">I study how exact claims are made, checked, and maintained when they are used in the world. My work connects philosophy of science and technology, formal logic, machine-checked proof, and the practical governance of evidence. Applications include AI, measurement, software assurance, and institutional audit.</p>
+          <h1>Machine-checked verification and <span>proof-carrying assurance</span></h1>
+          <p class="lead">I design and verify proof-carrying assurance tools for AI and critical systems. My work includes AI audit, NASA/Rockwell Collins Flight Guidance, GPU memory consistency, and distributed consensus.</p>
           <div class="actions">
             <a class="button primary" href="cv.html">View CV</a>
-            <a class="button secondary" href="#work">See selected research</a>
+            <a class="button secondary" href="#flagships">Explore flagship artefacts</a>
           </div>
-          <p><strong>Featured projects:</strong> <a href="#grounded-transport">Grounded Transport Calculus</a> · <a href="#byzantine-succession">Proof-Carrying Byzantine Succession</a></p>
           <p class="latest-publication"><strong>New publication:</strong> <a href="https://doi.org/10.1007/s44163-026-02252-6">Admissibility defines structural limits on optimisation in artificial intelligence</a>, <em>Discover Artificial Intelligence</em> (2026).</p>
-          <p class="availability"><strong>Based in:</strong> Edmonton, Canada. <strong>Open to:</strong> research, verification, writing, teaching, and international collaboration; relocation with financial support. <a href="https://github.com/dhwcmoore">GitHub ↗</a></p>
+          <p class="availability">Edmonton, Canada · Open to remote or relocated roles in formal verification, AI assurance, and research.</p>
+          <ul class="profile-links" role="list" aria-label="Code and research profiles">
+            <li><a href="https://github.com/dhwcmoore">GitHub</a></li>
+            <li><a href="https://orcid.org/0009-0008-1103-9652">ORCID</a></li>
+            <li><a href="https://zenodo.org/search?q=creators.person_or_org.name%3A%22Moore%2C%20Duston%22">Zenodo search</a></li>
+            <li><a href="https://scholar.google.com/scholar?q=author%3A%22Duston+Moore%22">Google Scholar search</a></li>
+          </ul>
         </div>
 
         <div class="assurance-card" aria-label="Assurance workflow">
-          <p class="card-label">One research pattern</p>
+          <p class="card-label">Verification workflow</p>
           <div class="pipeline">
             <div><span>1</span><strong>Scope the claim</strong><small>fix the proposition, evidence, policy, and non-claims</small></div>
-            <i>↓</i>
+            <i aria-hidden="true">↓</i>
             <div><span>2</span><strong>Formalise the obligation</strong><small>state the semantics and prove the kernel result in Rocq</small></div>
-            <i>↓</i>
-            <div><span>3</span><strong>Build the checker</strong><small>connect executable OCaml or Python to independently checkable evidence</small></div>
-            <i>↓</i>
+            <i aria-hidden="true">↓</i>
+            <div><span>3</span><strong>Build the checker</strong><small>verify certificates from an untrusted generator against the specification</small></div>
+            <i aria-hidden="true">↓</i>
             <div><span>4</span><strong>Audit the boundary</strong><small>publish assumptions, residual trust, tests, and the exact conclusion earned</small></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flagships" id="flagships" aria-labelledby="flagships-heading">
+      <div class="wrap">
+        <h2 id="flagships-heading">Flagship artefacts</h2>
+        <div class="flagship-grid">
+          <a href="#audit-warrants"><strong>Proof-Carrying Audit Warrants</strong><span>AI assurance · Extracted checker and 14 published fixtures</span></a>
+          <a href="#do333"><strong>DO-333 Rocq Assurance Case Study</strong><span>Aerospace verification · Flight Guidance requirement proofs</span></a>
+          <a href="#structural-admissibility"><strong>Structural Admissibility Library</strong><span>Formal foundations · 41 Rocq modules, including GPU and consensus models</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Verification projects</h2>
+          <p>These technical projects span AI, aerospace assurance, formal semantics, executable checking, and exact finite mathematics. Each distinguishes proved results from tests, trusted premises, and claims the artefact does not support. Publications and philosophical work appear below.</p>
+          <p>My AI assurance work addresses a specification boundary shared with <a href="https://arxiv.org/abs/2405.06624">Guaranteed Safe AI</a> and <a href="https://aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai">Safeguarded AI</a>. An untrusted search or ML component proposes a certificate, and a deterministic verifier checks what it establishes under a declared specification. A fibre witness can expose representation collapse by exhibiting two cases with the same observation but different required decisions.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project featured" id="audit-warrants">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>OCaml</li>
+              <li>AI audit</li>
+              <li>Warrant checker</li>
+            </ul>
+            <h3>Proof-Carrying Audit Warrants</h3>
+            <p><strong>Question:</strong> when an audit conclusion was warranted earlier, what evidence entitles an auditor to say that it remains warranted now? This project separates a mitigation's effect from the continuing authority of the evidence offered for it.</p>
+            <ul>
+              <li>Four claim-relative verdicts: warranted, defeated, underdetermined, or inadmissible</li>
+              <li>Three source-gated BenchRisk cases exposing distinct inferential failures</li>
+              <li>Coq semantics, an extracted checker, a CLI, and 14 published fixtures agreeing with the formal results</li>
+            </ul>
+            <p class="writing-status"><code>v0.1.0</code> candidate. A warrant checker under declared evidence and policy, not a claim that a mitigation is present or that an AI system is safe.</p>
+            <p class="writing-status"><strong>Verification.</strong> 7 Rocq modules, zero axioms or admissions, and 14 fixture comparisons. The repository records a clean <code>coqchk</code> run and provides <code>make verify</code>.</p>
+            <p class="writing-status"><strong>Trust boundary.</strong> The proof relies on the Coq kernel and declared semantics. Running the checker on a ledger also relies on extraction, the OCaml toolchain, and correct parsing and binding of the supplied evidence.</p>
+            <a href="https://github.com/dhwcmoore/proof-carrying-audit-warrants">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project featured" id="do333">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>DO-333</li>
+              <li>Aerospace assurance</li>
+              <li>Traceability</li>
+            </ul>
+            <h3>DO-333 Rocq Assurance Case Study</h3>
+            <p><strong>Question:</strong> when a machine-checked proof is offered as assurance evidence, exactly what does it establish, and what remains outside the proof? This public reconstruction revisits selected NASA/Rockwell Collins Flight Guidance System arguments and organises the evidence around DO-178C/DO-333 verification objectives without claiming certification credit.</p>
+            <ul>
+              <li>Reproduces the three source-reported requirement defects with machine-checked refutations, then proves the corrected requirements over their explicit domains</li>
+              <li>Constructively shows the HLR context is inhabited, audits declared dependencies against observed proof terms, and tests each HLR by removal</li>
+              <li>Publishes the theorem ladder, assumptions, discrepancies, traceability, evidence manifest, tool-trust boundary, non-claims, and completion report beside the proofs</li>
+            </ul>
+            <p class="writing-status">Released as <code>v1.0.0</code>. Coq 8.18.0 baseline; re-checked with <code>coqchk</code>. Independent case-study reconstruction, not a certification artefact.</p>
+            <p class="writing-status"><strong>Verification.</strong> 18 Rocq source modules. <code>make verify</code> rechecks proofs and audits named results with <code>Print Assumptions</code>.</p>
+            <p class="writing-status"><strong>Trust boundary.</strong> Coq kernel and runtime, formal definitions, and the manual translation of source requirements into formal propositions.</p>
+            <a href="https://github.com/dhwcmoore/do333-rocq-assurance-case-study">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project featured" id="structural-admissibility">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>OCaml</li>
+              <li>GPU memory consistency</li>
+              <li>Distributed consensus</li>
+            </ul>
+            <h3>Structural Admissibility Library</h3>
+            <p><strong>Question:</strong> can the observation possibly determine the claim? If two relevant cases become identical in the available observation but require different answers, the problem precedes optimisation. No later classifier can reconstruct the missing distinction from the same input.</p>
+            <ul>
+              <li>Case studies in distributed consensus, GPU execution, and physical sensing</li>
+              <li>Two principled repairs: weaken the claim or improve the observation</li>
+            </ul>
+            <p class="writing-status"><strong>Verification.</strong> 41 Rocq source modules and zero admissions. <code>scripts/build_all.sh</code> compiles the proofs and runs the OCaml tests with Dune.</p>
+            <p class="writing-status"><strong>Trust boundary.</strong> Rocq kernel, declared observation models and eight documented axioms. The executable components additionally depend on the OCaml toolchain.</p>
+            <a href="https://github.com/dhwcmoore/structural-admissibility">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>OCaml</li>
+              <li>Trustworthy AI</li>
+              <li>Active research</li>
+            </ul>
+            <h3>Proof-Carrying Fibre Witnesses</h3>
+            <p><strong>Question:</strong> can a learned observation interface support a declared target decision, or has it erased a distinction that the decision requires? An untrusted search process may propose a witness; the audit pipeline must establish its authority independently.</p>
+            <ul>
+              <li>Machine-checked kernel result connecting a validated fibre witness to target-relative inadmissibility</li>
+              <li>Typed campaign validation and capture/replay architecture with canonical manifests, authentication wiring, policy and context commitment, failure precedence, and fuel accounting</li>
+              <li>Review builds include kernel re-checking, assumption inspection, and OCaml harnesses; the broader pipeline has separately tracked obligations</li>
+            </ul>
+            <p class="writing-status">The review archive records the exact scope of each promoted unit. End-to-end capture/replay correspondence and verified cryptographic primitives are separate claims.</p>
+            <a href="mailto:dhwcmoore@gmail.com?subject=Proof-Carrying%20Fibre%20Witnesses%20review%20archive">Request the current review archive <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Python</li>
+              <li>Certificates</li>
+              <li>Verifier</li>
+            </ul>
+            <h3>Proof-Carrying Exactness</h3>
+            <p><strong>Question:</strong> who checks the checker? A certificate is not made valid by the program that produced it. This repository separates candidate generation from verification and uses exact rational arithmetic at the point where the formal verdict is decided.</p>
+            <ul>
+              <li>Four explicit results: exact, underdetermined, obstructed, or inadmissible</li>
+              <li>Repeatable certificate bytes and rejection of altered evidence</li>
+              <li>A documented path from specification to implementation and tests</li>
+            </ul>
+            <p class="writing-status">Generic affine-rational assessment pipeline complete; real regional and sensor-fusion adapters remain future work.</p>
+            <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>OCaml</li>
+              <li>Exact rational</li>
+            </ul>
+            <h3>Regional Obstruction Calculus</h3>
+            <p><strong>Question:</strong> do locally compatible pieces actually form one coherent whole? Neighbouring pieces can agree wherever they meet and still fail globally. The development produces either a repair or a witness showing why valid assembly fails under the declared conditions.</p>
+            <ul>
+              <li>Concrete repairs or separating witnesses</li>
+              <li>Rocq proofs with executable OCaml and Python verification paths</li>
+              <li>A distinction between results a representation change preserves and failures it may hide</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>Linear algebra</li>
+              <li>Exactness</li>
+            </ul>
+            <h3>Lift-Descent Exactness</h3>
+            <p><strong>Question:</strong> is the problem impossible, or merely non-unique? Existence and determination are different obligations. Data may admit no compatible state, or several compatible states may remain while disagreeing on the nominated claim.</p>
+            <ul>
+              <li>Constructive classifications of exact, underdetermined, and obstructed cases</li>
+              <li>Witnesses that identify either the obstruction or the remaining ambiguity</li>
+              <li>Proofs of which conclusions survive a change of representation</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/lift-descent-exactness">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>Cohomology</li>
+              <li>Local-to-global</li>
+            </ul>
+            <h3>Claim-Relative Exactness</h3>
+            <p><strong>Question:</strong> must failure to reconstruct the whole state defeat every claim about it? Not necessarily. A global state may fail to exist while a nominated quotient claim remains determined. This project isolates the part of a local-to-global obstruction that is actually visible to the claim.</p>
+            <ul>
+              <li>Extends the finite lift-descent theory to truncated cochain systems</li>
+              <li>Separates global state realisability from claim-relative determination</li>
+              <li>Develops finite constructive machinery before committing to a geometric adapter</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/claim-relative-exactness">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Python</li>
+              <li>OCaml</li>
+              <li>Rocq</li>
+              <li>HELICS</li>
+            </ul>
+            <h3>CycleDebt</h3>
+            <p><strong>Question:</strong> can every local comparison pass while the loop still fails? Yes. CycleDebt checks the cyclic obligation itself and distinguishes a supported claim, a concrete conflict, and an unresolved cyclic obstruction.</p>
+            <ul>
+              <li>Three results: the data conflict, the global claim is supported, or a cyclic obstruction remains</li>
+              <li>Independent verification with exact integer and rational arithmetic</li>
+              <li>A recorded HELICS co-simulation run and commands that reproduce the examples</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project" id="grounded-transport">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>Data lineage</li>
+              <li>Verified extraction</li>
+            </ul>
+            <h3>Grounded Transport Calculus</h3>
+            <p><strong>Question:</strong> when can a data transformation carry forward the evidence that justified a claim about the original data?</p>
+            <ul>
+              <li>Mechanised rules for when transformations preserve the lineage evidence needed to justify substitution</li>
+              <li>Counterexamples showing how lineage guarantees can fail to compose</li>
+              <li>Extracted lineage checker with regression and mutation studies</li>
+            </ul>
+            <a href="https://github.com/dhwcmoore/grounded-transport-calculus">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project" id="byzantine-succession">
+            <ul class="tags" role="list" aria-label="Project tags">
+              <li>Rocq</li>
+              <li>Distributed systems</li>
+              <li>Byzantine faults</li>
+              <li>Warrant debt</li>
+            </ul>
+            <h3>Proof-Carrying Byzantine Succession</h3>
+            <p><strong>Question:</strong> when a distributed system presents one state as the continuation of another, what evidence warrants that claim, and what witness should be returned when replay, reordering, equivocation, or conflicting quorum support defeats it?</p>
+            <ul>
+              <li>Complete R0-R18 ladder across 24 kernel modules: R1 implemented structurally, with R0 and R2-R18 proved and zero <code>Admitted</code>/<code>Axiom</code> declarations</li>
+              <li>Explicit witnesses for fork, replay, reordering, equivocation, and quorum-assumption defeat</li>
+              <li>Finite dependency paths propagate upstream defeat into inspectable downstream reassessment obligations</li>
+            </ul>
+            <p class="writing-status">Formal kernel and seven-scenario counter demonstration complete. Not a consensus protocol, certificate implementation, or deployed runtime verifier.</p>
+            <p>Run <code>make demo-counter</code> from the repository root to see the seven scenarios, including a valid extension, replay, reordering, a fork, and equivocation.</p>
+            <a href="https://github.com/dhwcmoore/proof-carrying-byzantine-succession">Open repository <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
       </div>
     </section>
@@ -93,13 +314,14 @@
         </div>
         <div>
           <p class="eyebrow">Technical profile</p>
+          <p>SMT solvers and model checkers can discharge or explore model obligations. I use constructive Rocq proofs and extracted OCaml checkers when the deliverable is a replayable certificate with an explicit soundness theorem, including for exact-rational admissibility checks.</p>
           <div class="capabilities">
             <div><h3>Proof and specification</h3><p>Rocq/Coq 8.18 and 9.x projects, constructive proof, inductive semantics, <code>Print Assumptions</code>, <code>coqchk</code></p></div>
             <div><h3>Languages</h3><p>OCaml, Python, C/C++, shell scripting</p></div>
             <div><h3>Engineering environment</h3><p>Linux, Git/GitHub, Make, Dune, opam, pytest, command-line tooling</p></div>
             <div><h3>Verification architecture</h3><p>Coq extraction, proof-carrying certificates, independent verifiers, canonical encodings, replay, differential testing</p></div>
             <div><h3>Mathematical methods</h3><p>Exact rational arithmetic, finite linear algebra, discrete structures, quotient and local-to-global analysis</p></div>
-            <div><h3>AI and assurance</h3><p>Learned observation regimes, audit warrants, policy and context binding, provenance, trust boundaries, explicit non-claims</p></div>
+            <div><h3>AI and assurance</h3><p>Generator–verifier separation, representation collapse, proof-carrying certificates for ML pipelines, specification boundaries, and evidence provenance</p></div>
             <div><h3>Philosophy and research</h3><p>Philosophy of science and technology, Whitehead, logic, measurement, conceptual analysis, peer-reviewed writing</p></div>
             <div><h3>Communication and leadership</h3><p>University teaching, curriculum and assessment, research planning, technical documentation, interdisciplinary explanation</p></div>
           </div>
@@ -116,12 +338,12 @@
         </div>
 
         <div class="architecture-principles">
-          <div><strong>If a tolerance matters, state it.</strong><span>A tolerance is a parameter of the claim. Leaving it unstated does not make the system practical; it leaves the criterion undefined.</span></div>
-          <div><strong>If the observation loses the distinction, stop.</strong><span>No amount of downstream intelligence can warrant different answers from inputs that are identical with respect to the information available.</span></div>
-          <div><strong>If the whole matters, check the whole.</strong><span>Pairwise agreement and local success entail a global result only when that implication has itself been established.</span></div>
-          <div><strong>If data are transformed, prove what survives.</strong><span>Compression, projection, aggregation, discretisation, and translation may preserve some conclusions and destroy others. Preservation must be stated; equivalence must be earned.</span></div>
-          <div><strong>If the generator says it is correct, that is still the generator speaking.</strong><span>Independent assurance requires an independently specified check, not a second assertion from the component whose result is under examination.</span></div>
-          <div><strong>If the evidence is insufficient, say insufficient.</strong><span>Underdetermination is not failure to make a decision. It is the correct decision when the evidence does not determine the nominated claim.</span></div>
+          <div><strong>If a tolerance matters, state it.</strong> <span>A tolerance is a parameter of the claim. Leaving it unstated does not make the system practical; it leaves the criterion undefined.</span></div>
+          <div><strong>If the observation loses the distinction, stop.</strong> <span>No amount of downstream intelligence can warrant different answers from inputs that are identical with respect to the information available.</span></div>
+          <div><strong>If the whole matters, check the whole.</strong> <span>Pairwise agreement and local success entail a global result only when that implication has itself been established.</span></div>
+          <div><strong>If data are transformed, prove what survives.</strong> <span>Compression, projection, aggregation, discretisation, and translation may preserve some conclusions and destroy others. Preservation must be stated; equivalence must be earned.</span></div>
+          <div><strong>If the generator says it is correct, that is still the generator speaking.</strong> <span>Independent assurance requires an independently specified check, not a second assertion from the component whose result is under examination.</span></div>
+          <div><strong>If the evidence is insufficient, say insufficient.</strong> <span>Underdetermination is not failure to make a decision. It is the correct decision when the evidence does not determine the nominated claim.</span></div>
         </div>
       </div>
     </section>
@@ -163,156 +385,6 @@
             <strong>Accept, reject, defer, or request more evidence</strong>
             <small>The result retains both its reason and the conditions under which it was warranted</small>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="work">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Selected formal methods research</p>
-          <h2>Proofs, executable checkers, and explicit assurance boundaries</h2>
-          <p>These technical projects span AI, aerospace assurance, formal semantics, executable checking, and exact finite mathematics. Each distinguishes proved results from tests, trusted premises, and claims the artefact does not support. Publications and philosophical work appear below.</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project featured">
-            <div class="tags"><span>Rocq</span><span>OCaml</span><span>Trustworthy AI</span><span>Active research</span></div>
-            <h3>Proof-Carrying Fibre Witnesses</h3>
-            <p><strong>Question:</strong> can a learned observation interface support a declared target decision, or has it erased a distinction that the decision requires? An untrusted search process may propose a witness; the audit pipeline must establish its authority independently.</p>
-            <ul>
-              <li>Machine-checked kernel result connecting a validated fibre witness to target-relative inadmissibility</li>
-              <li>Typed campaign validation and capture/replay architecture with canonical manifests, authentication wiring, policy and context commitment, failure precedence, and fuel accounting</li>
-              <li>Review builds include kernel re-checking, assumption inspection, and OCaml harnesses; the broader pipeline has separately tracked obligations</li>
-            </ul>
-            <p class="writing-status">The review archive records the exact scope of each promoted unit. End-to-end capture/replay correspondence and verified cryptographic primitives are separate claims.</p>
-            <a href="mailto:dhwcmoore@gmail.com?subject=Proof-Carrying%20Fibre%20Witnesses%20review%20archive">Request the current review archive <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project featured">
-            <div class="tags"><span>Rocq</span><span>DO-333</span><span>Aerospace assurance</span><span>Traceability</span></div>
-            <h3>DO-333 Rocq Assurance Case Study</h3>
-            <p><strong>Question:</strong> when a machine-checked proof is offered as assurance evidence, exactly what does it establish, and what remains outside the proof? This public reconstruction revisits selected NASA/Rockwell Collins Flight Guidance System arguments and organises the evidence around DO-178C/DO-333 verification objectives without claiming certification credit.</p>
-            <ul>
-              <li>Reproduces the three source-reported requirement defects with machine-checked refutations, then proves the corrected requirements over their explicit domains</li>
-              <li>Constructively shows the HLR context is inhabited, audits declared dependencies against observed proof terms, and tests each HLR by removal</li>
-              <li>Publishes the theorem ladder, assumptions, discrepancies, traceability, evidence manifest, tool-trust boundary, non-claims, and completion report beside the proofs</li>
-            </ul>
-            <p class="writing-status">Released as <code>v1.0.0</code>. Coq 8.18.0 baseline; re-checked with <code>coqchk</code>. Independent case-study reconstruction, not a certification artefact.</p>
-            <a href="https://github.com/dhwcmoore/do333-rocq-assurance-case-study">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project featured">
-            <div class="tags"><span>Rocq</span><span>OCaml</span><span>AI audit</span><span>Warrant checker</span></div>
-            <h3>Proof-Carrying Audit Warrants</h3>
-            <p><strong>Question:</strong> when an audit conclusion was warranted earlier, what evidence entitles an auditor to say that it remains warranted now? This project separates a mitigation's effect from the continuing authority of the evidence offered for it.</p>
-            <ul>
-              <li>Four claim-relative verdicts: warranted, defeated, underdetermined, or inadmissible</li>
-              <li>Three source-gated BenchRisk cases exposing distinct inferential failures</li>
-              <li>Coq semantics, an extracted checker, a CLI, and 14 published fixtures agreeing with the formal results</li>
-            </ul>
-            <p class="writing-status"><code>v0.1.0</code> candidate. A warrant checker under declared evidence and policy, not a claim that a mitigation is present or that an AI system is safe.</p>
-            <a href="https://github.com/dhwcmoore/proof-carrying-audit-warrants">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project featured">
-            <div class="tags"><span>Python</span><span>Certificates</span><span>Verifier</span></div>
-            <h3>Proof-Carrying Exactness</h3>
-            <p><strong>Question:</strong> who checks the checker? A certificate is not made valid by the program that produced it. This repository separates candidate generation from verification and uses exact rational arithmetic at the point where the formal verdict is decided.</p>
-            <ul>
-              <li>Four explicit results: exact, underdetermined, obstructed, or inadmissible</li>
-              <li>Repeatable certificate bytes and rejection of altered evidence</li>
-              <li>A documented path from specification to implementation and tests</li>
-            </ul>
-            <p class="writing-status">Generic affine-rational assessment pipeline complete; real regional and sensor-fusion adapters remain future work.</p>
-            <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project">
-            <div class="tags"><span>Rocq</span><span>OCaml</span><span>Exact rational</span></div>
-            <h3>Regional Obstruction Calculus</h3>
-            <p><strong>Question:</strong> do locally compatible pieces actually form one coherent whole? Neighbouring pieces can agree wherever they meet and still fail globally. The development produces either a repair or a witness showing why valid assembly fails under the declared conditions.</p>
-            <ul>
-              <li>Concrete repairs or separating witnesses</li>
-              <li>Rocq proofs with executable OCaml and Python verification paths</li>
-              <li>A distinction between results a representation change preserves and failures it may hide</li>
-            </ul>
-            <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project">
-            <div class="tags"><span>Rocq</span><span>OCaml</span><span>Runtime monitoring</span></div>
-            <h3>Structural Admissibility Library</h3>
-            <p><strong>Question:</strong> can the observation possibly determine the claim? If two relevant cases become identical in the available observation but require different answers, the problem precedes optimisation. No later classifier can reconstruct the missing distinction from the same input.</p>
-            <ul>
-              <li>Forty-one Rocq source modules with every assumption listed</li>
-              <li>Case studies in distributed consensus, GPU execution, and physical sensing</li>
-              <li>Two principled repairs: weaken the claim or improve the observation</li>
-            </ul>
-            <a href="https://github.com/dhwcmoore/structural-admissibility">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project">
-            <div class="tags"><span>Rocq</span><span>Linear algebra</span><span>Exactness</span></div>
-            <h3>Lift-Descent Exactness</h3>
-            <p><strong>Question:</strong> is the problem impossible, or merely non-unique? Existence and determination are different obligations. Data may admit no compatible state, or several compatible states may remain while disagreeing on the nominated claim.</p>
-            <ul>
-              <li>Constructive classifications of exact, underdetermined, and obstructed cases</li>
-              <li>Witnesses that identify either the obstruction or the remaining ambiguity</li>
-              <li>Proofs of which conclusions survive a change of representation</li>
-            </ul>
-            <a href="https://github.com/dhwcmoore/lift-descent-exactness">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project">
-            <div class="tags"><span>Rocq</span><span>Cohomology</span><span>Local-to-global</span></div>
-            <h3>Claim-Relative Exactness</h3>
-            <p><strong>Question:</strong> must failure to reconstruct the whole state defeat every claim about it? Not necessarily. A global state may fail to exist while a nominated quotient claim remains determined. This project isolates the part of a local-to-global obstruction that is actually visible to the claim.</p>
-            <ul>
-              <li>Extends the finite lift-descent theory to truncated cochain systems</li>
-              <li>Separates global state realisability from claim-relative determination</li>
-              <li>Develops finite constructive machinery before committing to a geometric adapter</li>
-            </ul>
-            <a href="https://github.com/dhwcmoore/claim-relative-exactness">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project featured">
-            <div class="tags"><span>Python</span><span>OCaml</span><span>Rocq</span><span>HELICS</span></div>
-            <h3>CycleDebt</h3>
-            <p><strong>Question:</strong> can every local comparison pass while the loop still fails? Yes. CycleDebt checks the cyclic obligation itself and distinguishes a supported claim, a concrete conflict, and an unresolved cyclic obstruction.</p>
-            <ul>
-              <li>Three results: the data conflict, the global claim is supported, or a cyclic obstruction remains</li>
-              <li>Independent verification with exact integer and rational arithmetic</li>
-              <li>A recorded HELICS co-simulation run and commands that reproduce the examples</li>
-            </ul>
-            <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project" id="grounded-transport">
-            <div class="tags"><span>Rocq</span><span>Data lineage</span><span>Verified extraction</span></div>
-            <h3>Grounded Transport Calculus</h3>
-            <p><strong>Question:</strong> when can a data transformation carry forward the evidence that justified a claim about the original data?</p>
-            <ul>
-              <li>Mechanised rules for when transformations preserve the lineage evidence needed to justify substitution</li>
-              <li>Counterexamples showing how lineage guarantees can fail to compose</li>
-              <li>Extracted lineage checker with regression and mutation studies</li>
-            </ul>
-            <a href="https://github.com/dhwcmoore/grounded-transport-calculus">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project" id="byzantine-succession">
-            <div class="tags"><span>Rocq</span><span>Distributed systems</span><span>Byzantine faults</span><span>Warrant debt</span></div>
-            <h3>Proof-Carrying Byzantine Succession</h3>
-            <p><strong>Question:</strong> when a distributed system presents one state as the continuation of another, what evidence warrants that claim, and what witness should be returned when replay, reordering, equivocation, or conflicting quorum support defeats it?</p>
-            <ul>
-              <li>Complete R0-R18 ladder across 24 kernel modules: R1 implemented structurally, with R0 and R2-R18 proved and zero <code>Admitted</code>/<code>Axiom</code> declarations</li>
-              <li>Explicit witnesses for fork, replay, reordering, equivocation, and quorum-assumption defeat</li>
-              <li>Finite dependency paths propagate upstream defeat into inspectable downstream reassessment obligations</li>
-            </ul>
-            <p class="writing-status">Formal kernel and seven-scenario counter demonstration complete. Not a consensus protocol, certificate implementation, or deployed runtime verifier.</p>
-            <p>Run <code>make demo-counter</code> from the repository root to see the seven scenarios, including a valid extension, replay, reordering, a fork, and equivocation.</p>
-            <a href="https://github.com/dhwcmoore/proof-carrying-byzantine-succession">Open repository <span aria-hidden="true">↗</span></a>
-          </article>
         </div>
       </div>
     </section>
@@ -568,7 +640,7 @@
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Discuss research or collaboration</h2>
-          <p>Interested in research, formal verification, philosophy of technology, technical writing, teaching, and auditable systems. Based in Edmonton and open to remote work or relocation with financial support.</p>
+          <p>Interested in research, formal verification, philosophy of technology, technical writing, teaching, and auditable systems. Based in Edmonton and open to remote work or relocation.</p>
         </div>
         <div class="contact-actions">
           <a href="cv.html">View CV</a>
