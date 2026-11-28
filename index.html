@@ -21,11 +21,12 @@
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Primary navigation">
-        <a href="#work">Projects</a>
+        <a href="#overview">Overview</a>
+        <a href="#flagships">Projects</a>
         <a href="#about">Research profile</a>
-        <a href="#applied">Applied systems</a>
-        <a href="#architecture">Architecture</a>
         <a href="#writing">Publications</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#applied">Applied systems</a>
         <a href="#experience">Experience</a>
         <a href="cv.html">CV</a>
       </nav>
@@ -41,7 +42,7 @@
           <p class="lead">I design and verify proof-carrying assurance tools for AI and critical systems. My work includes AI audit, NASA/Rockwell Collins Flight Guidance, GPU memory consistency, and distributed consensus.</p>
           <div class="actions">
             <a class="button primary" href="cv.html">View CV</a>
-            <a class="button secondary" href="#flagships">Explore flagship artefacts</a>
+            <a class="button secondary" href="#flagships">Compare projects</a>
           </div>
           <p class="latest-publication"><strong>New publication:</strong> <a href="https://doi.org/10.1007/s44163-026-02252-6">Admissibility defines structural limits on optimisation in artificial intelligence</a>, <em>Discover Artificial Intelligence</em> (2026).</p>
           <p class="availability">Edmonton, Canada · Open to remote or relocated roles in formal verification, AI assurance, and research.</p>
@@ -69,14 +70,170 @@
       </div>
     </section>
 
+    <section class="section" id="overview" aria-labelledby="overview-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="overview-heading">Research and career overview</h2>
+          <p>I’m an independent researcher and former tenured associate professor of philosophy and Director of General Education at Purdue University Fort Wayne. I also worked as an education developer at the University of Alberta. I bring philosophy of science and technology to a practical question. How can a reviewer tell whether an AI system or other consequential software has enough evidence for the claim it makes?</p>
+        </div>
+        <div class="flagship-grid">
+          <a href="#experience"><strong>Review my experience</strong><span>Research, teaching and academic leadership</span></a>
+          <a href="#writing"><strong>Read papers and philosophical work</strong><span>Published research, manuscripts and research in progress</span></a>
+          <a href="mailto:dhwcmoore@gmail.com?subject=Proof-Carrying%20Fibre%20Witnesses%20review%20archive&amp;body=I%20would%20like%20to%20review%20the%20current%20archive.%0A%0AUnit%20or%20claim%20of%20interest%3A%0A"><strong>Request the Fibre Witnesses review archive</strong><span>Specify the unit or claim you want to inspect</span></a>
+          <a href="mailto:dhwcmoore@gmail.com?subject=Portfolio%20enquiry&amp;body=I%20would%20like%20to%20discuss%3A%0A%0ASystem%2C%20claim%2C%20or%20research%20question%3A%0A"><strong>Discuss a role or research problem</strong><span>Share the system, claim or research question</span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="flagships" id="flagships" aria-labelledby="flagships-heading">
       <div class="wrap">
-        <h2 id="flagships-heading">Flagship artefacts</h2>
-        <div class="flagship-grid">
-          <a href="#audit-warrants"><strong>Proof-Carrying Audit Warrants</strong> <span>AI assurance · Extracted checker and 14 published fixtures</span></a>
-          <a href="#do333"><strong>DO-333 Rocq Assurance Case Study</strong> <span>Aerospace verification · Flight Guidance requirement proofs</span></a>
-          <a href="#structural-admissibility"><strong>Structural Admissibility Library</strong> <span>Formal foundations · 41 Rocq modules, including GPU and consensus models</span></a>
-          <a href="#byzantine-succession"><strong>Proof-Carrying Byzantine Succession</strong> <span>Distributed verification · 24 kernel modules and seven demo scenarios</span></a>
+        <h2 id="flagships-heading">Projects at a glance</h2>
+        <div class="project-table-scroll" role="region" aria-labelledby="flagships-heading" tabindex="0">
+          <table class="project-table">
+            <thead><tr><th scope="col">Project</th><th scope="col">Domain and role relevance</th><th scope="col">Maturity</th><th scope="col">Artefact</th><th scope="col">Key claim</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><a href="#audit-warrants">Proof-Carrying Audit Warrants</a></th><td>AI governance and audit</td><td>v0.1.0 candidate</td><td>Rocq proofs and extracted checker</td><td>Checks whether an earlier audit warrant still holds under declared evidence and policy.</td></tr>
+              <tr><th scope="row"><a href="#do333">DO-333 Rocq Assurance Case Study</a></th><td>Safety engineering</td><td>v1.0.0 release</td><td>Flight Guidance proofs and traceability</td><td>Refutes three source-reported requirement defects and proves the corrections within stated domains.</td></tr>
+              <tr><th scope="row"><a href="#structural-admissibility">Structural Admissibility Library</a></th><td>Formal methods and semantics</td><td>Mechanised library</td><td>Rocq library and OCaml tests</td><td>Identical observations with different required answers defeat an observation-based decision rule.</td></tr>
+              <tr><th scope="row"><a href="#byzantine-succession">Proof-Carrying Byzantine Succession</a></th><td>Distributed systems assurance</td><td>Formal kernel and demo complete</td><td>Rocq kernel and counter demo</td><td>Formalises succession obligations and exhibits failures such as replay, forks and equivocation.</td></tr>
+              <tr><th scope="row"><a href="#fibre-witnesses">Proof-Carrying Fibre Witnesses</a></th><td>AI governance and audit</td><td>Phase 1 released · active research</td><td>Proof core and extracted OCaml interfaces</td><td>A validated fibre witness establishes inadmissibility relative to a declared target.</td></tr>
+              <tr><th scope="row"><a href="#proof-carrying-exactness">Proof-Carrying Exactness</a></th><td>Assurance engineering</td><td>Generic pipeline complete</td><td>Certificate producer and independent verifier</td><td>Separately checks verdicts for exact affine-rational claims.</td></tr>
+              <tr><th scope="row"><a href="#regional-obstruction">Regional Obstruction Calculus</a></th><td>Formal methods and semantics</td><td>Mechanised development</td><td>Rocq proofs and executable verifiers</td><td>Local compatibility can coexist with a global obstruction. The calculus supplies repairs or witnesses.</td></tr>
+              <tr><th scope="row"><a href="#lift-descent">Lift-Descent Exactness</a></th><td>Formal methods and semantics</td><td>Mechanised development</td><td>Rocq proofs and witnesses</td><td>Distinguishes failure of existence from failure of determination.</td></tr>
+              <tr><th scope="row"><a href="#claim-relative">Claim-Relative Exactness</a></th><td>Formal methods and semantics</td><td>Mechanised development</td><td>Finite cochain proofs</td><td>Failure to reconstruct a global state can leave a nominated quotient claim determined.</td></tr>
+              <tr><th scope="row"><a href="#cycledebt">CycleDebt</a></th><td>Assurance engineering</td><td>Runnable demonstrator</td><td>Certificate theorem and co-simulation demo</td><td>Checks whether a cyclic obligation is supported, conflicting or obstructed.</td></tr>
+              <tr><th scope="row"><a href="#grounded-transport">Grounded Transport Calculus</a></th><td>Data governance and audit</td><td>Mechanised development</td><td>Rocq proofs and extracted lineage checker</td><td>Specifies when lineage warrants substitution and gives counterexamples to composition.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="about">
+      <div class="wrap approach-grid">
+        <div>
+          <p class="eyebrow">Research profile</p>
+          <h2>Research across concepts, proofs, and institutions</h2>
+          <p>My question is how a well-formed result becomes a warranted claim about a particular case. I work on abstraction, observation, uncertainty, provenance, and the obligations that remain when an exact result is applied. Some projects are philosophical articles; others develop formal semantics, Rocq proofs, independent checkers, and reproducible examples.</p>
+          <p>I hold a PhD in Philosophy from KU Leuven and previously worked as a tenured Associate Professor and Director of General Education. That experience informs my writing, teaching, assessment, and work across disciplines. The software and proof claims on this site are supported by the linked artefacts, with open boundaries stated alongside them.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Technical profile</p>
+          <p>SMT solvers and model checkers can discharge or explore model obligations. I use constructive Rocq proofs and extracted OCaml checkers when the deliverable is a replayable certificate with an explicit soundness theorem, including for exact-rational admissibility checks.</p>
+          <div class="capabilities">
+            <div><h3>Proof and specification</h3><p>Rocq/Coq 8.18 and 9.x projects, constructive proof, inductive semantics, <code>Print Assumptions</code>, <code>coqchk</code></p></div>
+            <div><h3>Languages</h3><p>OCaml, Python, C/C++, shell scripting</p></div>
+            <div><h3>Engineering environment</h3><p>Linux, Git/GitHub, Make, Dune, opam, pytest, command-line tooling</p></div>
+            <div><h3>Verification architecture</h3><p>Coq extraction, proof-carrying certificates, independent verifiers, canonical encodings, replay, differential testing</p></div>
+            <div><h3>Mathematical methods</h3><p>Exact rational arithmetic, finite linear algebra, discrete structures, quotient and local-to-global analysis</p></div>
+            <div><h3>AI and assurance</h3><p>Generator–verifier separation, representation collapse, proof-carrying certificates for ML pipelines, specification boundaries, and evidence provenance</p></div>
+            <div><h3>Philosophy and research</h3><p>Philosophy of science and technology, Whitehead, logic, measurement, conceptual analysis, peer-reviewed writing</p></div>
+            <div><h3>Communication and leadership</h3><p>University teaching, curriculum and assessment, research planning, technical documentation, interdisciplinary explanation</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="writing">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Research and publications</p>
+          <h2>Research articles and philosophical writing</h2>
+          <p>My writing examines what formal results establish, how representations and measurements acquire authority, and what must be maintained when they guide decisions. It includes published philosophical work, a published AI methods article, and ongoing manuscripts.</p>
+        </div>
+
+        <div class="writing-grid">
+          <article class="writing-card featured-writing">
+            <div class="writing-meta"><span>Peer-reviewed journal article</span><span>Published 2026 · Open access</span></div>
+            <h3>Admissibility defines structural limits on optimisation in artificial intelligence</h3>
+            <p>Studies failures caused not by a weak optimiser, but by missing information. When an observation makes two cases look identical even though they require different decisions, no later model can recover the missing distinction from that observation alone. The paper develops a formal admissibility test and an executable finite certificate prototype.</p>
+            <a class="button primary manuscript-button" href="https://doi.org/10.1007/s44163-026-02252-6">Read the published article</a>
+            <p><a href="Admissibility_Defines_Structural_Limits_Published.pdf" target="_blank" rel="noopener">Download the version of record (PDF)</a></p>
+            <p class="writing-status">Moore, D. (2026). <em>Discover Artificial Intelligence</em>, 6, article 1267. <a href="https://doi.org/10.1007/s44163-026-02252-6">https://doi.org/10.1007/s44163-026-02252-6</a>. Supporting work includes <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">CycleDebt</a> and the <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility Library</a>.</p>
+          </article>
+
+          <article class="writing-card">
+            <div class="writing-meta"><span>Philosophy manuscript</span></div>
+            <h3>The Work of Exactness: Whitehead, Formal Systems, and Human Artefacts</h3>
+            <p>Argues that exactness, as an operative human artefact, must be constituted and maintained through conceptual, symbolic, material, and institutional work. Formal relations may remain true within a declared order, while their implementation, transmission, and warranted application to changing concrete processes do not maintain themselves.</p>
+            <p class="writing-status">Related public work formalises observation-relative admissibility, one necessary condition on application warrant, without claiming that the formal test establishes the model's empirical adequacy.</p>
+          </article>
+
+          <article class="writing-card">
+            <div class="writing-meta"><span>Research programme</span><span>Formal verification</span></div>
+            <h3>Structural Admissibility: Quotients, Gluing, and the Conditions of Verifiability</h3>
+            <p>Develops two distinct failure tests. First, an observation may erase a distinction needed for a decision. Second, statements that agree locally may still fail to form one coherent global account.</p>
+            <p class="writing-status">The public development is divided among <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility</a>, <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Regional Obstruction Calculus</a>, <a href="https://github.com/dhwcmoore/lift-descent-exactness">Lift-Descent Exactness</a>, <a href="https://github.com/dhwcmoore/claim-relative-exactness">Claim-Relative Exactness</a>, and <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Proof-Carrying Exactness</a>.</p>
+          </article>
+
+          <article class="writing-card">
+            <div class="writing-meta"><span>Earlier philosophical publications</span><span>2008</span></div>
+            <h3>Process philosophy and organisations</h3>
+            <p>“Marcuse and Eternal Objects” appeared in <em>Process Studies</em>; “Propositions in Corporations” appeared in <em>Applied Process Thought II</em>. These publications belong to the philosophical part of my work, alongside current research on exactness, evidence, and application.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">How the parts fit</p>
+          <h2>Generation and verification are different jobs</h2>
+          <p>A generator can search, predict, optimise, or propose. Its own assertion that the result is correct is not independent evidence for that result. The architecture therefore keeps source material, candidate generation, translation, verification, and release authority separate.</p>
+        </div>
+
+        <div class="architecture-board" aria-label="AI-assisted assurance architecture">
+          <div class="arch-node source">
+            <span class="arch-kicker">Source material</span>
+            <strong>Requirements, measurements, code, and models</strong>
+            <small>Recorded sources with a known version, origin, and declared uncertainty</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node propose">
+            <span class="arch-kicker">Candidate generator</span>
+            <strong>AI model, optimiser, or ordinary program</strong>
+            <small>Proposes an answer and the evidence it says supports that answer</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node adapter">
+            <span class="arch-kicker">Explicit translation</span>
+            <strong>Input format, conversion rule, and source record</strong>
+            <small>Converts the candidate into checker input and records exactly what changed</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node verify">
+            <span class="arch-kicker">Independent checker</span>
+            <strong>Python or OCaml verifier, with Rocq proofs for the formal core</strong>
+            <small>Recomputes the obligation and returns a verdict with supporting evidence</small>
+          </div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node decide">
+            <span class="arch-kicker">Release decision</span>
+            <strong>Automated gate, stated policy, or human review</strong>
+            <small>Accept, reject, defer, or request more evidence</small>
+          </div>
+
+          <div class="feedback-line">
+            <span>A rejected candidate returns the failed condition. The checker does not silently repair the candidate and then count its own repair as evidence that the original proposal was correct.</span>
+          </div>
+        </div>
+
+        <figure class="obstruction-figure" aria-labelledby="obstruction-title">
+          <figcaption id="obstruction-title">One obstruction, two verification questions</figcaption>
+          <p>Local data agree on overlaps but fail to assemble into a global state.</p>
+          <div class="obstruction-branches">
+            <div><strong>Does a global state exist?</strong><p>No. The obstruction blocks assembly.</p></div>
+            <div><strong>Is the nominated quotient claim determined?</strong><p>It can be, when the claim map removes the obstruction and the projected data determine the claim.</p></div>
+          </div>
+          <a href="#claim-relative">Inspect the claim-relative formalisation</a>
+        </figure>
+
+        <div class="architecture-principles">
+          <div><strong>A proposal is not evidence for itself.</strong><span>Generated content remains a candidate until a separate check establishes the stated obligation.</span></div>
+          <div><strong>Approximate measurement is not vague semantics.</strong><span>Uncertainty can be represented explicitly without making the meaning of the claim approximate.</span></div>
+          <div><strong>Preservation is not reflection.</strong><span>A transformation may preserve valid results while hiding failures that cannot be reconstructed from the transformed representation.</span></div>
+          <div><strong>A failure code is not a diagnosis.</strong><span>A useful rejection identifies the failed condition, the relevant evidence, and what remains unresolved.</span></div>
         </div>
       </div>
     </section>
@@ -85,7 +242,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Verification projects</h2>
-          <p>These technical projects span AI, aerospace assurance, formal semantics, executable checking, and exact finite mathematics. Each distinguishes proved results from tests, trusted premises, and claims the artefact does not support. Publications and philosophical work appear below.</p>
+          <p>These technical projects span AI, aerospace assurance, formal semantics, executable checking, and exact finite mathematics. Each distinguishes proved results from tests, trusted premises, and claims the artefact does not support.</p>
           <p>My AI assurance work addresses a specification boundary shared with <a href="https://arxiv.org/abs/2405.06624">Guaranteed Safe AI</a> and <a href="https://aria.org.uk/opportunity-spaces/mathematics-for-safe-ai/safeguarded-ai">Safeguarded AI</a>. An untrusted search or ML component proposes a certificate, and a deterministic verifier checks what it establishes under a declared specification. A fibre witness can expose representation collapse by exhibiting two cases with the same observation but different required decisions.</p>
         </div>
 
@@ -172,7 +329,7 @@
         <section class="supporting-section" aria-labelledby="supporting-heading">
           <h3 id="supporting-heading">Foundational &amp; Supporting Repositories</h3>
           <div class="project-grid supporting-grid">
-            <article class="project supporting-project">
+            <article class="project supporting-project" id="fibre-witnesses">
               <ul class="tags" role="list" aria-label="Project tags">
                 <li>Rocq</li>
                 <li>OCaml</li>
@@ -198,7 +355,7 @@
               </div>
             </article>
 
-            <article class="project supporting-project">
+            <article class="project supporting-project" id="proof-carrying-exactness">
               <ul class="tags" role="list" aria-label="Project tags">
                 <li>Python</li>
                 <li>Certificates</li>
@@ -222,7 +379,7 @@
               </div>
             </article>
 
-            <article class="project supporting-project">
+            <article class="project supporting-project" id="regional-obstruction">
               <ul class="tags" role="list" aria-label="Project tags">
                 <li>Rocq</li>
                 <li>OCaml</li>
@@ -245,7 +402,7 @@
               </div>
             </article>
 
-            <article class="project supporting-project">
+            <article class="project supporting-project" id="lift-descent">
               <ul class="tags" role="list" aria-label="Project tags">
                 <li>Rocq</li>
                 <li>Linear algebra</li>
@@ -268,7 +425,7 @@
               </div>
             </article>
 
-            <article class="project supporting-project">
+            <article class="project supporting-project" id="claim-relative">
               <ul class="tags" role="list" aria-label="Project tags">
                 <li>Rocq</li>
                 <li>Cohomology</li>
@@ -291,7 +448,7 @@
               </div>
             </article>
 
-            <article class="project supporting-project">
+            <article class="project supporting-project" id="cycledebt">
               <ul class="tags" role="list" aria-label="Project tags">
                 <li>Python</li>
                 <li>OCaml</li>
@@ -359,31 +516,6 @@
           <h2>Accountable in use</h2>
           <p>Evidence, measurement, provenance, maintenance, and responsible people determine whether a result may guide action beyond its formal setting.</p>
         </article>
-      </div>
-    </section>
-
-    <section class="section alt" id="about">
-      <div class="wrap approach-grid">
-        <div>
-          <p class="eyebrow">Research profile</p>
-          <h2>Research across concepts, proofs, and institutions</h2>
-          <p>My question is how a well-formed result becomes a warranted claim about a particular case. I work on abstraction, observation, uncertainty, provenance, and the obligations that remain when an exact result is applied. Some projects are philosophical articles; others develop formal semantics, Rocq proofs, independent checkers, and reproducible examples.</p>
-          <p>I hold a PhD in Philosophy from KU Leuven and previously worked as a tenured Associate Professor and Director of General Education. That experience informs my writing, teaching, assessment, and work across disciplines. The software and proof claims on this site are supported by the linked artefacts, with open boundaries stated alongside them.</p>
-        </div>
-        <div>
-          <p class="eyebrow">Technical profile</p>
-          <p>SMT solvers and model checkers can discharge or explore model obligations. I use constructive Rocq proofs and extracted OCaml checkers when the deliverable is a replayable certificate with an explicit soundness theorem, including for exact-rational admissibility checks.</p>
-          <div class="capabilities">
-            <div><h3>Proof and specification</h3><p>Rocq/Coq 8.18 and 9.x projects, constructive proof, inductive semantics, <code>Print Assumptions</code>, <code>coqchk</code></p></div>
-            <div><h3>Languages</h3><p>OCaml, Python, C/C++, shell scripting</p></div>
-            <div><h3>Engineering environment</h3><p>Linux, Git/GitHub, Make, Dune, opam, pytest, command-line tooling</p></div>
-            <div><h3>Verification architecture</h3><p>Coq extraction, proof-carrying certificates, independent verifiers, canonical encodings, replay, differential testing</p></div>
-            <div><h3>Mathematical methods</h3><p>Exact rational arithmetic, finite linear algebra, discrete structures, quotient and local-to-global analysis</p></div>
-            <div><h3>AI and assurance</h3><p>Generator–verifier separation, representation collapse, proof-carrying certificates for ML pipelines, specification boundaries, and evidence provenance</p></div>
-            <div><h3>Philosophy and research</h3><p>Philosophy of science and technology, Whitehead, logic, measurement, conceptual analysis, peer-reviewed writing</p></div>
-            <div><h3>Communication and leadership</h3><p>University teaching, curriculum and assessment, research planning, technical documentation, interdisciplinary explanation</p></div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -513,59 +645,6 @@
       </div>
     </section>
 
-    <section class="section architecture-section" id="architecture">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">How the parts fit</p>
-          <h2>Generation and verification are different jobs</h2>
-          <p>A generator can search, predict, optimise, or propose. Its own assertion that the result is correct is not independent evidence for that result. The architecture therefore keeps source material, candidate generation, translation, verification, and release authority separate.</p>
-        </div>
-
-        <div class="architecture-board" aria-label="AI-assisted assurance architecture">
-          <div class="arch-node source">
-            <span class="arch-kicker">Source material</span>
-            <strong>Requirements, measurements, code, and models</strong>
-            <small>Recorded sources with a known version, origin, and declared uncertainty</small>
-          </div>
-          <div class="arch-arrow" aria-hidden="true">→</div>
-          <div class="arch-node propose">
-            <span class="arch-kicker">Candidate generator</span>
-            <strong>AI model, optimiser, or ordinary program</strong>
-            <small>Proposes an answer and the evidence it says supports that answer</small>
-          </div>
-          <div class="arch-arrow" aria-hidden="true">→</div>
-          <div class="arch-node adapter">
-            <span class="arch-kicker">Explicit translation</span>
-            <strong>Input format, conversion rule, and source record</strong>
-            <small>Converts the candidate into checker input and records exactly what changed</small>
-          </div>
-          <div class="arch-arrow" aria-hidden="true">→</div>
-          <div class="arch-node verify">
-            <span class="arch-kicker">Independent checker</span>
-            <strong>Python or OCaml verifier, with Rocq proofs for the formal core</strong>
-            <small>Recomputes the obligation and returns a verdict with supporting evidence</small>
-          </div>
-          <div class="arch-arrow" aria-hidden="true">→</div>
-          <div class="arch-node decide">
-            <span class="arch-kicker">Release decision</span>
-            <strong>Automated gate, stated policy, or human review</strong>
-            <small>Accept, reject, defer, or request more evidence</small>
-          </div>
-
-          <div class="feedback-line">
-            <span>A rejected candidate returns the failed condition. The checker does not silently repair the candidate and then count its own repair as evidence that the original proposal was correct.</span>
-          </div>
-        </div>
-
-        <div class="architecture-principles">
-          <div><strong>A proposal is not evidence for itself.</strong><span>Generated content remains a candidate until a separate check establishes the stated obligation.</span></div>
-          <div><strong>Approximate measurement is not vague semantics.</strong><span>Uncertainty can be represented explicitly without making the meaning of the claim approximate.</span></div>
-          <div><strong>Preservation is not reflection.</strong><span>A transformation may preserve valid results while hiding failures that cannot be reconstructed from the transformed representation.</span></div>
-          <div><strong>A failure code is not a diagnosis.</strong><span>A useful rejection identifies the failed condition, the relevant evidence, and what remains unresolved.</span></div>
-        </div>
-      </div>
-    </section>
-
     <section class="section demo-section" id="demo">
       <div class="wrap demo-grid">
         <div>
@@ -608,47 +687,6 @@
           <div><h3>Build usable tools</h3><p>Create documented Python packages and command-line programs with automated tests, reproducible examples, and independent checks where the claim requires them.</p></div>
           <div><h3>Analyse representation changes</h3><p>State which conclusions survive a conversion and which distinctions the conversion may hide or destroy.</p></div>
           <div><h3>Explain the result</h3><p>Say what was established, what was not established, and which assumption would have to change for the verdict to change.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="writing">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Research and publications</p>
-          <h2>Research articles and philosophical writing</h2>
-          <p>My writing examines what formal results establish, how representations and measurements acquire authority, and what must be maintained when they guide decisions. It includes published philosophical work, a published AI methods article, and ongoing manuscripts.</p>
-        </div>
-
-        <div class="writing-grid">
-          <article class="writing-card featured-writing">
-            <div class="writing-meta"><span>Peer-reviewed journal article</span><span>Published 2026 · Open access</span></div>
-            <h3>Admissibility defines structural limits on optimisation in artificial intelligence</h3>
-            <p>Studies failures caused not by a weak optimiser, but by missing information. When an observation makes two cases look identical even though they require different decisions, no later model can recover the missing distinction from that observation alone. The paper develops a formal admissibility test and an executable finite certificate prototype.</p>
-            <a class="button primary manuscript-button" href="https://doi.org/10.1007/s44163-026-02252-6">Read the published article</a>
-            <p><a href="Admissibility_Defines_Structural_Limits_Published.pdf" target="_blank" rel="noopener">Download the version of record (PDF)</a></p>
-            <p class="writing-status">Moore, D. (2026). <em>Discover Artificial Intelligence</em>, 6, article 1267. <a href="https://doi.org/10.1007/s44163-026-02252-6">https://doi.org/10.1007/s44163-026-02252-6</a>. Supporting work includes <a href="https://github.com/dhwcmoore/finite-regional-residue-obstruction">CycleDebt</a> and the <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility Library</a>.</p>
-          </article>
-
-          <article class="writing-card">
-            <div class="writing-meta"><span>Philosophy manuscript</span></div>
-            <h3>The Work of Exactness: Whitehead, Formal Systems, and Human Artefacts</h3>
-            <p>Argues that exactness, as an operative human artefact, must be constituted and maintained through conceptual, symbolic, material, and institutional work. Formal relations may remain true within a declared order, while their implementation, transmission, and warranted application to changing concrete processes do not maintain themselves.</p>
-            <p class="writing-status">Related public work formalises observation-relative admissibility, one necessary condition on application warrant, without claiming that the formal test establishes the model's empirical adequacy.</p>
-          </article>
-
-          <article class="writing-card">
-            <div class="writing-meta"><span>Research programme</span><span>Formal verification</span></div>
-            <h3>Structural Admissibility: Quotients, Gluing, and the Conditions of Verifiability</h3>
-            <p>Develops two distinct failure tests. First, an observation may erase a distinction needed for a decision. Second, statements that agree locally may still fail to form one coherent global account.</p>
-            <p class="writing-status">The public development is divided among <a href="https://github.com/dhwcmoore/structural-admissibility">Structural Admissibility</a>, <a href="https://github.com/dhwcmoore/regional-obstruction-calculus">Regional Obstruction Calculus</a>, <a href="https://github.com/dhwcmoore/lift-descent-exactness">Lift-Descent Exactness</a>, <a href="https://github.com/dhwcmoore/claim-relative-exactness">Claim-Relative Exactness</a>, and <a href="https://github.com/dhwcmoore/proof-carrying-exactness">Proof-Carrying Exactness</a>.</p>
-          </article>
-
-          <article class="writing-card">
-            <div class="writing-meta"><span>Earlier philosophical publications</span><span>2008</span></div>
-            <h3>Process philosophy and organisations</h3>
-            <p>“Marcuse and Eternal Objects” appeared in <em>Process Studies</em>; “Propositions in Corporations” appeared in <em>Applied Process Thought II</em>. These publications belong to the philosophical part of my work, alongside current research on exactness, evidence, and application.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -703,7 +741,9 @@
         <div class="contact-actions">
           <a href="cv.html">View CV</a>
           <a href="Duston_Moore_Formal_Methods_CV.pdf" download>Download CV (PDF)</a>
-          <a href="mailto:dhwcmoore@gmail.com">dhwcmoore@gmail.com</a>
+          <a href="mailto:dhwcmoore@gmail.com?subject=Portfolio%20enquiry&amp;body=I%20would%20like%20to%20discuss%3A%0A%0ASystem%2C%20claim%2C%20or%20research%20question%3A%0A">Start a technical or research conversation</a>
+          <a href="mailto:dhwcmoore@gmail.com?subject=Proof-Carrying%20Fibre%20Witnesses%20review%20archive&amp;body=I%20would%20like%20to%20review%20the%20current%20archive.%0A%0AUnit%20or%20claim%20of%20interest%3A%0A">Request the Fibre Witnesses review archive</a>
+          <a href="mailto:dhwcmoore@gmail.com?subject=Talk%20materials%20enquiry&amp;body=I%20would%20like%20to%20ask%20about%20talk%20materials%20on%3A%0A">Ask about talk materials</a>
           <a href="tel:+17809383102">780-938-3102</a>
           <a href="https://github.com/dhwcmoore">github.com/dhwcmoore</a>
         </div>
